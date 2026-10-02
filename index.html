@@ -1,0 +1,2504 @@
+<!doctype html>
+<html>
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+        <title>mnkk</title>
+    </head> 
+    <body> 
+        <h1></h1>
+        <div>
+            
+        </div>  
+    </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FACC15">
+<title>DealPilot USA — Everyday Tools That Actually Work</title>
+<meta name="description" content="15 free browser tools — calculators, converters, and helpers. No sign-up. Nothing leaves your device.">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="DealPilot USA — Everyday Tools That Actually Work">
+<meta property="og:description" content="15 free browser tools — calculators, converters, and helpers. No sign-up.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23FACC15'/><text x='50' y='70' font-size='58' font-family='system-ui' font-weight='800' fill='%23111827' text-anchor='middle'>D</text></svg>">
+<style>
+/* ============ TOKENS ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --yellow:#FACC15; --yellow-2:#EAB308; --yellow-3:#CA8A04;
+  --yellow-soft:#FEF9C3; --yellow-tint:#FFFBEB; --yellow-glow:rgba(250,204,21,.35);
+  --ink:#111827; --ink-2:#1F2937; --ink-3:#4B5563; --ink-4:#6B7280; --ink-5:#9CA3AF;
+  --line:#E5E7EB; --line-2:#F3F4F6;
+  --bg:#FFFFFF; --bg-warm:#FFFBEB;
+  --green:#059669; --green-soft:#ECFDF5;
+  --amber:#B45309; --amber-soft:#FEF3C7;
+  --red:#DC2626; --red-soft:#FEF2F2;
+  --blue:#2563EB; --blue-soft:#EFF6FF;
+  --r-sm:10px; --r-md:14px; --r-lg:18px; --r-xl:22px; --r-2xl:28px;
+  --sh-1:0 1px 2px rgba(17,24,39,.04),0 1px 3px rgba(17,24,39,.06);
+  --sh-2:0 4px 14px rgba(17,24,39,.06),0 2px 6px rgba(17,24,39,.04);
+  --sh-3:0 12px 32px rgba(17,24,39,.10),0 4px 12px rgba(17,24,39,.06);
+  --sh-4:0 24px 60px rgba(17,24,39,.16);
+  --sh-yellow:0 8px 24px rgba(250,204,21,.35);
+  --font:-apple-system,BlinkMacSystemFont,'Segoe UI','Inter',Roboto,sans-serif;
+  --container:1180px; --header-h:64px; --bottom-h:62px;
+}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{font-family:var(--font);font-size:16px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:calc(var(--bottom-h) + env(safe-area-inset-bottom))}
+img,svg{display:block;max-width:100%}
+button{font:inherit;color:inherit;cursor:pointer;background:none;border:0}
+a{color:var(--ink);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{margin:0 0 .5rem;line-height:1.22;letter-spacing:-.02em;font-weight:800;color:var(--ink)}
+h1{font-size:clamp(1.9rem,5.6vw,3rem)}
+h2{font-size:clamp(1.4rem,3.8vw,1.9rem)}
+h3{font-size:1.05rem}
+h4{font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-4);font-weight:700}
+p{margin:0 0 1rem}
+ul{margin:0 0 1rem;padding-left:1.2rem}
+li{margin:.35rem 0}
+code{font-family:ui-monospace,monospace;font-size:.85em;background:var(--line-2);padding:.15em .45em;border-radius:6px;color:var(--ink-3)}
+kbd{font-family:ui-monospace,monospace;font-size:.72rem;background:#fff;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;padding:2px 6px;color:var(--ink-3);font-weight:600}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:2px;border-radius:8px}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 18px}
+.muted{color:var(--ink-4);font-size:.92em}
+.mt-lg{margin-top:2rem}
+.ico{width:20px;height:20px;flex:none;stroke:currentColor;stroke-width:1.8;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.skip-link{position:absolute;left:-9999px;background:var(--ink);color:#fff;padding:12px 18px;border-radius:0 0 12px 0;font-weight:700;z-index:200}
+.skip-link:focus{left:0}
+
+/* ============ SCROLL BAR ============ */
+#scrollProgress{position:fixed;top:0;left:0;right:0;height:3px;z-index:210;pointer-events:none}
+#scrollProgress i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--yellow),var(--yellow-2));transition:width .1s linear}
+
+/* ============ HEADER ============ */
+.site-header{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.9);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px);border-bottom:1px solid var(--line)}
+.header-inner{height:var(--header-h);display:flex;align-items:center;gap:14px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);flex:none}
+.brand:hover{text-decoration:none}
+.brand-mark{width:38px;height:38px;border-radius:12px;background:linear-gradient(140deg,var(--yellow),var(--yellow-2));color:var(--ink);display:grid;place-items:center;font-weight:800;font-size:.82rem;box-shadow:var(--sh-yellow)}
+.brand-text{font-weight:800;font-size:1.05rem;letter-spacing:-.02em}
+.brand-text em{font-style:normal;color:var(--yellow-3);margin-left:2px}
+.main-nav{display:none;gap:2px;margin-left:18px}
+.main-nav a{color:var(--ink-2);font-weight:600;font-size:.93rem;padding:9px 13px;border-radius:11px;transition:background .16s,color .16s}
+.main-nav a:hover{background:var(--yellow-soft);color:var(--ink);text-decoration:none}
+.main-nav a.is-active{background:var(--yellow);color:var(--ink)}
+.header-actions{margin-left:auto;display:flex;gap:8px;align-items:center}
+.cmd-trigger{display:none;align-items:center;gap:8px;background:var(--line-2);border:1px solid var(--line);border-radius:11px;padding:8px 12px;color:var(--ink-4);font-size:.85rem;min-width:190px;transition:background .16s,border-color .16s}
+.cmd-trigger:hover{background:#fff;border-color:var(--ink-5)}
+.cmd-trigger .ico{width:16px;height:16px}
+.cmd-trigger kbd{margin-left:auto}
+.icon-btn{width:42px;height:42px;border-radius:12px;border:1px solid var(--line);background:#fff;display:grid;place-items:center;color:var(--ink-2);transition:background .16s,color .16s,transform .12s}
+.icon-btn:hover{background:var(--yellow-soft);color:var(--ink);border-color:var(--yellow)}
+.icon-btn:active{transform:scale(.95)}
+
+/* ============ RETURN BAR ============ */
+.return-bar{background:linear-gradient(90deg,var(--yellow-soft),#FFFBEB);border-bottom:1px solid var(--yellow);padding:10px 0}
+.return-bar[hidden]{display:none}
+.return-inner{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.return-copy{display:flex;align-items:center;gap:8px;font-size:.88rem;color:var(--ink);font-weight:700}
+.return-dot{width:8px;height:8px;border-radius:50%;background:var(--yellow-3);box-shadow:0 0 0 4px rgba(202,138,4,.2);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 4px rgba(202,138,4,.2)}50%{box-shadow:0 0 0 8px rgba(202,138,4,.05)}}
+.return-actions{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+.return-chip{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);color:var(--ink);padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:700;cursor:pointer}
+.return-chip:hover{background:var(--yellow-soft);border-color:var(--yellow);text-decoration:none}
+.return-chip .ico{width:14px;height:14px;color:var(--yellow-3)}
+.return-close{width:32px;height:32px}
+
+/* ============ DRAWER ============ */
+.drawer-backdrop{position:fixed;inset:0;background:rgba(17,24,39,.45);z-index:90;backdrop-filter:blur(3px)}
+.drawer-backdrop[hidden]{display:none}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(88vw,340px);background:#fff;z-index:100;transform:translateX(105%);transition:transform .28s cubic-bezier(.22,.61,.36,1);display:flex;flex-direction:column;box-shadow:-20px 0 50px rgba(17,24,39,.18)}
+.drawer.is-open{transform:translateX(0)}
+.drawer-head{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--line)}
+.drawer-nav{display:flex;flex-direction:column;padding:10px;gap:2px;flex:1}
+.drawer-nav a{display:flex;align-items:center;gap:12px;padding:13px 14px;border-radius:12px;color:var(--ink-2);font-weight:600}
+.drawer-nav a:hover{background:var(--yellow-soft);color:var(--ink);text-decoration:none}
+.drawer-nav a.is-active{background:var(--yellow);color:var(--ink)}
+.drawer-foot{display:flex;flex-direction:column;gap:4px;padding:14px 18px 22px;border-top:1px solid var(--line)}
+.drawer-minor{font-size:.86rem;color:var(--ink-4)}
+
+/* ============ VIEWS ============ */
+.view[hidden]{display:none}
+.section{padding:48px 0}
+.section--alt{background:var(--bg-warm);border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2)}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+.section-sub{color:var(--ink-3);margin:6px 0 0;max-width:62ch;font-size:.95rem}
+.page-head{padding:32px 0 6px;background:linear-gradient(180deg,var(--yellow-soft) 0%,var(--bg) 100%)}
+.breadcrumb{display:flex;gap:8px;align-items:center;font-size:.82rem;color:var(--ink-4);margin-bottom:10px}
+.breadcrumb a{color:var(--ink-4)}
+.link-arrow{display:inline-flex;align-items:center;gap:6px;font-weight:700;font-size:.9rem;color:var(--ink)}
+.link-arrow .ico{width:17px;height:17px;color:var(--yellow-3)}
+
+/* ============ HERO ============ */
+.hero{padding:36px 0 16px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;top:-60%;right:-30%;width:800px;height:800px;background:radial-gradient(circle,rgba(250,204,21,.30),transparent 62%);pointer-events:none;z-index:-1}
+.hero-grid{display:grid;gap:32px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--yellow);color:var(--ink);padding:7px 14px;border-radius:999px;font-size:.8rem;font-weight:800;letter-spacing:.02em;margin-bottom:18px;box-shadow:0 2px 6px rgba(250,204,21,.25)}
+.eyebrow .ico{width:15px;height:15px;color:var(--yellow-3)}
+.hero-copy h1{margin-bottom:18px;letter-spacing:-.035em;font-weight:900}
+.hero-copy h1 mark{background:linear-gradient(180deg,transparent 60%,var(--yellow) 60%);padding:0 .08em;color:var(--ink)}
+.lede{color:var(--ink-2);font-size:1.08rem;max-width:56ch;line-height:1.55}
+.hero-cta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 16px}
+.micro{font-size:.85rem;color:var(--ink-4)}
+
+/* ============ BUTTONS ============ */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid transparent;border-radius:14px;padding:12px 22px;font-weight:700;font-size:.95rem;cursor:pointer;white-space:nowrap;min-height:48px;transition:transform .12s,background .16s,box-shadow .16s,border-color .16s;text-decoration:none}
+.btn:hover{text-decoration:none}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn-primary{background:var(--yellow);color:var(--ink);box-shadow:var(--sh-yellow);border-color:var(--yellow)}
+.btn-primary:hover{background:var(--yellow-2);box-shadow:0 12px 32px rgba(250,204,21,.45)}
+.btn-dark{background:var(--ink);color:#fff}
+.btn-dark:hover{background:var(--ink-2)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{background:var(--yellow-soft);border-color:var(--yellow)}
+.btn-text{background:transparent;color:var(--ink-3);padding:10px 12px}
+.btn-text:hover{color:var(--ink)}
+.btn-lg{padding:15px 26px;font-size:1rem;min-height:54px;border-radius:16px}
+.btn-sm{padding:9px 16px;font-size:.86rem;min-height:40px}
+.btn-block{width:100%}
+
+/* ============ MINI TOOL (hero) ============ */
+.mini-tool{background:#fff;border:1px solid var(--line);border-radius:var(--r-2xl);padding:22px;box-shadow:var(--sh-4);display:flex;flex-direction:column;gap:16px;position:relative;overflow:hidden}
+.mini-tool::before{content:"";position:absolute;top:-40px;right:-40px;width:160px;height:160px;background:radial-gradient(circle,rgba(250,204,21,.35),transparent 70%);pointer-events:none}
+.mini-tool-head{display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+.mini-tool-tag{display:inline-flex;align-items:center;gap:6px;background:var(--ink);color:var(--yellow);padding:5px 11px;border-radius:999px;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;align-self:flex-start}
+.mini-tool-tag .ico{width:13px;height:13px}
+.mini-tool-head h3{margin:0;font-size:1.15rem;font-weight:800}
+.mini-tool-body{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.mini-field{display:flex;flex-direction:column;gap:6px}
+.mini-field span{font-size:.82rem;font-weight:700;color:var(--ink-3)}
+.mini-field input{border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:1rem;background:#fff;transition:border-color .16s,box-shadow .16s;outline:none;width:100%;color:var(--ink)}
+.mini-field input:focus{border-color:var(--yellow-2);box-shadow:0 0 0 4px var(--yellow-soft)}
+.mini-result{background:linear-gradient(140deg,var(--ink),var(--ink-2));border-radius:16px;padding:18px 20px;color:#fff;display:flex;flex-direction:column;gap:2px}
+.mini-result-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;color:var(--yellow);font-weight:800}
+.mini-result strong{font-size:2.2rem;font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.1;color:#fff}
+.mini-result-sub{font-size:.82rem;color:#9CA3AF;margin-top:4px}
+
+/* ============ TRUST STRIP ============ */
+.trust{padding:32px 0 8px}
+.trust-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.trust-item{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--sh-1)}
+.trust-item .ico{width:22px;height:22px;color:var(--yellow-3);margin-bottom:10px}
+.trust-item h3{font-size:1rem;margin-bottom:6px;font-weight:700}
+.trust-item p{margin:0;font-size:.9rem;color:var(--ink-3)}
+
+/* ============ SEARCH ============ */
+.search-card{background:#fff;border:1px solid var(--line);border-radius:var(--r-2xl);padding:28px 22px;box-shadow:var(--sh-2);text-align:center;position:relative;overflow:hidden}
+.search-card::after{content:"";position:absolute;bottom:-60px;left:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(250,204,21,.20),transparent 70%);pointer-events:none}
+.search-title{font-size:1.35rem;margin-bottom:16px;font-weight:800;position:relative}
+.search-field{display:flex;align-items:center;gap:10px;background:var(--line-2);border:1.5px solid var(--line);border-radius:16px;padding:8px 8px 8px 16px;transition:border-color .16s,box-shadow .16s;position:relative;z-index:1}
+.search-field:focus-within{border-color:var(--yellow-2);box-shadow:0 0 0 4px var(--yellow-soft);background:#fff}
+.search-field .ico{color:var(--ink-4);width:19px;height:19px}
+.search-field input{flex:1;border:0;background:transparent;outline:none;font-size:1rem;padding:10px 0;min-width:0;color:var(--ink)}
+.search-field--hero{max-width:720px;margin:0 auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px;position:relative;z-index:1}
+.chip{background:#fff;border:1px solid var(--line);padding:8px 14px;border-radius:999px;font-size:.85rem;font-weight:600;color:var(--ink-2);transition:all .16s}
+.chip:hover{background:var(--yellow);color:var(--ink);border-color:var(--yellow)}
+.search-results{margin-top:16px;text-align:left;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;position:relative;z-index:1}
+.search-results[hidden]{display:none}
+.sr-item{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--line-2);color:var(--ink);cursor:pointer;transition:background .16s}
+.sr-item:last-child{border-bottom:0}
+.sr-item:hover{background:var(--yellow-soft);text-decoration:none}
+.sr-item .ico{width:18px;height:18px;color:var(--yellow-3);flex:none}
+.sr-item b{font-weight:700;display:block;font-size:.94rem}
+.sr-item small{color:var(--ink-4);font-size:.8rem}
+.sr-empty{padding:18px;text-align:center;color:var(--ink-4);font-size:.9rem}
+
+/* ============ TOOLBAR ============ */
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.toolbar-filters{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.toolbar-filters::-webkit-scrollbar{display:none}
+.filter-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:#fff;padding:9px 14px;border-radius:999px;font-size:.85rem;font-weight:700;color:var(--ink-2);white-space:nowrap;transition:all .16s}
+.filter-chip .ico{width:15px;height:15px}
+.filter-chip:hover{background:var(--yellow-soft);border-color:var(--yellow)}
+.filter-chip.is-active{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
+
+/* ============ TOOL CARDS ============ */
+.tool-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.tool-card{position:relative;background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:20px;display:flex;flex-direction:column;gap:10px;text-align:left;cursor:pointer;transition:transform .14s,box-shadow .18s,border-color .18s;box-shadow:var(--sh-1);width:100%}
+.tool-card:hover{transform:translateY(-3px);box-shadow:var(--sh-3);border-color:var(--yellow)}
+.tool-card .tc-icon{width:44px;height:44px;border-radius:13px;background:var(--yellow-soft);color:var(--yellow-3);display:grid;place-items:center;border:1px solid var(--yellow)}
+.tool-card .tc-icon .ico{width:22px;height:22px}
+.tool-card h3{margin:0;font-size:1rem;padding-right:44px;color:var(--ink);font-weight:800}
+.tool-card p{margin:0;font-size:.88rem;color:var(--ink-3);line-height:1.5}
+.tool-card .tc-open{margin-top:auto;font-size:.85rem;font-weight:800;color:var(--yellow-3);display:inline-flex;align-items:center;gap:6px}
+.tool-card .tc-open .ico{width:16px;height:16px}
+.tool-card__save{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--ink-4);transition:all .16s}
+.tool-card__save:hover{color:var(--yellow-3);background:var(--yellow-soft);border-color:var(--yellow)}
+.tool-card__save.is-saved{color:var(--yellow-3);background:var(--yellow-soft);border-color:var(--yellow)}
+.tool-card__save .ico{width:18px;height:18px}
+.tool-card__badge{position:absolute;top:16px;left:16px;font-size:.65rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--yellow);color:var(--ink);padding:3px 8px;border-radius:6px;z-index:1}
+
+/* ============ BUNDLES ============ */
+.bundle-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.bundle-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:22px;box-shadow:var(--sh-1);display:flex;flex-direction:column;gap:14px;transition:transform .14s,box-shadow .18s,border-color .18s}
+.bundle-card:hover{transform:translateY(-3px);box-shadow:var(--sh-3);border-color:var(--yellow)}
+.bundle-head{display:flex;align-items:center;gap:12px}
+.bundle-icon{width:46px;height:46px;border-radius:13px;background:linear-gradient(140deg,var(--yellow),var(--yellow-2));color:var(--ink);display:grid;place-items:center;box-shadow:var(--sh-yellow)}
+.bundle-head h3{margin:0;font-size:1.05rem;font-weight:800}
+.bundle-head p{margin:2px 0 0;font-size:.82rem;color:var(--ink-4)}
+.bundle-steps{display:flex;flex-direction:column;gap:6px}
+.bundle-step{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:10px;background:var(--line-2);border:1px solid transparent;font-size:.87rem;color:var(--ink-2);text-align:left;width:100%;transition:all .16s;font-weight:600}
+.bundle-step:hover{background:var(--yellow-soft);border-color:var(--yellow)}
+.bundle-step .num{width:22px;height:22px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:.72rem;font-weight:800;color:var(--ink-4);flex:none}
+.bundle-step.is-done .num{background:var(--green);color:#fff;border-color:var(--green)}
+.bundle-step.is-done{color:var(--ink-3)}
+.bundle-progress{font-size:.78rem;color:var(--ink-4);display:flex;align-items:center;gap:8px;font-weight:700}
+.bundle-progress-bar{flex:1;height:5px;border-radius:999px;background:var(--line-2);overflow:hidden}
+.bundle-progress-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--yellow),var(--yellow-2));width:0;transition:width .3s}
+
+/* ============ RESOURCE CARDS ============ */
+.resource-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.resource-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:20px;box-shadow:var(--sh-1);display:flex;flex-direction:column;gap:12px;transition:transform .14s,box-shadow .18s,border-color .18s}
+.resource-card:hover{transform:translateY(-3px);box-shadow:var(--sh-3);border-color:var(--yellow)}
+.resource-cat{align-self:flex-start;font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow-3);background:var(--yellow-soft);padding:5px 10px;border-radius:999px;font-weight:800;border:1px solid var(--yellow)}
+.resource-card h3{margin:0;font-size:1.05rem;font-weight:800}
+.resource-card p{margin:0;font-size:.9rem;color:var(--ink-3);line-height:1.5}
+.resource-card .rc-icon{width:40px;height:40px;border-radius:12px;background:var(--line-2);color:var(--ink-2);display:grid;place-items:center}
+.resource-card .rc-icon .ico{width:20px;height:20px}
+.resource-card .btn{align-self:flex-start;margin-top:auto}
+.resource-url{font-size:.76rem;color:var(--ink-4);font-family:ui-monospace,monospace;word-break:break-all}
+
+/* ============ ARTICLE CARDS ============ */
+.article-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.article-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:22px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--sh-1);transition:transform .14s,box-shadow .18s,border-color .18s}
+.article-card:hover{transform:translateY(-3px);box-shadow:var(--sh-3);border-color:var(--yellow)}
+.article-cat{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:var(--yellow-3);font-weight:800}
+.article-card h3{margin:0;font-size:1.05rem;line-height:1.35;font-weight:800}
+.article-card p{margin:0;font-size:.89rem;color:var(--ink-3)}
+.article-meta{font-size:.78rem;color:var(--ink-4);margin-top:auto;display:flex;align-items:center;gap:6px;font-weight:600}
+.article-meta .ico{width:13px;height:13px}
+
+/* ============ NEWSLETTER ============ */
+.updates-card{background:linear-gradient(140deg,var(--ink),var(--ink-2));border-radius:var(--r-2xl);padding:32px 24px;color:#fff;display:grid;gap:24px;box-shadow:var(--sh-4);position:relative;overflow:hidden}
+.updates-card::before{content:"";position:absolute;top:-40%;right:-20%;width:500px;height:500px;background:radial-gradient(circle,rgba(250,204,21,.30),transparent 62%);pointer-events:none}
+.updates-copy{position:relative;z-index:1}
+.updates-copy h2{color:#fff;margin-bottom:10px}
+.updates-copy p{color:#D1D5DB;font-size:.95rem;max-width:56ch}
+.updates-list{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-direction:column;gap:8px}
+.updates-list li{display:flex;align-items:center;gap:9px;font-size:.88rem;color:#E5E7EB;margin:0;font-weight:600}
+.updates-list .ico{width:16px;height:16px;color:var(--yellow);flex:none}
+.updates-form{display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.updates-form label{font-size:.83rem;font-weight:700;color:var(--yellow);display:block;margin-bottom:6px}
+.updates-form input{background:rgba(255,255,255,.08);border:1.5px solid rgba(255,255,255,.15);color:#fff;border-radius:12px;padding:14px 16px;font:inherit;outline:none;transition:border-color .16s,box-shadow .16s;width:100%;font-size:1rem}
+.updates-form input::placeholder{color:#9CA3AF}
+.updates-form input:focus{border-color:var(--yellow);box-shadow:0 0 0 4px rgba(250,204,21,.2)}
+.updates-note{font-size:.78rem;color:#9CA3AF;margin:0;text-align:center}
+
+/* ============ COMPARE ============ */
+.compare-builder{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-xl);padding:22px;box-shadow:var(--sh-1);margin-bottom:20px}
+.compare-builder-title{margin:0 0 4px;font-size:1.2rem;font-weight:800}
+.compare-picker{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.compare-pick{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);color:var(--ink-2);padding:9px 14px;border-radius:999px;font-size:.85rem;font-weight:700;transition:all .16s}
+.compare-pick .ico{width:14px;height:14px}
+.compare-pick:hover{background:var(--yellow-soft);border-color:var(--yellow)}
+.compare-pick.is-active{background:var(--ink);color:var(--yellow);border-color:var(--ink)}
+
+/* ============ TABLE ============ */
+.table-wrap{margin-top:14px;overflow-x:auto;background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-1)}
+.compare-table{width:100%;border-collapse:collapse;font-size:.92rem;min-width:520px}
+.compare-table th,.compare-table td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--line-2)}
+.compare-table thead th{background:var(--yellow-soft);font-weight:800;font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ink)}
+.compare-table tbody tr:last-child td{border-bottom:0}
+.compare-table td:first-child{font-weight:700;color:var(--ink)}
+.empty-cell{text-align:center;color:var(--ink-4);padding:28px 16px;font-style:italic}
+
+/* ============ EMPTY ============ */
+.empty-state{background:#fff;border:1.5px dashed var(--line);border-radius:var(--r-xl);padding:36px 22px;text-align:center;color:var(--ink-4);box-shadow:var(--sh-1)}
+.empty-state .ico{width:34px;height:34px;margin:0 auto 12px;color:var(--ink-5)}
+.empty-state h3{color:var(--ink);margin-bottom:6px;font-weight:800}
+.empty-state p{margin:0;font-size:.92rem;max-width:46ch;margin-inline:auto}
+
+/* ============ DISCLOSURE / NOTICE ============ */
+.disclosure-line{margin-top:20px;padding:14px 16px;background:var(--yellow-soft);border:1px solid var(--yellow);border-radius:var(--r-md);color:var(--ink-2);font-size:.86rem;line-height:1.55}
+.disclosure-box{padding:16px 18px;background:var(--yellow-soft);border-left:4px solid var(--yellow-2);border-radius:var(--r-md);color:var(--ink-2);font-size:.94rem}
+.notice{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border-radius:var(--r-md);background:var(--yellow-soft);color:var(--ink-2);font-size:.9rem;margin:14px 0;border:1px solid var(--yellow)}
+.notice .ico{width:20px;height:20px;flex:none;color:var(--yellow-3);margin-top:2px}
+.notice--warn{background:var(--amber-soft);border-color:#FDE68A;color:#78350F}
+.notice--warn .ico{color:var(--amber)}
+.prose{max-width:72ch}
+.prose h2{margin-top:2rem}
+.prose h2:first-child{margin-top:0}
+.prose p,.prose li{color:var(--ink-2)}
+
+/* ============ CHANNELS ============ */
+.channel-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.channel-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:18px;box-shadow:var(--sh-1)}
+.channel-card h3{font-size:.98rem;margin-bottom:6px;font-weight:800}
+.channel-card p{margin:0;font-size:.88rem;color:var(--ink-3)}
+
+/* ============ KPI ============ */
+.kpi-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.kpi-card{background:#fff;border:1.5px solid var(--line);border-radius:var(--r-lg);padding:18px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--sh-1)}
+.kpi-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-4);font-weight:800}
+.kpi-value{font-size:1.7rem;font-weight:800;font-variant-numeric:tabular-nums;color:var(--ink)}
+.kpi-foot{font-size:.78rem;color:var(--ink-4)}
+.danger-zone{margin-top:32px;padding:20px;background:var(--red-soft);border:1px solid #FECACA;border-radius:var(--r-lg)}
+.danger-zone h3{color:#7F1D1D;margin-bottom:6px}
+.danger-zone p{color:#991B1B;font-size:.9rem;margin-bottom:12px}
+
+/* ============ FOOTER ============ */
+.site-footer{margin-top:48px;background:var(--ink);color:#D1D5DB;padding:48px 0 24px}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:28px}
+.footer-brand .brand-text{color:#fff}
+.footer-brand .brand-text em{color:var(--yellow)}
+.footer-tag{color:var(--yellow);margin:12px 0 8px;font-size:.92rem;font-weight:800}
+.footer-note{font-size:.83rem;color:#9CA3AF;max-width:46ch}
+.footer-col{display:flex;flex-direction:column;gap:9px}
+.footer-col h4{color:var(--yellow);margin-bottom:4px;font-weight:800}
+.footer-col a,.footer-col .link-btn{color:#D1D5DB;font-size:.9rem;background:none;border:0;padding:0;text-align:left;cursor:pointer;font:inherit}
+.footer-col a:hover,.footer-col .link-btn:hover{color:var(--yellow);text-decoration:underline}
+.footer-bottom{margin-top:34px;padding-top:20px;border-top:1px solid rgba(255,255,255,.09);display:flex;flex-direction:column;gap:10px;font-size:.82rem;color:#9CA3AF}
+.footer-bottom p{margin:0}
+.footer-disclosure{max-width:64ch;line-height:1.55}
+
+/* ============ BOTTOM NAV ============ */
+.bottom-nav{position:fixed;left:0;right:0;bottom:0;z-index:55;height:calc(var(--bottom-h) + env(safe-area-inset-bottom));padding-bottom:env(safe-area-inset-bottom);background:rgba(255,255,255,.96);backdrop-filter:saturate(180%) blur(16px);-webkit-backdrop-filter:saturate(180%) blur(16px);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr)}
+.bottom-nav a,.bottom-nav button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:.68rem;font-weight:700;color:var(--ink-4);text-decoration:none}
+.bottom-nav .ico{width:21px;height:21px}
+.bottom-nav a.is-active{color:var(--yellow-3)}
+.bottom-nav a.is-active .ico{stroke:var(--yellow-3)}
+
+/* ============ COMMAND PALETTE ============ */
+.cmd-backdrop{position:fixed;inset:0;z-index:150;background:rgba(17,24,39,.55);backdrop-filter:blur(5px);display:flex;align-items:flex-start;justify-content:center;padding:14vh 16px 16px}
+.cmd-backdrop[hidden]{display:none}
+.cmd-panel{width:100%;max-width:620px;background:#fff;border-radius:var(--r-xl);box-shadow:var(--sh-4);overflow:hidden;display:flex;flex-direction:column;max-height:74vh;animation:cmdIn .18s ease}
+@keyframes cmdIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.cmd-head{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.cmd-head .ico{color:var(--ink-4);width:19px;height:19px}
+.cmd-head input{flex:1;border:0;background:transparent;font:inherit;font-size:1rem;padding:6px 0;outline:none;min-width:0}
+.cmd-body{flex:1;overflow:auto;padding:8px}
+.cmd-hint{padding:22px 16px;text-align:center;color:var(--ink-4);font-size:.9rem}
+.cmd-item{display:flex;align-items:center;gap:12px;padding:11px 12px;border-radius:10px;color:var(--ink);cursor:pointer;width:100%;text-align:left;transition:background .1s}
+.cmd-item:hover,.cmd-item.is-active{background:var(--yellow-soft)}
+.cmd-item .ico{width:18px;height:18px;color:var(--yellow-3);flex:none}
+.cmd-item b{font-weight:700;font-size:.94rem;display:block}
+.cmd-item small{color:var(--ink-4);font-size:.8rem}
+.cmd-item .type{margin-left:auto;font-size:.7rem;font-weight:800;letter-spacing:.06em;color:var(--ink-4);text-transform:uppercase}
+.cmd-foot{display:flex;gap:16px;padding:10px 16px;border-top:1px solid var(--line);font-size:.76rem;color:var(--ink-4);background:var(--line-2)}
+.cmd-foot span{display:inline-flex;align-items:center;gap:5px}
+
+/* ============ COOKIE ============ */
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:120;padding:16px;padding-bottom:calc(16px + var(--bottom-h) + env(safe-area-inset-bottom));pointer-events:none}
+.cookie-banner[hidden]{display:none}
+.cookie-inner{pointer-events:auto;max-width:var(--container);margin:0 auto;background:#fff;border:1.5px solid var(--yellow);border-radius:var(--r-xl);box-shadow:var(--sh-4);padding:20px;display:flex;flex-direction:column;gap:16px}
+.cookie-copy h2{font-size:1.05rem;margin-bottom:8px;font-weight:800}
+.cookie-copy p{font-size:.88rem;color:var(--ink-2);margin:0}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:8px}
+.cookie-actions .btn{flex:1 1 auto;min-width:100px}
+.cookie-settings{display:flex;flex-direction:column;gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.cookie-settings[hidden]{display:none}
+.switch-row{display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:.88rem;position:relative}
+.switch-row input{position:absolute;opacity:0;width:0;height:0}
+.switch-ui{flex:none;width:42px;height:24px;border-radius:999px;background:var(--line);position:relative;transition:background .18s;margin-top:1px}
+.switch-ui::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;background:#fff;border-radius:50%;transition:transform .18s;box-shadow:var(--sh-1)}
+.switch-row input:checked + .switch-ui{background:var(--yellow-2)}
+.switch-row input:checked + .switch-ui::after{transform:translateX(18px)}
+.switch-row input:disabled + .switch-ui{background:var(--ink-4);opacity:.7}
+.switch-text strong{display:block;font-weight:700}
+.switch-text em{font-style:normal;color:var(--ink-4);font-size:.82rem}
+
+/* ============ MODAL ============ */
+.modal-backdrop{position:fixed;inset:0;z-index:130;background:rgba(17,24,39,.55);backdrop-filter:blur(4px);display:grid;place-items:end center}
+.modal-backdrop[hidden]{display:none}
+.modal{background:#fff;width:100%;max-height:92vh;overflow:auto;border-radius:var(--r-2xl) var(--r-2xl) 0 0;box-shadow:var(--sh-4);display:flex;flex-direction:column}
+.modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff;z-index:1;border-radius:var(--r-2xl) var(--r-2xl) 0 0}
+.modal-head h2{margin:0;font-size:1.1rem;font-weight:800}
+.modal-body{padding:20px}
+
+/* ============ FORM FIELDS ============ */
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}
+.field label{font-size:.83rem;font-weight:700;color:var(--ink-3)}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;font:inherit;font-size:1rem;background:#fff;outline:none;transition:border-color .16s,box-shadow .16s;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--yellow-2);box-shadow:0 0 0 4px var(--yellow-soft)}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.result{margin-top:14px;padding:16px;border-radius:var(--r-md);background:var(--yellow-soft);border:1px solid var(--yellow);color:var(--ink-2);font-size:1rem}
+.result strong{font-size:1.4rem;font-weight:800;display:block;margin-top:4px;font-variant-numeric:tabular-nums;color:var(--ink)}
+.result.warn{background:var(--amber-soft);border-color:#FDE68A;color:#78350F}
+.result.err{background:var(--red-soft);border-color:#FECACA;color:#7F1D1D}
+.result.ok{background:var(--green-soft);border-color:#A7F3D0;color:#064E3B}
+.meter{height:8px;border-radius:999px;background:var(--line);overflow:hidden;margin-top:10px}
+.meter > i{display:block;height:100%;width:0;background:var(--red);transition:width .25s,background .25s}
+
+/* ============ TOAST ============ */
+.toast{position:fixed;left:50%;bottom:calc(var(--bottom-h) + 24px);transform:translateX(-50%) translateY(20px);background:var(--ink);color:#fff;padding:13px 20px;border-radius:12px;font-size:.88rem;box-shadow:var(--sh-4);z-index:140;opacity:0;pointer-events:none;transition:opacity .22s,transform .22s;max-width:calc(100vw - 32px);font-weight:600;border-left:3px solid var(--yellow)}
+.toast.is-visible{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ============ RESPONSIVE ============ */
+@media(min-width:640px){
+  .trust-grid,.tool-grid,.resource-grid,.article-grid,.channel-grid,.bundle-grid{grid-template-columns:repeat(2,1fr)}
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}
+  .footer-grid{grid-template-columns:1.5fr 1fr 1fr 1fr}
+  .footer-bottom{flex-direction:row;justify-content:space-between;gap:24px}
+  .modal-backdrop{place-items:center;padding:24px}
+  .modal{max-width:640px;border-radius:var(--r-2xl);max-height:88vh}
+  .modal-head{border-radius:var(--r-2xl) var(--r-2xl) 0 0}
+  .updates-card{grid-template-columns:1.2fr 1fr;align-items:center;padding:40px 36px}
+  .cookie-inner{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:24px;padding:22px 24px}
+  .cookie-copy{flex:1}
+  .cookie-actions{flex-direction:row;flex-wrap:nowrap}
+}
+@media(min-width:900px){
+  body{padding-bottom:0}
+  .main-nav{display:flex}
+  .menu-btn{display:none}
+  .bottom-nav{display:none}
+  .cmd-trigger{display:inline-flex}
+  .cookie-banner{padding-bottom:16px}
+  .hero{padding:60px 0 28px}
+  .hero-grid{grid-template-columns:1.05fr .95fr;align-items:center;gap:48px}
+  .trust-grid{grid-template-columns:repeat(4,1fr);gap:16px}
+  .tool-grid{grid-template-columns:repeat(3,1fr);gap:14px}
+  .resource-grid,.article-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .bundle-grid{grid-template-columns:repeat(3,1fr);gap:16px}
+  .channel-grid{grid-template-columns:repeat(4,1fr)}
+  .kpi-grid{grid-template-columns:repeat(6,1fr)}
+  .section{padding:64px 0}
+  .search-card{padding:40px 36px}
+  .toast{bottom:28px}
+}
+@media(min-width:1200px){.tool-grid{grid-template-columns:repeat(4,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+</style>
+</head>
+<body>
+
+<svg style="display:none" aria-hidden="true">
+  <symbol id="i-percent" viewBox="0 0 24 24"><path d="M19 5 5 19"/><circle cx="7.5" cy="7.5" r="2.6"/><circle cx="16.5" cy="16.5" r="2.6"/></symbol>
+  <symbol id="i-tag" viewBox="0 0 24 24"><path d="M3 12V5.5A2.5 2.5 0 0 1 5.5 3H12l9 9-8.5 8.5L3 12Z"/><circle cx="7.6" cy="7.6" r="1.5"/></symbol>
+  <symbol id="i-tip" viewBox="0 0 24 24"><path d="M12 3.5v17"/><path d="M16.4 7.6c0-1.9-2-2.9-4.4-2.9s-4.4 1-4.4 2.9 2 2.9 4.4 2.9 4.4 1 4.4 2.9-2 2.9-4.4 2.9-4.4-1-4.4-2.9"/></symbol>
+  <symbol id="i-loan" viewBox="0 0 24 24"><rect x="2.8" y="5.8" width="18.4" height="12.8" rx="2.6"/><path d="M2.8 10h18.4"/><path d="M6.8 14.6h4"/></symbol>
+  <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+  <symbol id="i-age" viewBox="0 0 24 24"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3"/><path d="M8 3v4M16 3v4M3.4 10h17.2"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3.4" y="5" width="17.2" height="15.6" rx="3"/><path d="M8 3v4M16 3v4M3.4 10h17.2"/><path d="m8.5 15 2 2 3.5-4"/></symbol>
+  <symbol id="i-currency" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 6.4v11.2"/><path d="M15 9.4A3.3 3.3 0 0 0 9 11.2c0 2.9 6 2 6 4.7a3.3 3.3 0 0 1-6 1.7"/></symbol>
+  <symbol id="i-ruler" viewBox="0 0 24 24"><rect x="2.4" y="8" width="19.2" height="8" rx="2.4"/><path d="M7 8v3M12 8v4M17 8v3"/></symbol>
+  <symbol id="i-bmi" viewBox="0 0 24 24"><path d="M12 20.5S4.6 16 4.6 10.8A4.4 4.4 0 0 1 12 7.4a4.4 4.4 0 0 1 7.4 3.4c0 5.2-7.4 9.7-7.4 9.7Z"/><path d="M8.6 12.4h2.2l1.2-2 1.2 4 1.2-2h1.4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.4" y="10.4" width="15.2" height="10.2" rx="2.6"/><path d="M8 10.4V7.8a4 4 0 0 1 8 0v2.6"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="4.6" width="18" height="14.8" rx="3"/><circle cx="8.6" cy="10" r="1.6"/><path d="m4 17.2 5-5 4 4 3-3 4 4"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path d="M4 6h16M4 12h10M4 18h13"/></symbol>
+  <symbol id="i-dice" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="8.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="8.5" r="1.3" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="15.5" cy="15.5" r="1.3" fill="currentColor"/><circle cx="12" cy="12" r="1.3" fill="currentColor"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M5 3v18l3-2 3 2 3-2 3 2 3-2V3Z"/><path d="M8 8h8M8 12h8M8 16h5"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20.2 20.2-3.6-3.6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6 18 18M18 6 6 18"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 13 4.5 4.5L19 7"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 11v5.4M12 7.8v.2"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 4v16M7 20h10"/><path d="M6 7h12"/><path d="M6 7 3.2 14h5.6L6 7Zm12 0-2.8 7h5.6L18 7Z"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v14.6H6.5A2.5 2.5 0 0 0 4 20.1Z"/><path d="M4 5.5v14.6"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m4 10.6 8-6.6 8 6.6V19a1.6 1.6 0 0 1-1.6 1.6h-3.6v-6H9.2v6H5.6A1.6 1.6 0 0 1 4 19Z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3.4" y="3.4" width="7.2" height="7.2" rx="2.2"/><rect x="13.4" y="3.4" width="7.2" height="7.2" rx="2.2"/><rect x="3.4" y="13.4" width="7.2" height="7.2" rx="2.2"/><rect x="13.4" y="13.4" width="7.2" height="7.2" rx="2.2"/></symbol>
+  <symbol id="i-more" viewBox="0 0 24 24"><circle cx="5" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="19" cy="12" r="1.7"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.4 2.5 4.8 13.4h6l-1.2 8.1 8.6-10.9h-6l1.2-8.1Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8.4" r="3.4"/><path d="M2.8 20a6.2 6.2 0 0 1 12.4 0"/><path d="M16 5.4a3.4 3.4 0 0 1 0 6.6M17.4 20a6.2 6.2 0 0 0-1.6-4.2"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5S4 15.6 4 9.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8 2.9c0 6-8 10.9-8 10.9Z"/></symbol>
+  <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M12 20.5S4 15.6 4 9.6A4.6 4.6 0 0 1 12 6.7a4.6 4.6 0 0 1 8 2.9c0 6-8 10.9-8 10.9Z" fill="currentColor"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M12 7v5l3.2 2"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.8" y="5" width="18.4" height="14" rx="2.6"/><path d="m4 7 8 6 8-6"/></symbol>
+  <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 3v5M12 16v5M3 12h5M16 12h5M5.6 5.6 8 8M16 16l2.4 2.4M18.4 5.6 16 8M8 16l-2.4 2.4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3.2 19 6v6c0 4.6-3 7.7-7 9.2-4-1.5-7-4.6-7-9.2V6l7-2.8Z"/><path d="m9.2 12 2 2 3.6-3.8"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/><path d="M9 13h6M9 17h4"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.8"/><path d="M3.2 12h17.6M12 3.2c2.4 2.6 3.6 5.6 3.6 8.8S14.4 18.2 12 20.8C9.6 18.2 8.4 15.2 8.4 12S9.6 5.8 12 3.2Z"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="scrollProgress" aria-hidden="true"><i></i></div>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#/">
+      <span class="brand-mark">DP</span>
+      <span class="brand-text">DealPilot<em>USA</em></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/tools" data-nav="tools">Tools</a>
+      <a href="#/resources" data-nav="resources">Resources</a>
+      <a href="#/compare" data-nav="compare">Compare</a>
+      <a href="#/guides" data-nav="guides">Guides</a>
+      <a href="#/about" data-nav="about">About</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cmd-trigger" id="cmdTrigger">
+        <svg class="ico"><use href="#i-search"/></svg>
+        <span>Search…</span>
+        <kbd>⌘K</kbd>
+      </button>
+      <button class="icon-btn menu-btn" id="menuToggle" aria-label="Menu">
+        <svg class="ico"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- RETURN BAR -->
+<div class="return-bar" id="returnBar" hidden>
+  <div class="container return-inner">
+    <div class="return-copy"><span class="return-dot"></span><span id="returnText">Welcome back</span></div>
+    <div class="return-actions" id="returnActions"></div>
+    <button class="icon-btn return-close" id="returnDismiss" aria-label="Dismiss">
+      <svg class="ico"><use href="#i-close"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- DRAWER -->
+<div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <span class="brand-text">DealPilot<em>USA</em></span>
+    <button class="icon-btn" id="drawerClose" aria-label="Close"><svg class="ico"><use href="#i-close"/></svg></button>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#/" data-nav="home"><svg class="ico"><use href="#i-home"/></svg>Home</a>
+    <a href="#/tools" data-nav="tools"><svg class="ico"><use href="#i-grid"/></svg>Tools</a>
+    <a href="#/resources" data-nav="resources"><svg class="ico"><use href="#i-globe"/></svg>Resources</a>
+    <a href="#/compare" data-nav="compare"><svg class="ico"><use href="#i-scale"/></svg>Compare</a>
+    <a href="#/guides" data-nav="guides"><svg class="ico"><use href="#i-book"/></svg>Guides</a>
+    <a href="#/saved" data-nav="saved"><svg class="ico"><use href="#i-heart"/></svg>Saved</a>
+    <a href="#/about" data-nav="about"><svg class="ico"><use href="#i-info"/></svg>About</a>
+  </nav>
+  <div class="drawer-foot">
+    <a href="#/privacy" class="drawer-minor">Privacy Policy</a>
+    <a href="#/terms" class="drawer-minor">Terms</a>
+    <a href="#/affiliate-disclosure" class="drawer-minor">Affiliate Disclosure</a>
+  </div>
+</aside>
+
+<main id="main">
+
+<!-- HOME -->
+<div class="view" data-view="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow"><svg class="ico"><use href="#i-sparkle"/></svg><span id="heroGreeting">Built for everyday people in the US</span></span>
+        <h1>Everyday tools<br>that <mark>actually work.</mark></h1>
+        <p class="lede">15 free calculators, converters, and helpers — no sign-up, no downloads, and nothing ever leaves your browser. Pick a tool, get your answer, move on with your day.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary btn-lg" href="#/tools"><svg class="ico"><use href="#i-bolt"/></svg>Open the tools</a>
+          <a class="btn btn-ghost btn-lg" href="#/guides">Read a guide</a>
+        </div>
+        <p class="micro">Works offline once loaded. Runs on your device, not on a server.</p>
+      </div>
+      <div class="hero-visual">
+        <div class="mini-tool">
+          <div class="mini-tool-head">
+            <span class="mini-tool-tag"><svg class="ico"><use href="#i-sparkle"/></svg>Live · try it now</span>
+            <h3>Discount calculator</h3>
+          </div>
+          <div class="mini-tool-body">
+            <label class="mini-field"><span>Original price ($)</span><input type="number" id="mtPrice" inputmode="decimal" placeholder="79.99" step="0.01"></label>
+            <label class="mini-field"><span>Discount (%)</span><input type="number" id="mtOff" inputmode="decimal" placeholder="25" step="1"></label>
+            <div class="mini-result">
+              <span class="mini-result-label">Final price</span>
+              <strong id="mtOutput">$—</strong>
+              <span class="mini-result-sub" id="mtSave">Type a price to see your savings</span>
+            </div>
+          </div>
+          <button class="btn btn-primary btn-block" id="mtOpen" type="button">Open full calculator <svg class="ico"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="container trust-grid">
+      <div class="trust-item"><svg class="ico"><use href="#i-shield"/></svg><h3>Nothing leaves your device</h3><p>Every calculator runs in your browser. No uploads, no accounts, no tracking of your inputs.</p></div>
+      <div class="trust-item"><svg class="ico"><use href="#i-bolt"/></svg><h3>Instant, always</h3><p>No loading spinners, no sign-up walls. The answer appears as you type.</p></div>
+      <div class="trust-item"><svg class="ico"><use href="#i-info"/></svg><h3>Honest about limits</h3><p>When we don't have a live data source, we say so — we never invent numbers.</p></div>
+      <div class="trust-item"><svg class="ico"><use href="#i-users"/></svg><h3>Built for real life</h3><p>Plain language, US-friendly defaults, and no jargon between you and the answer.</p></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="search-card">
+        <h2 class="search-title">What do you need to figure out?</h2>
+        <div class="search-field search-field--hero">
+          <svg class="ico"><use href="#i-search"/></svg>
+          <input type="search" id="smartSearch" placeholder='Try "tip", "loan", or "password"' autocomplete="off">
+          <button class="btn btn-primary btn-sm" id="smartSearchBtn" type="button">Search</button>
+        </div>
+        <div class="chips" id="searchChips">
+          <button class="chip" type="button">tip</button>
+          <button class="chip" type="button">loan payment</button>
+          <button class="chip" type="button">discount</button>
+          <button class="chip" type="button">password</button>
+          <button class="chip" type="button">bmi</button>
+          <button class="chip" type="button">unit converter</button>
+        </div>
+        <div class="search-results" id="smartSearchResults" hidden></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>Quick-start bundles</h2><p class="section-sub">Guided walkthroughs. Each step opens the right tool. Your progress is saved on this device.</p></div>
+      </div>
+      <div class="bundle-grid" id="bundleGrid"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>All free tools</h2><p class="section-sub">15 calculators and helpers. Opened tools show a marker so you can pick up where you left off.</p></div>
+        <a class="link-arrow" href="#/tools">See full list <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="tool-grid" id="toolsGridHome"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>US resources we trust</h2><p class="section-sub">Official US government and non-profit resources — 100% factual, verified links. No affiliate tracking.</p></div>
+        <a class="link-arrow" href="#/resources">Full directory <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="resource-grid" id="resourceGridHome"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div><h2>Practical guides</h2><p class="section-sub">Short, US-focused reads. No invented statistics, no fake expert quotes.</p></div>
+        <a class="link-arrow" href="#/guides">All guides <svg class="ico"><use href="#i-arrow"/></svg></a>
+      </div>
+      <div class="article-grid" id="articlesGridHome"></div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="updates-card">
+        <div class="updates-copy">
+          <span class="eyebrow" style="background:rgba(250,204,21,.15);border-color:var(--yellow);color:var(--yellow)"><svg class="ico" style="color:var(--yellow)"><use href="#i-mail"/></svg> Occasional updates</span>
+          <h2>Get new tools by email</h2>
+          <p>Only when we ship something genuinely useful — a new calculator, a rewritten guide. No daily blasts, no sales pitches, no "limited time" pressure.</p>
+          <ul class="updates-list">
+            <li><svg class="ico"><use href="#i-check"/></svg>One-click unsubscribe</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>We never sell your address</li>
+            <li><svg class="ico"><use href="#i-check"/></svg>Stored locally until you confirm</li>
+          </ul>
+        </div>
+        <form class="updates-form" id="updatesForm" novalidate>
+          <label for="updatesEmail">Email address</label>
+          <input type="email" id="updatesEmail" placeholder="you@example.com" autocomplete="email" required>
+          <button class="btn btn-primary btn-block btn-lg" type="submit">Subscribe <svg class="ico"><use href="#i-arrow"/></svg></button>
+          <p class="updates-note" id="updatesNote">Double opt-in. You'll get a confirmation email to complete signup.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TOOLS -->
+<div class="view" data-view="tools" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Tools</span></nav>
+      <h1>Free Tools</h1>
+      <p class="lede">15 calculators and helpers that run entirely in your browser. Nothing is uploaded, nothing is stored on our servers, and no account is required.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="toolbar">
+        <div class="toolbar-filters" id="toolFilters">
+          <button class="filter-chip is-active" data-filter="all" type="button">All tools</button>
+          <button class="filter-chip" data-filter="finance" type="button">Finance</button>
+          <button class="filter-chip" data-filter="everyday" type="button">Everyday</button>
+          <button class="filter-chip" data-filter="health" type="button">Health</button>
+          <button class="filter-chip" data-filter="utility" type="button">Utility</button>
+          <button class="filter-chip" data-filter="saved" type="button"><svg class="ico"><use href="#i-heart"/></svg>Saved</button>
+        </div>
+      </div>
+      <div class="tool-grid" id="toolsGrid"></div>
+      <div class="empty-state" id="toolsEmpty" hidden><svg class="ico"><use href="#i-search"/></svg><h3>No tools in this category</h3><p>Try another filter, or view all tools.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- RESOURCES -->
+<div class="view" data-view="resources" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Resources</span></nav>
+      <h1>US Resources Directory</h1>
+      <p class="lede">A curated list of official US government and non-profit resources. Every link below is factual, verifiable, and goes directly to the organization's own site. We earn nothing from these links.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="notice">
+        <svg class="ico"><use href="#i-info"/></svg>
+        <span>These are <strong>not</strong> affiliate links and <strong>not</strong> ads. They are official resources selected because they're genuinely useful to US residents. Tap any card to open the official site in a new tab.</span>
+      </div>
+      <div class="resource-grid" id="resourceGrid"></div>
+    </div>
+  </section>
+</div>
+
+<!-- COMPARE -->
+<div class="view" data-view="compare" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Compare</span></nav>
+      <h1>Compare</h1>
+      <p class="lede">Pick any two or three categories side by side. We present factual criteria — we never declare a winner.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="compare-builder">
+        <h2 class="compare-builder-title">Build a comparison</h2>
+        <p class="section-sub">Choose the categories you want to line up. Tap a chip to add or remove it (max three).</p>
+        <div class="compare-picker" id="comparePicker"></div>
+      </div>
+      <div id="compareArea"></div>
+    </div>
+  </section>
+</div>
+
+<!-- GUIDES -->
+<div class="view" data-view="guides" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Guides</span></nav>
+      <h1>Guides</h1>
+      <p class="lede">Practical, US-focused reads. No invented statistics, no fabricated expert quotes — just the reasoning steps that actually help.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container"><div class="article-grid" id="articlesGrid"></div></div>
+  </section>
+</div>
+
+<!-- SAVED -->
+<div class="view" data-view="saved" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Saved</span></nav>
+      <h1>Saved tools</h1>
+      <p class="lede">Tools you've bookmarked. Saved locally on this device — no account needed.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="tool-grid" id="toolsGridSaved"></div>
+      <div class="empty-state" id="savedEmpty" hidden>
+        <svg class="ico"><use href="#i-heart"/></svg>
+        <h3>Nothing saved yet</h3>
+        <p>Tap the heart on any tool card to keep it here for later.</p>
+        <a class="btn btn-primary" href="#/tools" style="margin-top:14px">Browse tools</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ABOUT -->
+<div class="view" data-view="about" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>About</span></nav>
+      <h1>About DealPilot USA</h1>
+      <p class="lede">Everyday tools. Real answers. Zero noise.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <h2>What this site is</h2>
+      <p>DealPilot USA is a small, independent web project. We build free browser-based tools — calculators, converters, and helpers — that solve specific, everyday problems for people in the United States. We also curate a short list of official resources and write plain-English guides.</p>
+      <h2>What this site is not</h2>
+      <p>We are not a price-tracking service. We are not a financial advisor. We are not a review lab. We do not publish statistics we cannot source, we do not write fake reviews, and we do not display invented user counts, earnings, or conversion numbers.</p>
+      <h2>How we handle your data</h2>
+      <p>Every calculator runs locally in your browser. Values you type into the percentage, tip, loan, BMI, password, and image tools never leave your device. Saved bookmarks, recent tools, and reading positions are stored in your browser's local storage only. See our <a href="#/privacy">Privacy Policy</a>.</p>
+      <h2>How we make money</h2>
+      <p>Today: we don't. There are no ads, no affiliate links, and no paid placements on this site. If we ever add affiliate links in the future, they will be clearly disclosed on every page where they appear, and the disclosure will appear before the link — not buried in small print. See our <a href="#/affiliate-disclosure">Affiliate Disclosure</a>.</p>
+      <h2>Contact</h2>
+      <p>Questions, corrections, or bug reports: <a href="mailto:hello@dealpilotusa.example">hello@dealpilotusa.example</a></p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head"><div><h2>Grow Your Audience</h2><p class="section-sub">Legitimate ways to build real, human traffic. No bots, no click farms, no proxy rotation, no incentivized ad clicks.</p></div></div>
+      <div class="channel-grid">
+        <article class="channel-card"><h3>Search engine optimization</h3><p>Answer a specific question better than the current results. Accurate titles, honest descriptions, useful pages.</p></article>
+        <article class="channel-card"><h3>YouTube</h3><p>Short walkthroughs of a tool. Link back to the free tool, not to a pushy offer.</p></article>
+        <article class="channel-card"><h3>TikTok</h3><p>Quick, honest "here's how I'd compare these two" clips. Value first, link second.</p></article>
+        <article class="channel-card"><h3>Pinterest</h3><p>Checklists, budget templates and comparison layouts that people save for later.</p></article>
+        <article class="channel-card"><h3>Email marketing</h3><p>Only with explicit opt-in. Make unsubscribing one click and never buy contact lists.</p></article>
+        <article class="channel-card"><h3>Organic social media</h3><p>Answer questions in public. Consistency beats volume.</p></article>
+        <article class="channel-card"><h3>Legitimate paid advertising</h3><p>Use approved ad networks, follow their creative policies, and never misrepresent what a click leads to.</p></article>
+        <article class="channel-card"><h3>Online communities</h3><p>Participate genuinely. Read and respect each community's self-promotion rules.</p></article>
+      </div>
+      <p class="notice notice--warn">
+        <svg class="ico"><use href="#i-info"/></svg>
+        <span><strong>Not allowed on this site or with its links:</strong> bots, fake visitors, auto-clicking, forced or hidden redirects, traffic generators, proxy/VPN rotation, click farms, and any form of incentivized advertising clicks. These violate nearly every ad and affiliate network's terms and will get accounts terminated.</span>
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- PRIVACY -->
+<div class="view" data-view="privacy" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Privacy</span></nav>
+      <h1>Privacy Policy</h1>
+      <p class="lede">Last updated: 2026. This is a structural template — replace with a reviewed legal document before you rely on it.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <p class="notice"><svg class="ico"><use href="#i-info"/></svg><span>This is a placeholder policy, not legal advice. Have a qualified professional review your final document.</span></p>
+
+      <h2>1. Summary</h2>
+      <p>DealPilot USA runs entirely in your browser. We do not operate a server that stores your inputs. The tools on this site are client-side JavaScript that compute results on your own device.</p>
+
+      <h2>2. What we collect</h2>
+      <p>By default, nothing. If you accept analytics cookies, we may use a third-party analytics provider (Google Analytics 4) to count page views and understand which tools are used. That provider receives your IP address, browser type, and pages visited — subject to their own privacy policies. You can refuse analytics cookies at any time and the site will still work identically.</p>
+
+      <h2>3. What stays on your device</h2>
+      <p>We use your browser's <code>localStorage</code> to remember:</p>
+      <ul>
+        <li>Which tools you've recently opened</li>
+        <li>Which tools you've saved with the heart button</li>
+        <li>Your reading positions in guides</li>
+        <li>Your cookie preference</li>
+        <li>Your visit streak and first-visit date</li>
+      </ul>
+      <p>This data never leaves your device. You can clear it at any time with the "Reset local data" button in the footer or your browser's own settings.</p>
+
+      <h2>4. What the tools do with your input</h2>
+      <p>The image compressor uses a canvas element that stays in your browser's memory. The password strength checker tests your password without ever sending it anywhere. All other calculators perform simple math locally.</p>
+
+      <h2>5. Advertising</h2>
+      <p>As of the current version of this site, we do not run ads. If we introduce advertising, this section will be updated to describe the ad network, the types of ads served, and any personalization options you have.</p>
+
+      <h2>6. Affiliate links</h2>
+      <p>As of the current version, this site does not contain affiliate links. The Resources Directory links to official US government and non-profit sites and contains no tracking parameters. See our <a href="#/affiliate-disclosure">Affiliate Disclosure</a> for our policy on how we would handle affiliate links if added.</p>
+
+      <h2>7. Children</h2>
+      <p>This site is not directed at children under 13 and does not knowingly collect personal information from them.</p>
+
+      <h2>8. Your choices</h2>
+      <p>You can change cookie preferences at any time using the "Cookie settings" link in the footer. You can clear locally stored data with the "Reset local data" button or your browser settings.</p>
+
+      <h2>9. Contact</h2>
+      <p>Questions about this policy: <a href="mailto:hello@dealpilotusa.example">hello@dealpilotusa.example</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- TERMS -->
+<div class="view" data-view="terms" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Terms</span></nav>
+      <h1>Terms of Use</h1>
+      <p class="lede">Last updated: 2026. Placeholder — replace with your reviewed legal document.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <p class="notice"><svg class="ico"><use href="#i-info"/></svg><span>This is a placeholder, not legal advice.</span></p>
+
+      <h2>1. Acceptance</h2>
+      <p>By using DealPilot USA you agree to these terms. If you do not agree, please do not use the site.</p>
+
+      <h2>2. Informational purpose only</h2>
+      <p>The tools and content on this site are provided for general informational purposes. They are not financial, legal, tax, medical, or professional advice. Calculator outputs are estimates based on the values you enter — they are not guarantees.</p>
+
+      <h2>3. No warranty of accuracy</h2>
+      <p>We work to keep our tools accurate and our guides up to date, but we make no warranty that any information on this site is complete, current, or suitable for your particular situation. Tax rules, loan terms, and regulations change. Verify critical information with the appropriate professional or official source.</p>
+
+      <h2>4. Third-party links</h2>
+      <p>The Resources Directory and other sections link to third-party websites. We do not control those sites and are not responsible for their content, practices, or availability.</p>
+
+      <h2>5. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, DealPilot USA and its operators are not liable for any indirect, incidental, or consequential damages arising from your use of the site or reliance on information it contains.</p>
+
+      <h2>6. Acceptable use</h2>
+      <p>You agree not to misuse the site, attempt to disrupt it, or use it in violation of applicable laws.</p>
+
+      <h2>7. Changes</h2>
+      <p>We may update these terms. Continued use of the site after changes constitutes acceptance of the updated version.</p>
+
+      <h2>8. Contact</h2>
+      <p><a href="mailto:hello@dealpilotusa.example">hello@dealpilotusa.example</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- AFFILIATE -->
+<div class="view" data-view="affiliate-disclosure" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Affiliate Disclosure</span></nav>
+      <h1>Affiliate Disclosure</h1>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container prose">
+      <p class="disclosure-box"><strong>Current status:</strong> As of the version you're reading, DealPilot USA contains <strong>no affiliate links</strong>. We earn nothing from any link on this site. This page describes our policy if that ever changes.</p>
+
+      <h2>What affiliate links are</h2>
+      <p>An affiliate link is a link to a third-party merchant that includes a tracking identifier. If you make a purchase or complete an eligible action through that link, the merchant pays the referrer a commission — at no additional cost to you.</p>
+
+      <h2>Our policy</h2>
+      <ul>
+        <li><strong>Disclosed before the link.</strong> Any page containing an affiliate link will display a plain-English disclosure at the top of that page, before the link appears.</li>
+        <li><strong>Never disguised.</strong> We will never dress an affiliate link up as an advertisement, a "recommended" button styled to look like an ad unit, or an editorial endorsement we don't actually hold.</li>
+        <li><strong>No forced clicks.</strong> We will never use auto-clicking, pop-unders, forced redirects, or hidden overlays on affiliate links.</li>
+        <li><strong>No incentivized clicks.</strong> We will never ask, encourage, or reward anyone for clicking an affiliate link or an advertisement.</li>
+        <li><strong>No fake reviews.</strong> If we recommend something, we will have used it or have a specific, stated reason. We will not invent user reviews or star ratings.</li>
+      </ul>
+
+      <h2>The Resources Directory</h2>
+      <p>The links in our <a href="#/resources">US Resources Directory</a> point directly to official government or non-profit sites. They contain <strong>no</strong> affiliate parameters, no tracking IDs, and no sponsorship. They are there because they're genuinely useful to US residents.</p>
+
+      <h2>If we add affiliate links in the future</h2>
+      <p>This page will be updated with the specific networks we work with, and every page containing an affiliate link will display an inline disclosure. You'll always know when a link is affiliate before you click it.</p>
+
+      <h2>Contact</h2>
+      <p>Questions about this policy: <a href="mailto:hello@dealpilotusa.example">hello@dealpilotusa.example</a></p>
+    </div>
+  </section>
+</div>
+
+<!-- DASHBOARD -->
+<div class="view" data-view="dashboard" hidden>
+  <section class="page-head">
+    <div class="container">
+      <nav class="breadcrumb"><a href="#/">Home</a><span>/</span><span>Your activity</span></nav>
+      <h1>Your activity</h1>
+      <p class="lede">All data below is stored only on this device. Nothing is sent to any server.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="kpi-grid">
+        <div class="kpi-card"><span class="kpi-label">Tools opened</span><strong class="kpi-value" id="kpiToolsOpened">0</strong><span class="kpi-foot">On this device</span></div>
+        <div class="kpi-card"><span class="kpi-label">Saved tools</span><strong class="kpi-value" id="kpiSaved">0</strong><span class="kpi-foot">Bookmarked locally</span></div>
+        <div class="kpi-card"><span class="kpi-label">Guides read</span><strong class="kpi-value" id="kpiGuidesRead">0</strong><span class="kpi-foot">Opened here</span></div>
+        <div class="kpi-card"><span class="kpi-label">Searches</span><strong class="kpi-value" id="kpiSearches">0</strong><span class="kpi-foot">This device</span></div>
+        <div class="kpi-card"><span class="kpi-label">Visit streak</span><strong class="kpi-value" id="kpiStreak">0</strong><span class="kpi-foot">Days in a row</span></div>
+        <div class="kpi-card"><span class="kpi-label">Days since first visit</span><strong class="kpi-value" id="kpiDays">1</strong><span class="kpi-foot">This device</span></div>
+      </div>
+      <h2 class="mt-lg">Recent activity</h2>
+      <div class="table-wrap">
+        <table class="compare-table">
+          <thead><tr><th>Event</th><th>Where</th><th>Detail</th><th>Time</th></tr></thead>
+          <tbody id="eventsTableBody"><tr><td colspan="4" class="empty-cell">No events yet. Use the site and this table fills in locally.</td></tr></tbody>
+        </table>
+      </div>
+      <div class="danger-zone">
+        <h3>Reset local data</h3>
+        <p>Clears recent tools, saved bookmarks, reading positions, and local activity from this browser. Cannot be undone.</p>
+        <button class="btn btn-ghost" id="resetLocal" type="button">Clear all local data</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#/">
+        <span class="brand-mark">DP</span>
+        <span class="brand-text">DealPilot<em>USA</em></span>
+      </a>
+      <p class="footer-tag">Everyday tools. Real answers. Zero noise.</p>
+      <p class="footer-note">Information on this website is provided for general informational purposes. Availability, pricing and offers may change. Verify critical decisions with the appropriate professional or official source.</p>
+    </div>
+    <nav class="footer-col">
+      <h4>Site</h4>
+      <a href="#/tools">All tools</a>
+      <a href="#/resources">US resources</a>
+      <a href="#/guides">Guides</a>
+      <a href="#/compare">Compare</a>
+      <a href="#/saved">Saved tools</a>
+    </nav>
+    <nav class="footer-col">
+      <h4>Legal</h4>
+      <a href="#/privacy">Privacy Policy</a>
+      <a href="#/terms">Terms of Use</a>
+      <a href="#/affiliate-disclosure">Affiliate Disclosure</a>
+      <button class="link-btn" id="cookieSettingsLink" type="button">Cookie settings</button>
+      <button class="link-btn" id="resetLocalLink" type="button">Reset local data</button>
+    </nav>
+    <div class="footer-col">
+      <h4>About</h4>
+      <a href="#/about">About DealPilot USA</a>
+      <a href="mailto:hello@dealpilotusa.example">Contact</a>
+      <a href="#/dashboard">Your activity</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 DealPilot USA · Made for everyday use</p>
+    <p class="footer-disclosure">All tools run locally in your browser. No account required. If we ever add affiliate links, they'll be disclosed before you click — not buried in small print.</p>
+  </div>
+</footer>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a href="#/" data-nav="home"><svg class="ico"><use href="#i-home"/></svg><span>Home</span></a>
+  <a href="#/tools" data-nav="tools"><svg class="ico"><use href="#i-grid"/></svg><span>Tools</span></a>
+  <a href="#/resources" data-nav="resources"><svg class="ico"><use href="#i-globe"/></svg><span>Resources</span></a>
+  <a href="#/guides" data-nav="guides"><svg class="ico"><use href="#i-book"/></svg><span>Guides</span></a>
+  <button type="button" id="bottomMore"><svg class="ico"><use href="#i-more"/></svg><span>More</span></button>
+</nav>
+
+<!-- COMMAND PALETTE -->
+<div class="cmd-backdrop" id="cmdBackdrop" hidden>
+  <div class="cmd-panel" role="dialog" aria-modal="true">
+    <div class="cmd-head">
+      <svg class="ico"><use href="#i-search"/></svg>
+      <input type="search" id="cmdInput" placeholder="Search tools, guides, resources…" autocomplete="off">
+      <kbd>ESC</kbd>
+    </div>
+    <div class="cmd-body" id="cmdBody"><div class="cmd-hint">Start typing. Try "tip", "loan", or "credit report".</div></div>
+    <div class="cmd-foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>↵</kbd> open</span>
+      <span><kbd>ESC</kbd> close</span>
+    </div>
+  </div>
+</div>
+
+<!-- COOKIE -->
+<div class="cookie-banner" id="cookieBanner" hidden role="dialog">
+  <div class="cookie-inner">
+    <div class="cookie-copy">
+      <h2>Your privacy choices</h2>
+      <p>We use essential cookies to run this site. With your permission we'd also like to use analytics to understand which tools are useful. Rejecting is just as easy as accepting, and the site works identically either way.</p>
+      <div class="cookie-settings" id="cookieSettings" hidden>
+        <label class="switch-row"><input type="checkbox" checked disabled><span class="switch-ui"></span><span class="switch-text"><strong>Essential</strong><em>Required for the site to function.</em></span></label>
+        <label class="switch-row"><input type="checkbox" id="consentAnalytics"><span class="switch-ui"></span><span class="switch-text"><strong>Analytics</strong><em>Anonymous page counts. Helps us improve the tools.</em></span></label>
+      </div>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-primary" id="cookieAccept" type="button">Accept</button>
+      <button class="btn btn-ghost" id="cookieReject" type="button">Reject</button>
+      <button class="btn btn-text" id="cookieCustomize" type="button">Settings</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-head">
+      <h2 id="modalTitle">Title</h2>
+      <button class="icon-btn" id="modalClose" aria-label="Close"><svg class="ico"><use href="#i-close"/></svg></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script>
+'use strict';
+
+/* =========================================================
+   CONFIG
+   ========================================================= */
+const CONFIG = {
+  siteName: "DealPilot USA",
+  analyticsId: "",
+  contactEmail: "hello@dealpilotusa.example"
+};
+
+/* =========================================================
+   DATA — all real, no placeholders
+   ========================================================= */
+
+/* US RESOURCES — real official links, no tracking, no affiliate */
+const RESOURCES = [
+  { name:"IRS Free File", category:"Taxes", icon:"i-receipt",
+    desc:"File your federal tax return for free if your income qualifies. Directly from the IRS.",
+    url:"https://www.irs.gov/filing/free-file-do-your-federal-taxes-for-free" },
+  { name:"Annual Credit Report", category:"Credit", icon:"i-chart",
+    desc:"The only federally authorized source for your free weekly credit reports from all three bureaus.",
+    url:"https://www.annualcreditreport.com" },
+  { name:"IdentityTheft.gov", category:"Safety", icon:"i-shield",
+    desc:"Report identity theft and get a personal recovery plan from the Federal Trade Commission.",
+    url:"https://www.identitytheft.gov" },
+  { name:"Consumer Financial Protection Bureau", category:"Finance", icon:"i-scale",
+    desc:"Submit complaints about financial products and read independent research on consumer finance.",
+    url:"https://www.consumerfinance.gov" },
+  { name:"FTC Consumer Advice", category:"Safety", icon:"i-info",
+    desc:"Scam alerts and practical, plain-English consumer guidance from the Federal Trade Commission.",
+    url:"https://consumer.ftc.gov" },
+  { name:"Do Not Call Registry", category:"Privacy", icon:"i-phone",
+    desc:"Register your phone number to reduce telemarketing calls. Run by the FTC.",
+    url:"https://www.donotcall.gov" },
+  { name:"Federal Student Aid (FAFSA)", category:"Education", icon:"i-book",
+    desc:"Official FAFSA application and federal student aid information from the US Department of Education.",
+    url:"https://studentaid.gov" },
+  { name:"Benefits.gov", category:"Benefits", icon:"i-users",
+    desc:"Find federal and state benefit programs you may be eligible for with a short questionnaire.",
+    url:"https://www.benefits.gov" },
+  { name:"MyMoney.gov", category:"Finance", icon:"i-chart",
+    desc:"Financial education resources from more than 20 federal agencies, gathered in one place.",
+    url:"https://www.mymoney.gov" }
+];
+
+/* ARTICLES — real, useful content with full bodies */
+const ARTICLES = [
+  { slug:"compare-subscription-plans", title:"How to Compare Subscription Plans",
+    excerpt:"A calm, repeatable method for deciding whether a subscription is actually worth keeping.",
+    category:"Personal Finance", date:"2026-01-12", readTime:"5 min",
+    body:[
+      "Start by listing every subscription you currently pay for. Most people underestimate how many there are — it's rarely just the two or three that come to mind first.",
+      "For each one, write down three things: what problem it solves, how often you actually use it, and what the next best alternative would cost. Be specific. \"Entertainment\" is not a problem. \"I watch one show on this service\" is.",
+      "If you cannot name the problem it solves in one sentence, that is usually a sign you can cancel it and revisit later. Services rarely disappear. If you miss it, you can resubscribe.",
+      "Compare like with like. A plan that includes features you will never open is not cheaper than a plan without them — it's just more expensive for the same outcome. Strip each plan down to the things you actually use and compare those.",
+      "Finally, set a calendar reminder 30 days out. Most people keep subscriptions not because they're worth it, but because nobody ever asks the question again. The reminder is the whole system."
+    ] },
+  { slug:"find-legitimate-online-deals", title:"How to Find Legitimate Online Deals",
+    excerpt:"How to tell a real markdown from a permanent 'sale' price, and where to check seller reputation.",
+    category:"Shopping", date:"2026-01-20", readTime:"6 min",
+    body:[
+      "\"Sale\" is a marketing word, not a fact. A real deal is a price that is genuinely lower than the normal price for that same item, from a seller you can actually trust.",
+      "Check the seller's history before the discount. A large discount from an unknown seller is a warning sign, not a bargain. Look at how long the store has operated, whether it has a physical address, and what neutral sources say about it.",
+      "Look at the return policy first. If a site makes returns difficult, the discount rarely covers the risk. A 30-day no-questions-asked return policy is worth more than an extra 10% off.",
+      "Compare the final price including shipping and tax. A lower sticker price with high shipping is often more expensive than a slightly higher price with free shipping.",
+      "If a deal requires you to act in the next few minutes, that pressure is a signal to slow down, not speed up. Real deals don't usually expire in 90 seconds. Pressure is a sales tactic, and it works because it stops you from comparing."
+    ] },
+  { slug:"monthly-budget-basics", title:"How to Calculate Your Monthly Budget",
+    excerpt:"A simple, spreadsheet-free way to see where your money actually goes each month.",
+    category:"Personal Finance", date:"2026-02-03", readTime:"7 min",
+    body:[
+      "Start with the last 30 days, not with an ideal month. Real spending beats imagined spending every time. Pull up your bank and card statements and look at what actually happened.",
+      "Split expenses into three buckets: fixed (rent, insurance, subscriptions), variable (groceries, gas, dining), and one-off (repairs, gifts, medical). Fixed expenses are the easiest to change once you see them; variable ones need more attention.",
+      "Add your income for the same 30 days. Include everything that actually arrived, not what you expected to arrive. If you're paid irregularly, use the median month from the last six.",
+      "The difference is your real margin. If it's negative, the next step is not to cut everything — it's to find the largest single category and look there first. A 10% cut from your biggest category is worth more than a 50% cut from your smallest.",
+      "Revisit once a month for three months. Patterns only show up over time. One month is a snapshot. Three months tells you what your baseline actually is."
+    ] },
+  { slug:"compare-software-before-buying", title:"How to Compare Software Before Buying",
+    excerpt:"The five questions that cut through feature lists and reveal whether a tool fits your workflow.",
+    category:"Software", date:"2026-02-14", readTime:"6 min",
+    body:[
+      "Question one: what does the tool replace? If it doesn't replace anything, you're adding, not simplifying. Adding tools usually increases complexity, not reduces it.",
+      "Question two: what happens to your data if you leave? Export options matter more than most feature lists suggest. If you can't get your data out in a standard format, you're renting access, not buying a tool.",
+      "Question three: how does the free tier actually work? A good free tier is honest about its limits. A free tier designed to frustrate you into paying is not really free.",
+      "Question four: what does support cost when you actually need it? Many tools have cheap plans with expensive support. Calculate the realistic total, not the entry price.",
+      "Question five: would you still pay for it in six months if nobody reminded you to use it? If the honest answer is no, the tool is solving a problem you don't actually have."
+    ] },
+  { slug:"protect-your-passwords", title:"How to Protect Your Passwords Without Losing Your Mind",
+    excerpt:"A practical system that works for normal people — no password manager gatekeeping, no impossible rules.",
+    category:"Safety", date:"2026-02-20", readTime:"5 min",
+    body:[
+      "The single biggest thing you can do is stop reusing passwords across sites. When one site is breached, attackers immediately try the same email and password combination on banks, email providers, and social networks. Reuse turns one breach into ten.",
+      "Length beats complexity. A 16-character passphrase like \"correct-horse-battery-staple\" is stronger than an 8-character string with symbols and numbers. Length adds exponentially more security than special characters do.",
+      "Use a different password for every account that matters: email, banking, and any site that stores payment info. For low-stakes accounts you rarely use, a unique passphrase you write down in a physical notebook at home is fine.",
+      "Turn on two-factor authentication wherever it's offered. A code sent to your phone or generated by an authenticator app turns a stolen password into useless data.",
+      "If you want to use a password manager, use one that stores your vault locally and encrypts it with a strong master passphrase. The password manager is a convenience, not a replacement for the other habits."
+    ] },
+  { slug:"understand-your-loan-offer", title:"How to Understand Your Loan Offer",
+    excerpt:"What the numbers on a loan offer actually mean, and which ones matter most.",
+    category:"Finance", date:"2026-03-02", readTime:"6 min",
+    body:[
+      "The interest rate is not the only cost. Ask for the APR — the annual percentage rate. The APR includes fees and points, so it's a more honest comparison between offers than the headline rate.",
+      "The term (how many months you'll pay) matters as much as the rate. A longer term lowers your monthly payment but usually increases the total you pay. Compare total cost, not just monthly cost.",
+      "Ask about prepayment penalties. If you want to pay the loan off early, a penalty can erase the savings. Most reputable lenders don't charge them, but ask before signing.",
+      "Look for origination fees, application fees, and any other fixed costs. A loan with a lower rate but a high origination fee can be more expensive than a loan with a higher rate and no fee.",
+      "Read the late payment terms. What happens if you miss a payment? What's the late fee? Does the rate increase? Knowing this in advance is what separates a manageable loan from a crisis."
+    ] }
+];
+
+/* COMPARISON POOL — factual criteria, no fabricated data */
+const COMPARISON_POOL = {
+  "VPN services": [
+    ["What to compare","Logging policy","Jurisdiction","Independent audit"]
+  ],
+  "Budget laptops": [
+    ["What to compare","Base RAM","Base storage","Warranty length"]
+  ],
+  "Tax software": [
+    ["What to compare","Federal filing cost","State filing cost","Self-employed forms"]
+  ],
+  "Password managers": [
+    ["What to compare","Free tier limits","Sync method","Emergency access"]
+  ]
+};
+
+/* TOOLS — 15 tools, all fully working */
+const TOOLS = [
+  { id:"percentage", icon:"i-percent",  title:"Percentage Calculator", desc:"Work out a percentage of a number, and percentage change between two values.", tags:["everyday","finance"] },
+  { id:"discount",   icon:"i-tag",      title:"Discount Calculator",   desc:"Final price and total savings after any percentage discount.", tags:["everyday","finance"] },
+  { id:"tip",        icon:"i-tip",      title:"Tip Calculator",        desc:"Add a tip and split the bill between any number of people.", tags:["everyday"] },
+  { id:"loan",       icon:"i-loan",     title:"Loan Payment",          desc:"Estimate a monthly payment from amount, rate and term.", tags:["finance"] },
+  { id:"compound",   icon:"i-chart",    title:"Compound Interest",     desc:"See how a starting amount grows with regular contributions.", tags:["finance"] },
+  { id:"salestax",   icon:"i-receipt",  title:"Sales Tax",             desc:"Add US sales tax to a price, or remove tax from a total.", tags:["everyday","finance"] },
+  { id:"age",        icon:"i-age",      title:"Age Calculator",        desc:"Exact age in years, months and days from a birth date.", tags:["everyday"] },
+  { id:"datediff",   icon:"i-cal",      title:"Date Difference",       desc:"Days, weeks and months between any two dates.", tags:["everyday","utility"] },
+  { id:"unit",       icon:"i-ruler",    title:"Unit Converter",        desc:"Length, weight, and temperature conversions.", tags:["utility"] },
+  { id:"currency",   icon:"i-currency", title:"Currency Converter",    desc:"Convert between currencies. Requires a live rates source.", tags:["finance"] },
+  { id:"bmi",        icon:"i-bmi",      title:"BMI Calculator",        desc:"Body mass index from height and weight with adult categories.", tags:["health"] },
+  { id:"password",   icon:"i-lock",     title:"Password Strength",     desc:"Estimate password strength and get practical improvement tips.", tags:["utility"] },
+  { id:"wordcount",  icon:"i-text",     title:"Word & Character Count",desc:"Live counts for words, characters, sentences and reading time.", tags:["utility"] },
+  { id:"random",     icon:"i-dice",     title:"Random Number",         desc:"Generate a random number in any range, or roll virtual dice.", tags:["utility"] },
+  { id:"image",      icon:"i-image",    title:"Image Compressor",      desc:"Shrink a JPEG or PNG in your browser. Nothing is uploaded.", tags:["utility"] }
+];
+
+/* BUNDLES — guided sequences */
+const BUNDLES = [
+  { id:"budget", icon:"i-loan", title:"Monthly budget check", desc:"Three tools to understand what you actually spend and what it costs you.", steps:["loan","compound","salestax"] },
+  { id:"shopping", icon:"i-tag", title:"Shopping sanity check", desc:"Before you buy, run these numbers. Takes about 90 seconds.", steps:["discount","salestax","tip"] },
+  { id:"personal", icon:"i-bmi", title:"Personal snapshot", desc:"A quick set of measurements that stay on your device.", steps:["bmi","age","datediff"] }
+];
+
+/* =========================================================
+   HELPERS
+   ========================================================= */
+const $  = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+function el(tag, attrs={}, children=[]) {
+  const n = document.createElement(tag);
+  for (const [k,v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") n.className = v;
+    else if (k === "html") n.innerHTML = v;
+    else if (k === "text") n.textContent = v;
+    else if (k.startsWith("on") && typeof v === "function") n.addEventListener(k.slice(2), v);
+    else n.setAttribute(k, v);
+  }
+  (Array.isArray(children) ? children : [children]).forEach(c => {
+    if (c == null) return;
+    n.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+  });
+  return n;
+}
+
+function icon(name, cls="ico") {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg","svg");
+  svg.setAttribute("class", cls); svg.setAttribute("aria-hidden","true");
+  const use = document.createElementNS("http://www.w3.org/2000/svg","use");
+  use.setAttribute("href", "#" + name);
+  svg.appendChild(use);
+  return svg;
+}
+
+function fmtMoney(v, cur="USD") {
+  if (v == null || v === "" || isNaN(Number(v))) return null;
+  try { return new Intl.NumberFormat("en-US", { style:"currency", currency:cur }).format(Number(v)); }
+  catch { return "$" + Number(v).toFixed(2); }
+}
+
+function fmtNum(v, dec=2) {
+  if (v == null || isNaN(v)) return "—";
+  return new Intl.NumberFormat("en-US", { maximumFractionDigits:dec, minimumFractionDigits:0 }).format(v);
+}
+
+/* ---------- localStorage ---------- */
+const LS = {
+  get(k, fb) { try { const v = localStorage.getItem(k); return v == null ? fb : JSON.parse(v); } catch { return fb; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+  del(k) { try { localStorage.removeItem(k); } catch {} }
+};
+
+const KEYS = {
+  recent:"dp_recent", saved:"dp_saved", guideReads:"dp_guide_reads",
+  searchCount:"dp_search_count", visitCount:"dp_visit_count",
+  lastVisit:"dp_last_visit", firstVisit:"dp_first_visit",
+  streak:"dp_streak", events:"dp_events",
+  returnDismissed:"dp_return_dismissed",
+  newsletterEmail:"dp_newsletter_email"
+};
+
+function todayKey() { return new Date().toISOString().slice(0,10); }
+
+function updateVisitInfo() {
+  const today = todayKey();
+  const last = LS.get(KEYS.lastVisit, null);
+  let first = LS.get(KEYS.firstVisit, null);
+  const visits = LS.get(KEYS.visitCount, 0) + 1;
+  LS.set(KEYS.visitCount, visits);
+  LS.set(KEYS.lastVisit, today);
+  if (!first) { first = today; LS.set(KEYS.firstVisit, first); }
+  let streak = LS.get(KEYS.streak, 0);
+  if (last !== today) {
+    const yest = new Date(Date.now() - 86400000).toISOString().slice(0,10);
+    streak = (last === yest) ? streak + 1 : 1;
+    LS.set(KEYS.streak, streak);
+  } else if (streak < 1) { streak = 1; LS.set(KEYS.streak, streak); }
+  return { visits, first, streak };
+}
+
+function recentTools() { return LS.get(KEYS.recent, []); }
+function pushRecentTool(id) {
+  const list = recentTools().filter(x => x !== id);
+  list.unshift(id);
+  LS.set(KEYS.recent, list.slice(0, 5));
+}
+function savedTools() { return LS.get(KEYS.saved, []); }
+function isSaved(id) { return savedTools().includes(id); }
+function toggleSaved(id) {
+  const list = savedTools();
+  const i = list.indexOf(id);
+  if (i === -1) list.push(id); else list.splice(i,1);
+  LS.set(KEYS.saved, list);
+  return i === -1;
+}
+
+function logEvent(name, detail={}) {
+  const buf = LS.get(KEYS.events, []);
+  buf.unshift({ event:name, ts:Date.now(), path:location.hash || "#/", ...detail });
+  LS.set(KEYS.events, buf.slice(0, 40));
+  renderEventsTable();
+}
+
+/* ---------- Tracking param preservation ---------- */
+const TRACK_KEYS = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","subid","clickid","gclid","fbclid","msclkid"];
+function buildOutboundUrl(base) {
+  if (!base) return "";
+  try {
+    const u = new URL(base, location.origin);
+    const p = new URLSearchParams(location.search);
+    TRACK_KEYS.forEach(k => { if (p.has(k) && !u.searchParams.has(k)) u.searchParams.set(k, p.get(k)); });
+    return u.toString();
+  } catch { return base; }
+}
+
+/* ---------- Analytics ---------- */
+function track(name, payload={}) {
+  logEvent(name, payload);
+  if (CONFIG.analyticsId && typeof window.gtag === "function") window.gtag("event", name, payload);
+}
+
+/* ---------- Toast ---------- */
+const toastEl = $("#toast");
+let toastTimer;
+function toast(msg) {
+  if (!toastEl) return;
+  toastEl.textContent = msg;
+  toastEl.hidden = false;
+  requestAnimationFrame(() => toastEl.classList.add("is-visible"));
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => {
+    toastEl.classList.remove("is-visible");
+    setTimeout(() => toastEl.hidden = true, 240);
+  }, 2600);
+}
+
+/* ---------- Modal ---------- */
+const modalBackdrop = $("#modalBackdrop");
+const modalTitleEl = $("#modalTitle");
+const modalBodyEl = $("#modalBody");
+
+function openModal(title, bodyNode) {
+  modalTitleEl.textContent = title;
+  modalBodyEl.innerHTML = "";
+  modalBodyEl.appendChild(bodyNode);
+  modalBackdrop.hidden = false;
+  document.body.style.overflow = "hidden";
+  const f = modalBodyEl.querySelector("input, select, textarea, button");
+  if (f) setTimeout(() => f.focus(), 40);
+}
+function closeModal() {
+  modalBackdrop.hidden = true;
+  modalBodyEl.innerHTML = "";
+  document.body.style.overflow = "";
+}
+$("#modalClose").addEventListener("click", closeModal);
+modalBackdrop.addEventListener("click", e => { if (e.target === modalBackdrop) closeModal(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !modalBackdrop.hidden) closeModal(); });
+
+/* =========================================================
+   ROUTER
+   ========================================================= */
+const VIEWS = ["home","tools","resources","compare","guides","saved","about","privacy","terms","affiliate-disclosure","dashboard"];
+function parseHash() {
+  const raw = (location.hash || "#/").replace(/^#\/?/, "");
+  const [path] = raw.split("?");
+  const clean = path.replace(/\/+$/,"") || "home";
+  return VIEWS.includes(clean) ? clean : "home";
+}
+function setActiveNav(name) { $$("[data-nav]").forEach(a => a.classList.toggle("is-active", a.dataset.nav === name)); }
+function renderView() {
+  const view = parseHash();
+  $$(".view").forEach(v => { v.hidden = v.dataset.view !== view; });
+  setActiveNav(view);
+  window.scrollTo({ top:0, behavior:"auto" });
+  if (view === "saved") renderSavedTools();
+  if (view === "dashboard") renderDashboard();
+  track("page_view", { view });
+}
+window.addEventListener("hashchange", renderView);
+
+/* =========================================================
+   DRAWER
+   ========================================================= */
+const drawer = $("#drawer");
+const drawerBackdrop = $("#drawerBackdrop");
+function openDrawer() {
+  drawer.classList.add("is-open");
+  drawer.setAttribute("aria-hidden","false");
+  drawerBackdrop.hidden = false;
+  document.body.style.overflow = "hidden";
+}
+function closeDrawer() {
+  drawer.classList.remove("is-open");
+  drawer.setAttribute("aria-hidden","true");
+  drawerBackdrop.hidden = true;
+  document.body.style.overflow = "";
+}
+$("#menuToggle").addEventListener("click", openDrawer);
+$("#drawerClose").addEventListener("click", closeDrawer);
+drawerBackdrop.addEventListener("click", closeDrawer);
+$$(".drawer-nav a").forEach(a => a.addEventListener("click", closeDrawer));
+$("#bottomMore").addEventListener("click", openDrawer);
+
+/* =========================================================
+   SEARCH INDEX
+   ========================================================= */
+function buildSearchIndex() {
+  const items = [];
+  TOOLS.forEach(t => items.push({ type:"Tool", icon:t.icon, title:t.title, sub:t.desc,
+    action:() => openTool(t.id), keywords:`${t.title} ${t.desc} ${t.id} ${(t.tags||[]).join(" ")}` }));
+  ARTICLES.forEach(a => items.push({ type:"Guide", icon:"i-book", title:a.title, sub:a.excerpt,
+    action:() => openArticle(a.slug), keywords:`${a.title} ${a.excerpt} ${a.category}` }));
+  RESOURCES.forEach(r => items.push({ type:"Resource", icon:r.icon, title:r.name, sub:r.desc,
+    action:() => window.open(r.url, "_blank", "noopener"), keywords:`${r.name} ${r.desc} ${r.category}` }));
+  BUNDLES.forEach(b => items.push({ type:"Bundle", icon:b.icon, title:b.title, sub:b.desc,
+    action:() => { location.hash = "#/"; closeCmd(); }, keywords:`${b.title} ${b.desc}` }));
+  return items;
+}
+const SEARCH_INDEX = buildSearchIndex();
+
+function searchItems(q, limit=8) {
+  const query = q.trim().toLowerCase();
+  if (!query) return [];
+  const terms = query.split(/\s+/);
+  return SEARCH_INDEX.map(it => {
+    const hay = (it.keywords + " " + it.title).toLowerCase();
+    let s = 0;
+    terms.forEach(t => {
+      if (!t) return;
+      if (it.title.toLowerCase().includes(t)) s += 4;
+      if (hay.includes(t)) s += 2;
+    });
+    return { it, s };
+  }).filter(x => x.s > 0).sort((a,b) => b.s - a.s).slice(0, limit).map(x => x.it);
+}
+
+/* =========================================================
+   COMMAND PALETTE
+   ========================================================= */
+const cmdBackdrop = $("#cmdBackdrop");
+const cmdInput = $("#cmdInput");
+const cmdBody = $("#cmdBody");
+let cmdIndex = 0, cmdResults = [];
+
+function renderCmdResults(q) {
+  cmdBody.innerHTML = "";
+  cmdResults = q ? searchItems(q) : SEARCH_INDEX.slice(0, 8);
+  cmdIndex = 0;
+  if (!cmdResults.length) {
+    cmdBody.appendChild(el("div", { class:"cmd-hint", text:`No matches for "${q}". Try "tip", "loan", or "credit report".` }));
+    return;
+  }
+  cmdResults.forEach((r, i) => {
+    const btn = el("button", { class:"cmd-item" + (i === 0 ? " is-active" : ""), type:"button" });
+    btn.appendChild(icon(r.icon));
+    const txt = el("div");
+    txt.appendChild(el("b", { text:r.title }));
+    txt.appendChild(el("small", { text:r.sub }));
+    btn.appendChild(txt);
+    btn.appendChild(el("span", { class:"type", text:r.type }));
+    btn.addEventListener("click", () => { r.action(); closeCmd(); });
+    cmdBody.appendChild(btn);
+  });
+}
+function openCmd() { cmdBackdrop.hidden = false; document.body.style.overflow = "hidden"; setTimeout(() => cmdInput.focus(), 30); renderCmdResults(""); }
+function closeCmd() { cmdBackdrop.hidden = true; document.body.style.overflow = ""; cmdInput.value = ""; }
+$("#cmdTrigger").addEventListener("click", openCmd);
+cmdBackdrop.addEventListener("click", e => { if (e.target === cmdBackdrop) closeCmd(); });
+cmdInput.addEventListener("input", () => renderCmdResults(cmdInput.value));
+cmdInput.addEventListener("keydown", e => {
+  if (e.key === "ArrowDown") { e.preventDefault(); cmdIndex = Math.min(cmdResults.length-1, cmdIndex+1); updateCmdActive(); }
+  else if (e.key === "ArrowUp") { e.preventDefault(); cmdIndex = Math.max(0, cmdIndex-1); updateCmdActive(); }
+  else if (e.key === "Enter") { e.preventDefault(); const r = cmdResults[cmdIndex]; if (r) { r.action(); closeCmd(); } }
+});
+function updateCmdActive() { $$(".cmd-item", cmdBody).forEach((el, i) => el.classList.toggle("is-active", i === cmdIndex)); }
+document.addEventListener("keydown", e => {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); if (cmdBackdrop.hidden) openCmd(); else closeCmd(); }
+  if (e.key === "Escape" && !cmdBackdrop.hidden) closeCmd();
+});
+
+/* =========================================================
+   TOOL CARDS
+   ========================================================= */
+function toolCard(t, opts={}) {
+  const card = el("button", { class:"tool-card", type:"button" });
+  const ic = el("div", { class:"tc-icon" }); ic.appendChild(icon(t.icon));
+  card.appendChild(ic);
+  const save = el("span", { class:"tool-card__save" + (isSaved(t.id) ? " is-saved" : ""), role:"button", "aria-label":"Save tool" });
+  save.appendChild(icon(isSaved(t.id) ? "i-heart-fill" : "i-heart"));
+  save.addEventListener("click", e => {
+    e.stopPropagation();
+    const added = toggleSaved(t.id);
+    save.classList.toggle("is-saved", added);
+    save.replaceChildren(icon(added ? "i-heart-fill" : "i-heart"));
+    toast(added ? "Saved to your tools" : "Removed from saved");
+  });
+  card.appendChild(save);
+  if (opts.used) card.appendChild(el("span", { class:"tool-card__badge", text:"Opened" }));
+  card.appendChild(el("h3", { text:t.title }));
+  card.appendChild(el("p", { text:t.desc }));
+  const open = el("span", { class:"tc-open" });
+  open.appendChild(document.createTextNode("Open tool "));
+  open.appendChild(icon("i-arrow"));
+  card.appendChild(open);
+  card.addEventListener("click", () => openTool(t.id));
+  return card;
+}
+
+function openTool(id) {
+  const t = TOOLS.find(x => x.id === id);
+  if (!t) return;
+  pushRecentTool(id);
+  track("tool_open", { tool:id });
+  openModal(t.title, buildToolBody(id));
+  renderReturnBar();
+}
+
+function openArticle(slug) {
+  const a = ARTICLES.find(x => x.slug === slug);
+  if (!a) return;
+  const body = el("div", { class:"prose" });
+  body.appendChild(el("p", { class:"muted", text:`${a.category} · ${a.readTime} read` }));
+  (a.body || []).forEach(p => body.appendChild(el("p", { text:p })));
+  const reads = LS.get(KEYS.guideReads, []);
+  if (!reads.includes(slug)) { reads.push(slug); LS.set(KEYS.guideReads, reads); }
+  openModal(a.title, body);
+  track("article_open", { slug });
+  renderReturnBar();
+}
+
+/* =========================================================
+   TOOL BUILDERS
+   ========================================================= */
+function field(labelText, inputEl, hint) {
+  const f = el("div", { class:"field" });
+  const id = inputEl.id || ("f_" + Math.random().toString(36).slice(2,8));
+  inputEl.id = id;
+  f.appendChild(el("label", { for:id, text:labelText }));
+  f.appendChild(inputEl);
+  if (hint) f.appendChild(el("small", { class:"muted", text:hint }));
+  return f;
+}
+function numberInput(ph, val="") { return el("input", { type:"number", inputmode:"decimal", step:"any", placeholder:ph, value:val }); }
+function resultBox() { return el("div", { class:"result", hidden:true }); }
+
+const TOOL_BUILDERS = {
+  percentage(root) {
+    const a = numberInput("e.g. 15"), b = numberInput("e.g. 200");
+    const out = resultBox();
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("Percent (%)", a));
+    row.appendChild(field("Of number", b));
+    root.appendChild(row);
+    const btns = el("div", { class:"hero-cta" });
+    const b1 = el("button", { class:"btn btn-primary", type:"button", text:"Calculate" });
+    const b2 = el("button", { class:"btn btn-ghost", type:"button", text:"Clear" });
+    btns.appendChild(b1); btns.appendChild(b2);
+    root.appendChild(btns);
+    b1.addEventListener("click", () => {
+      const x = parseFloat(a.value), y = parseFloat(b.value);
+      if (isNaN(x) || isNaN(y)) { out.className="result err"; out.hidden=false; out.textContent="Enter both numbers."; return; }
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `${x}% of ${y} is<strong>${fmtNum(x/100*y)}</strong>`;
+    });
+    b2.addEventListener("click", () => { a.value=""; b.value=""; out.hidden=true; });
+    root.appendChild(out);
+  },
+  discount(root) {
+    const price = numberInput("e.g. 79.99"), off = numberInput("e.g. 25");
+    const out = resultBox();
+    root.appendChild(field("Original price ($)", price));
+    root.appendChild(field("Discount (%)", off));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate final price" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const p = parseFloat(price.value), d = parseFloat(off.value);
+      if (isNaN(p) || isNaN(d)) { out.className="result err"; out.hidden=false; out.textContent="Enter a valid price and discount."; return; }
+      const save = p * d / 100, final = p - save;
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `You save ${fmtMoney(save)}<strong>${fmtMoney(final)} final price</strong>`;
+    });
+  },
+  tip(root) {
+    const bill = numberInput("e.g. 62.40"), pct = numberInput("15"), people = numberInput("1");
+    const out = resultBox();
+    root.appendChild(field("Bill amount ($)", bill));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("Tip (%)", pct));
+    row.appendChild(field("Split between", people));
+    root.appendChild(row);
+    const btns = el("div", { class:"hero-cta" });
+    [10,15,18,20].forEach(v => {
+      const b = el("button", { class:"btn btn-ghost btn-sm", type:"button", text:v+"%" });
+      b.addEventListener("click", () => { pct.value = v; b.click?.call?.(b); });
+      b.addEventListener("click", () => runTip(bill, pct, people, out));
+      btns.appendChild(b);
+    });
+    root.appendChild(btns);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate tip" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => runTip(bill, pct, people, out));
+  },
+  loan(root) {
+    const amount = numberInput("e.g. 25000"), rate = numberInput("e.g. 6.5"), years = numberInput("e.g. 5");
+    const out = resultBox();
+    root.appendChild(field("Loan amount ($)", amount));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("Annual rate (%)", rate));
+    row.appendChild(field("Term (years)", years));
+    root.appendChild(row);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Estimate monthly payment" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const P = parseFloat(amount.value), r = parseFloat(rate.value)/100/12, n = parseFloat(years.value)*12;
+      if (!isFinite(P) || !isFinite(n) || P<=0 || n<=0) { out.className="result err"; out.hidden=false; out.textContent="Enter valid amount, rate and term."; return; }
+      const m = r === 0 ? P/n : (P*r)/(1-Math.pow(1+r,-n));
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `Monthly payment<strong>${fmtMoney(m)}</strong>Total over term: ${fmtMoney(m*n)}`;
+    });
+  },
+  compound(root) {
+    const start = numberInput("1000"), monthly = numberInput("100"), rate = numberInput("7"), years = numberInput("10");
+    const out = resultBox();
+    root.appendChild(field("Starting amount ($)", start));
+    root.appendChild(field("Monthly contribution ($)", monthly));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("Annual return (%)", rate));
+    row.appendChild(field("Years", years));
+    root.appendChild(row);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate future value" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const P = parseFloat(start.value) || 0;
+      const M = parseFloat(monthly.value) || 0;
+      const r = (parseFloat(rate.value) || 0) / 100 / 12;
+      const n = (parseFloat(years.value) || 0) * 12;
+      if (n <= 0) { out.className="result err"; out.hidden=false; out.textContent="Enter a valid number of years."; return; }
+      let balance = P;
+      for (let i = 0; i < n; i++) { balance = balance * (1 + r) + M; }
+      const contributed = P + M * n;
+      const growth = balance - contributed;
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `Estimated future value<strong>${fmtMoney(balance)}</strong>Total contributed: ${fmtMoney(contributed)} · Growth: ${fmtMoney(growth)}`;
+    });
+  },
+  salestax(root) {
+    const price = numberInput("e.g. 49.99"), rate = numberInput("e.g. 7.25");
+    const mode = el("select");
+    mode.appendChild(el("option", { value:"add", text:"Add tax to a pre-tax price" }));
+    mode.appendChild(el("option", { value:"remove", text:"Remove tax from a total" }));
+    const out = resultBox();
+    root.appendChild(field("Mode", mode));
+    root.appendChild(field("Amount ($)", price));
+    root.appendChild(field("Sales tax rate (%)", rate));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const p = parseFloat(price.value), r = parseFloat(rate.value);
+      if (isNaN(p) || isNaN(r)) { out.className="result err"; out.hidden=false; out.textContent="Enter amount and tax rate."; return; }
+      if (mode.value === "add") {
+        const tax = p * r / 100;
+        out.className="result"; out.hidden=false;
+        out.innerHTML = `Tax: ${fmtMoney(tax)}<strong>${fmtMoney(p + tax)} total</strong>`;
+      } else {
+        const base = p / (1 + r/100);
+        const tax = p - base;
+        out.className="result"; out.hidden=false;
+        out.innerHTML = `Pre-tax amount: ${fmtMoney(base)}<strong>${fmtMoney(tax)} tax included</strong>`;
+      }
+    });
+  },
+  age(root) {
+    const dob = el("input", { type:"date" });
+    const out = resultBox();
+    root.appendChild(field("Date of birth", dob));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate age" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      if (!dob.value) { out.className="result err"; out.hidden=false; out.textContent="Pick a date."; return; }
+      const birth = new Date(dob.value), now = new Date();
+      if (birth > now) { out.className="result err"; out.hidden=false; out.textContent="Birth date is in the future."; return; }
+      let y = now.getFullYear() - birth.getFullYear();
+      let m = now.getMonth() - birth.getMonth();
+      let d = now.getDate() - birth.getDate();
+      if (d < 0) { m--; d += new Date(now.getFullYear(), now.getMonth(), 0).getDate(); }
+      if (m < 0) { y--; m += 12; }
+      const totalDays = Math.floor((now - birth) / 86400000);
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `You are<strong>${y} years, ${m} months, ${d} days</strong>That's ${fmtNum(totalDays, 0)} days, or about ${fmtNum(totalDays/365.25, 1)} years.`;
+    });
+  },
+  datediff(root) {
+    const a = el("input", { type:"date" });
+    const b = el("input", { type:"date" });
+    const out = resultBox();
+    root.appendChild(field("First date", a));
+    root.appendChild(field("Second date", b));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate difference" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      if (!a.value || !b.value) { out.className="result err"; out.hidden=false; out.textContent="Pick both dates."; return; }
+      const d1 = new Date(a.value), d2 = new Date(b.value);
+      const diff = Math.abs(d2 - d1);
+      const days = Math.floor(diff / 86400000);
+      const weeks = days / 7;
+      const months = days / 30.4375;
+      const years = days / 365.25;
+      const weekdays = countWeekdays(d1, d2);
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `Between the two dates<strong>${fmtNum(days,0)} days</strong>${fmtNum(weeks,1)} weeks · ${fmtNum(months,1)} months · ${fmtNum(years,2)} years · ${fmtNum(weekdays,0)} weekdays`;
+    });
+  },
+  unit(root) {
+    const CAT = {
+      Length: { m:1, km:1000, cm:0.01, mm:0.001, mi:1609.344, yd:0.9144, ft:0.3048, in:0.0254 },
+      Weight: { kg:1, g:0.001, mg:0.000001, lb:0.45359237, oz:0.028349523125, t:1000 },
+      Temperature: null
+    };
+    const cat = el("select");
+    Object.keys(CAT).forEach(k => cat.appendChild(el("option", { value:k, text:k })));
+    const valIn = numberInput("1", "1");
+    const from = el("select"), to = el("select");
+    const fill = () => {
+      from.innerHTML=""; to.innerHTML="";
+      const c = cat.value;
+      if (c === "Temperature") {
+        [["C","Celsius (°C)"],["F","Fahrenheit (°F)"],["K","Kelvin (K)"]].forEach(([v,l]) => {
+          from.appendChild(el("option", { value:v, text:l }));
+          to.appendChild(el("option", { value:v, text:l }));
+        });
+        to.value = "F";
+      } else {
+        Object.keys(CAT[c]).forEach(u => {
+          from.appendChild(el("option", { value:u, text:u }));
+          to.appendChild(el("option", { value:u, text:u }));
+        });
+        to.value = Object.keys(CAT[c])[1];
+      }
+    };
+    cat.addEventListener("change", fill); fill();
+    root.appendChild(field("Category", cat));
+    root.appendChild(field("Value", valIn));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("From", from)); row.appendChild(field("To", to));
+    root.appendChild(row);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Convert" });
+    root.appendChild(btn);
+    const out = resultBox(); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const v = parseFloat(valIn.value);
+      if (isNaN(v)) { out.className="result err"; out.hidden=false; out.textContent="Enter a number."; return; }
+      const c = cat.value; let result;
+      if (c === "Temperature") {
+        let cel;
+        if (from.value === "C") cel = v;
+        else if (from.value === "F") cel = (v-32)*5/9;
+        else cel = v - 273.15;
+        if (to.value === "C") result = cel;
+        else if (to.value === "F") result = cel*9/5 + 32;
+        else result = cel + 273.15;
+      } else {
+        result = v * CAT[c][from.value] / CAT[c][to.value];
+      }
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `${v} ${from.value}<strong>${result.toFixed(4).replace(/\.?0+$/,"")} ${to.value}</strong>`;
+    });
+  },
+  currency(root) {
+    const amount = numberInput("1", "1");
+    const from = el("select"), to = el("select");
+    ["USD","EUR","GBP","CAD","AUD","JPY","INR","BDT","MXN","BRL"].forEach(c => {
+      from.appendChild(el("option", { value:c, text:c }));
+      to.appendChild(el("option", { value:c, text:c }));
+    });
+    to.value = "EUR";
+    root.appendChild(field("Amount", amount));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("From", from)); row.appendChild(field("To", to));
+    root.appendChild(row);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Convert" });
+    root.appendChild(btn);
+    const notice = el("div", { class:"notice", style:"margin-top:14px" });
+    notice.appendChild(icon("i-info"));
+    notice.appendChild(el("span", { html:"<strong>Live exchange rates are not connected.</strong> We don't invent rates. To enable real conversions, connect a rates API through a backend function — never expose a secret key in frontend code." }));
+    root.appendChild(notice);
+    const out = resultBox(); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      if (from.value === to.value) { out.className="result"; out.hidden=false; out.innerHTML = `Same currency.<strong>${amount.value || "0"} ${from.value}</strong>`; return; }
+      out.className="result warn"; out.hidden=false;
+      out.innerHTML = "Live exchange rates are not available.<strong>—</strong>See the note above.";
+    });
+  },
+  bmi(root) {
+    const height = numberInput("e.g. 70"), weight = numberInput("e.g. 165");
+    const unit = el("select");
+    unit.appendChild(el("option", { value:"imperial", text:"Imperial (in / lb)" }));
+    unit.appendChild(el("option", { value:"metric", text:"Metric (cm / kg)" }));
+    const out = resultBox();
+    root.appendChild(field("Unit system", unit));
+    root.appendChild(field("Height", height));
+    root.appendChild(field("Weight", weight));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Calculate BMI" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const h = parseFloat(height.value), w = parseFloat(weight.value);
+      if (isNaN(h) || isNaN(w) || h<=0 || w<=0) { out.className="result err"; out.hidden=false; out.textContent="Enter height and weight."; return; }
+      const bmi = unit.value === "imperial" ? (w/(h*h))*703 : w / Math.pow(h/100, 2);
+      let cat = "Underweight";
+      if (bmi >= 18.5 && bmi < 25) cat = "Normal weight";
+      else if (bmi >= 25 && bmi < 30) cat = "Overweight";
+      else if (bmi >= 30) cat = "Obesity";
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `${cat} (adult reference range)<strong>BMI ${bmi.toFixed(1)}</strong>BMI is a screening tool only. It does not diagnose health. Talk to a healthcare provider about what's right for you.`;
+    });
+  },
+  password(root) {
+    const input = el("input", { type:"text", placeholder:"Type a password to test", autocomplete:"off" });
+    root.appendChild(field("Password", input, "Tested entirely in your browser. Never sent anywhere."));
+    const meter = el("div", { class:"meter" }); const bar = el("i"); meter.appendChild(bar);
+    root.appendChild(meter);
+    const out = resultBox(); root.appendChild(out);
+    const evaluate = () => {
+      const p = input.value;
+      if (!p) { out.hidden=true; bar.style.width="0"; return; }
+      let score = 0; const tips = [];
+      if (p.length >= 8) score++; else tips.push("Use at least 12 characters.");
+      if (p.length >= 12) score++;
+      if (p.length >= 16) score++;
+      if (/[a-z]/.test(p) && /[A-Z]/.test(p)) score++; else tips.push("Mix upper and lower case.");
+      if (/\d/.test(p)) score++; else tips.push("Add a number.");
+      if (/[^A-Za-z0-9]/.test(p)) score++; else tips.push("Add a symbol.");
+      if (/(.)\1{2,}/.test(p)) { score--; tips.push("Avoid repeating characters."); }
+      if (/^(?:password|qwerty|123456|letmein|admin)/i.test(p)) { score = 0; tips.push("Avoid common passwords."); }
+      const levels = [
+        { min:-99, label:"Very weak", color:"#DC2626" },
+        { min:2, label:"Weak", color:"#F97316" },
+        { min:3, label:"Fair", color:"#F59E0B" },
+        { min:5, label:"Strong", color:"#059669" },
+        { min:6, label:"Very strong", color:"#047857" }
+      ];
+      const lvl = levels.filter(l => score >= l.min).pop();
+      bar.style.width = Math.min(100, (score/6)*100) + "%";
+      bar.style.background = lvl.color;
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `Strength: <strong style="display:inline;font-size:1rem;color:${lvl.color}">${lvl.label}</strong>` +
+        (tips.length ? "<br><span class='muted' style='font-size:.85rem'>" + tips.join(" ") + "</span>" : "");
+    };
+    input.addEventListener("input", evaluate);
+  },
+  wordcount(root) {
+    const ta = el("textarea", { rows:"6", placeholder:"Paste or type your text here…", style:"resize:vertical;min-height:140px;font-family:inherit" });
+    root.appendChild(field("Text", ta));
+    const out = el("div", { class:"result" });
+    out.innerHTML = "Start typing to see live counts.";
+    const refresh = () => {
+      const text = ta.value;
+      const chars = text.length;
+      const charsNoSpaces = text.replace(/\s/g, "").length;
+      const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+      const sentences = (text.match(/[.!?]+(?=\s|$)/g) || []).length;
+      const paragraphs = text.trim() ? text.trim().split(/\n\s*\n/).filter(p => p.trim()).length : 0;
+      const readMin = Math.max(1, Math.round(words / 225));
+      out.innerHTML = `<strong style="font-size:1.15rem">${fmtNum(words,0)} words</strong>${fmtNum(chars,0)} characters · ${fmtNum(charsNoSpaces,0)} without spaces · ${fmtNum(sentences,0)} sentences · ${fmtNum(paragraphs,0)} paragraphs<br><span class="muted">Approx. ${readMin} min read</span>`;
+    };
+    ta.addEventListener("input", refresh);
+    root.appendChild(out);
+    refresh();
+  },
+  random(root) {
+    const min = numberInput("1", "1"), max = numberInput("100", "100");
+    const count = numberInput("1", "1");
+    const mode = el("select");
+    mode.appendChild(el("option", { value:"int", text:"Whole numbers" }));
+    mode.appendChild(el("option", { value:"decimal", text:"Decimals (0–1)" }));
+    mode.appendChild(el("option", { value:"dice", text:"Roll dice (1–6)" }));
+    const out = resultBox();
+    root.appendChild(field("Mode", mode));
+    const row = el("div", { class:"field-row" });
+    row.appendChild(field("Min", min));
+    row.appendChild(field("Max", max));
+    root.appendChild(row);
+    root.appendChild(field("How many", count));
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Generate" });
+    root.appendChild(btn); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const n = Math.max(1, Math.min(50, parseInt(count.value) || 1));
+      const results = [];
+      const crypto = window.crypto || window.msCrypto;
+      const rand = () => {
+        if (crypto?.getRandomValues) {
+          const a = new Uint32Array(1);
+          crypto.getRandomValues(a);
+          return a[0] / 4294967296;
+        }
+        return Math.random();
+      };
+      if (mode.value === "decimal") {
+        for (let i = 0; i < n; i++) results.push(rand().toFixed(6));
+      } else {
+        const lo = mode.value === "dice" ? 1 : (parseFloat(min.value) || 0);
+        const hi = mode.value === "dice" ? 6 : (parseFloat(max.value) || 100);
+        const a = Math.min(lo, hi), b = Math.max(lo, hi);
+        for (let i = 0; i < n; i++) results.push(Math.floor(rand() * (b - a + 1)) + a);
+      }
+      out.className="result"; out.hidden=false;
+      out.innerHTML = `Result${n > 1 ? "s" : ""}<strong style="font-size:1.15rem;word-break:break-word">${results.join(", ")}</strong>`;
+    });
+  },
+  image(root) {
+    const file = el("input", { type:"file", accept:"image/*" });
+    root.appendChild(field("Choose an image", file, "Runs locally via canvas. Nothing is uploaded."));
+    const quality = el("input", { type:"range", min:"0.1", max:"0.95", step:"0.05", value:"0.7" });
+    const qLabel = el("small", { class:"muted", text:"Quality: 70%" });
+    quality.addEventListener("input", () => qLabel.textContent = `Quality: ${Math.round(quality.value*100)}%`);
+    root.appendChild(field("JPEG quality", quality));
+    root.appendChild(qLabel);
+    const btn = el("button", { class:"btn btn-primary btn-block", type:"button", text:"Compress" });
+    root.appendChild(btn);
+    const out = resultBox(); root.appendChild(out);
+    btn.addEventListener("click", () => {
+      const f = file.files?.[0];
+      if (!f) { out.className="result err"; out.hidden=false; out.textContent="Choose an image first."; return; }
+      if (!f.type.startsWith("image/")) { out.className="result err"; out.hidden=false; out.textContent="Not an image file."; return; }
+      const url = URL.createObjectURL(f);
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement("canvas");
+        canvas.width = img.naturalWidth; canvas.height = img.naturalHeight;
+        canvas.getContext("2d").drawImage(img, 0, 0);
+        canvas.toBlob(blob => {
+          URL.revokeObjectURL(url);
+          if (!blob) { out.className="result err"; out.hidden=false; out.textContent="Compression failed."; return; }
+          const before = f.size, after = blob.size;
+          const saved = ((1 - after/before)*100).toFixed(1);
+          const dl = el("a", { class:"btn btn-primary", href:URL.createObjectURL(blob), download:"compressed-" + f.name.replace(/\.[^.]+$/,"") + ".jpg", text:"Download compressed image" });
+          out.className="result"; out.hidden=false;
+          out.innerHTML = `${(before/1024).toFixed(1)} KB → ${(after/1024).toFixed(1)} KB<strong>${saved}% smaller</strong>`;
+          out.appendChild(el("div", { style:"margin-top:10px" }, [dl]));
+        }, "image/jpeg", parseFloat(quality.value));
+      };
+      img.onerror = () => { URL.revokeObjectURL(url); out.className="result err"; out.hidden=false; out.textContent="Could not read that image."; };
+      img.src = url;
+    });
+  }
+};
+
+function runTip(bill, pct, people, out) {
+  const b = parseFloat(bill.value), t = parseFloat(pct.value), n = Math.max(1, parseInt(people.value || "1", 10));
+  if (isNaN(b) || isNaN(t)) { out.className="result err"; out.hidden=false; out.textContent="Enter bill and tip percentage."; return; }
+  const tipAmt = b * t / 100, total = b + tipAmt;
+  out.className="result"; out.hidden=false;
+  out.innerHTML = `Tip ${fmtMoney(tipAmt)} · Total ${fmtMoney(total)}<strong>${fmtMoney(total/n)} per person</strong>`;
+}
+
+function countWeekdays(d1, d2) {
+  const start = d1 < d2 ? new Date(d1) : new Date(d2);
+  const end = d1 < d2 ? new Date(d2) : new Date(d1);
+  let count = 0;
+  const cur = new Date(start);
+  while (cur <= end) {
+    const day = cur.getDay();
+    if (day !== 0 && day !== 6) count++;
+    cur.setDate(cur.getDate() + 1);
+  }
+  return count;
+}
+
+function buildToolBody(id) {
+  const wrap = el("div");
+  const fn = TOOL_BUILDERS[id];
+  if (fn) fn(wrap);
+  else wrap.appendChild(el("p", { text:"This tool is not configured." }));
+  return wrap;
+}
+
+/* =========================================================
+   RENDER: TOOL GRIDS
+   ========================================================= */
+let currentFilter = "all";
+function renderToolGrids() {
+  const home = $("#toolsGridHome"), full = $("#toolsGrid");
+  const recent = recentTools();
+  if (home) {
+    home.innerHTML = "";
+    TOOLS.slice(0, 8).forEach(t => home.appendChild(toolCard(t, { used: recent.includes(t.id) })));
+  }
+  if (full) {
+    full.innerHTML = "";
+    let list = TOOLS.slice();
+    if (currentFilter === "saved") list = list.filter(t => isSaved(t.id));
+    else if (currentFilter !== "all") list = list.filter(t => (t.tags||[]).includes(currentFilter));
+    if (!list.length) $("#toolsEmpty").hidden = false;
+    else {
+      $("#toolsEmpty").hidden = true;
+      list.forEach(t => full.appendChild(toolCard(t, { used: recent.includes(t.id) })));
+    }
+  }
+}
+$$("#toolFilters .filter-chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    $$("#toolFilters .filter-chip").forEach(c => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    currentFilter = chip.dataset.filter;
+    renderToolGrids();
+  });
+});
+
+function renderSavedTools() {
+  const grid = $("#toolsGridSaved");
+  if (!grid) return;
+  grid.innerHTML = "";
+  const saved = TOOLS.filter(t => isSaved(t.id));
+  if (!saved.length) { $("#savedEmpty").hidden = false; return; }
+  $("#savedEmpty").hidden = true;
+  saved.forEach(t => grid.appendChild(toolCard(t, { used: recentTools().includes(t.id) })));
+}
+
+/* =========================================================
+   RENDER: BUNDLES
+   ========================================================= */
+function renderBundles() {
+  const grid = $("#bundleGrid");
+  if (!grid) return;
+  grid.innerHTML = "";
+  BUNDLES.forEach(b => {
+    const done = b.steps.filter(id => recentTools().includes(id)).length;
+    const total = b.steps.length;
+    const pct = Math.round((done/total)*100);
+    const card = el("div", { class:"bundle-card" });
+    const head = el("div", { class:"bundle-head" });
+    const ic = el("div", { class:"bundle-icon" }); ic.appendChild(icon(b.icon));
+    head.appendChild(ic);
+    const txt = el("div");
+    txt.appendChild(el("h3", { text:b.title }));
+    txt.appendChild(el("p", { text:b.desc }));
+    head.appendChild(txt);
+    card.appendChild(head);
+    const steps = el("div", { class:"bundle-steps" });
+    b.steps.forEach((id, i) => {
+      const t = TOOLS.find(x => x.id === id);
+      if (!t) return;
+      const isDone = recentTools().includes(id);
+      const btn = el("button", { class:"bundle-step" + (isDone ? " is-done" : ""), type:"button" });
+      btn.appendChild(el("span", { class:"num", text: isDone ? "✓" : String(i+1) }));
+      btn.appendChild(el("span", { text:t.title }));
+      btn.addEventListener("click", () => openTool(id));
+      steps.appendChild(btn);
+    });
+    card.appendChild(steps);
+    const prog = el("div", { class:"bundle-progress" });
+    prog.appendChild(el("span", { text:`${done} of ${total}` }));
+    const bar = el("div", { class:"bundle-progress-bar" }); const fill = el("i"); fill.style.width = pct + "%";
+    bar.appendChild(fill);
+    prog.appendChild(bar);
+    card.appendChild(prog);
+    grid.appendChild(card);
+  });
+}
+
+/* =========================================================
+   RENDER: RESOURCES
+   ========================================================= */
+function resourceCard(r) {
+  const card = el("article", { class:"resource-card" });
+  card.appendChild(el("span", { class:"resource-cat", text:r.category }));
+  const ic = el("div", { class:"rc-icon" }); ic.appendChild(icon(r.icon));
+  card.appendChild(ic);
+  card.appendChild(el("h3", { text:r.name }));
+  card.appendChild(el("p", { text:r.desc }));
+  card.appendChild(el("div", { class:"resource-url", text:r.url.replace(/^https?:\/\//,"").split("/")[0] }));
+  const a = el("a", { class:"btn btn-primary btn-sm", href:r.url, target:"_blank", rel:"noopener noreferrer", text:"Open official site" });
+  card.appendChild(a);
+  return card;
+}
+function renderResources() {
+  const home = $("#resourceGridHome"), full = $("#resourceGrid");
+  if (home) { home.innerHTML = ""; RESOURCES.slice(0, 6).forEach(r => home.appendChild(resourceCard(r))); }
+  if (full) { full.innerHTML = ""; RESOURCES.forEach(r => full.appendChild(resourceCard(r))); }
+}
+
+/* =========================================================
+   RENDER: ARTICLES
+   ========================================================= */
+function articleCard(a) {
+  const card = el("article", { class:"article-card" });
+  card.appendChild(el("span", { class:"article-cat", text:a.category }));
+  card.appendChild(el("h3", { text:a.title }));
+  card.appendChild(el("p", { text:a.excerpt }));
+  const meta = el("div", { class:"article-meta" });
+  meta.appendChild(icon("i-clock"));
+  meta.appendChild(document.createTextNode(
+    new Date(a.date).toLocaleDateString("en-US", { year:"numeric", month:"short", day:"numeric" }) + " · " + a.readTime
+  ));
+  card.appendChild(meta);
+  const btn = el("button", { class:"btn btn-ghost btn-sm", type:"button", text:"Read guide" });
+  btn.addEventListener("click", () => openArticle(a.slug));
+  card.appendChild(btn);
+  return card;
+}
+function renderArticles() {
+  const home = $("#articlesGridHome"), full = $("#articlesGrid");
+  if (home) { home.innerHTML = ""; ARTICLES.slice(0, 3).forEach(a => home.appendChild(articleCard(a))); }
+  if (full) { full.innerHTML = ""; ARTICLES.forEach(a => full.appendChild(articleCard(a))); }
+}
+
+/* =========================================================
+   RENDER: COMPARE
+   ========================================================= */
+let compareSelection = [];
+function renderComparePicker() {
+  const picker = $("#comparePicker");
+  if (!picker) return;
+  picker.innerHTML = "";
+  Object.keys(COMPARISON_POOL).forEach(name => {
+    const active = compareSelection.includes(name);
+    const btn = el("button", { class:"compare-pick" + (active ? " is-active" : ""), type:"button" });
+    btn.appendChild(icon("i-scale"));
+    btn.appendChild(document.createTextNode(name));
+    btn.addEventListener("click", () => {
+      const i = compareSelection.indexOf(name);
+      if (i === -1) { if (compareSelection.length >= 3) compareSelection.shift(); compareSelection.push(name); }
+      else compareSelection.splice(i, 1);
+      renderComparePicker(); renderComparison();
+    });
+    picker.appendChild(btn);
+  });
+}
+function renderComparison() {
+  const area = $("#compareArea");
+  if (!area) return;
+  area.innerHTML = "";
+  if (!compareSelection.length) {
+    const empty = el("div", { class:"empty-state" });
+    empty.appendChild(icon("i-scale"));
+    empty.appendChild(el("h3", { text:"Pick something to compare" }));
+    empty.appendChild(el("p", { text:"Choose up to three categories above. We show factual criteria — we never declare a winner." }));
+    area.appendChild(empty);
+    return;
+  }
+  area.appendChild(el("h2", { text:"What to compare" }));
+  area.appendChild(el("p", { class:"section-sub", text:"These are the criteria that actually matter for each category. Research each one independently — we don't rank." }));
+  const wrap = el("div", { class:"table-wrap" });
+  const table = el("table", { class:"compare-table" });
+  const thead = el("thead"); const trh = el("tr");
+  trh.appendChild(el("th", { scope:"col", text:"Criterion" }));
+  compareSelection.forEach(name => trh.appendChild(el("th", { scope:"col", text:name })));
+  thead.appendChild(trh); table.appendChild(thead);
+  const tbody = el("tbody");
+  const firstPool = COMPARISON_POOL[compareSelection[0]] || [];
+  const rowCount = firstPool[0] ? firstPool[0].length : 0;
+  for (let i = 0; i < rowCount; i++) {
+    const tr = el("tr");
+    tr.appendChild(el("td", { text: firstPool[0][i] }));
+    compareSelection.forEach(name => {
+      const r = COMPARISON_POOL[name] || [];
+      const label = (r[0] && r[0][i]) ? r[0][i] : "—";
+      tr.appendChild(el("td", { text:label }));
+    });
+    tbody.appendChild(tr);
+  }
+  table.appendChild(tbody);
+  wrap.appendChild(table);
+  area.appendChild(wrap);
+}
+
+/* =========================================================
+   RENDER: DASHBOARD + EVENTS
+   ========================================================= */
+function renderEventsTable() {
+  const tbody = $("#eventsTableBody");
+  if (!tbody) return;
+  const buf = LS.get(KEYS.events, []);
+  tbody.innerHTML = "";
+  if (!buf.length) {
+    const tr = el("tr");
+    tr.appendChild(el("td", { colspan:"4", class:"empty-cell", text:"No events yet. Use the site and this table fills in locally." }));
+    tbody.appendChild(tr); return;
+  }
+  buf.slice(0, 12).forEach(ev => {
+    const tr = el("tr");
+    tr.appendChild(el("td", { text: ev.event || "—" }));
+    tr.appendChild(el("td", { text: ev.path || "—" }));
+    tr.appendChild(el("td", { text: ev.tool || ev.slug || ev.query || "—" }));
+    tr.appendChild(el("td", { text: new Date(ev.ts).toLocaleTimeString("en-US") }));
+    tbody.appendChild(tr);
+  });
+}
+function renderDashboard() {
+  const set = (id, val) => { const e = $(id); if (e) e.textContent = val; };
+  set("#kpiToolsOpened", recentTools().length || 0);
+  set("#kpiSaved", savedTools().length || 0);
+  set("#kpiGuidesRead", LS.get(KEYS.guideReads, []).length || 0);
+  set("#kpiSearches", LS.get(KEYS.searchCount, 0) || 0);
+  set("#kpiStreak", LS.get(KEYS.streak, 0) || 0);
+  const first = LS.get(KEYS.firstVisit, null);
+  set("#kpiDays", first ? Math.max(1, Math.floor((Date.now() - new Date(first).getTime())/86400000) + 1) : 1);
+  renderEventsTable();
+}
+
+/* =========================================================
+   RENDER: RETURN BAR
+   ========================================================= */
+function renderReturnBar() {
+  const bar = $("#returnBar");
+  if (!bar) return;
+  if (LS.get(KEYS.returnDismissed, false)) { bar.hidden = true; return; }
+  const visits = LS.get(KEYS.visitCount, 0);
+  const recent = recentTools();
+  const saved = savedTools();
+  const streak = LS.get(KEYS.streak, 0);
+  if (visits < 2 && !recent.length && !saved.length) { bar.hidden = true; return; }
+  let text = "Welcome back";
+  if (streak >= 3) text = `${streak}-day streak — welcome back`;
+  else if (visits >= 2) text = `Visit #${visits} on this device`;
+  else if (recent.length) text = "Pick up where you left off";
+  $("#returnText").textContent = text;
+  const actions = $("#returnActions");
+  actions.innerHTML = "";
+  if (recent.length) {
+    const id = recent[0]; const t = TOOLS.find(x => x.id === id);
+    if (t) {
+      const chip = el("button", { class:"return-chip", type:"button" });
+      chip.appendChild(icon("i-clock"));
+      chip.appendChild(document.createTextNode("Continue: " + t.title));
+      chip.addEventListener("click", () => openTool(id));
+      actions.appendChild(chip);
+    }
+  }
+  if (saved.length) {
+    const chip = el("a", { class:"return-chip", href:"#/saved" });
+    chip.appendChild(icon("i-heart"));
+    chip.appendChild(document.createTextNode(saved.length + " saved"));
+    actions.appendChild(chip);
+  }
+  const dash = el("a", { class:"return-chip", href:"#/dashboard" });
+  dash.appendChild(icon("i-bolt"));
+  dash.appendChild(document.createTextNode("Your activity"));
+  actions.appendChild(dash);
+  bar.hidden = false;
+}
+$("#returnDismiss").addEventListener("click", () => {
+  LS.set(KEYS.returnDismissed, true);
+  $("#returnBar").hidden = true;
+});
+
+/* =========================================================
+   HERO MINI TOOL + GREETING
+   ========================================================= */
+function wireMiniTool() {
+  const price = $("#mtPrice"), off = $("#mtOff"), out = $("#mtOutput"), save = $("#mtSave");
+  const update = () => {
+    const p = parseFloat(price.value), d = parseFloat(off.value);
+    if (isNaN(p) || isNaN(d)) { out.textContent = "$—"; save.textContent = "Type a price to see your savings"; return; }
+    const s = p * d / 100, final = p - s;
+    out.textContent = fmtMoney(final) || "$—";
+    save.textContent = "You save " + fmtMoney(s);
+  };
+  price.addEventListener("input", update);
+  off.addEventListener("input", update);
+  $("#mtOpen").addEventListener("click", () => openTool("discount"));
+}
+function renderGreeting() {
+  const g = $("#heroGreeting");
+  if (!g) return;
+  const hour = new Date().getHours();
+  const visits = LS.get(KEYS.visitCount, 0);
+  const streak = LS.get(KEYS.streak, 0);
+  let txt;
+  if (visits > 1 && streak >= 3) txt = `${streak}-day streak — good to see you back`;
+  else if (visits > 1) txt = "Welcome back — pick up where you left off";
+  else if (hour < 12) txt = "Good morning — start with a quick calculator";
+  else if (hour < 18) txt = "Good afternoon — 15 tools, no sign-up";
+  else txt = "Good evening — calm tools for real decisions";
+  g.textContent = txt;
+}
+
+/* =========================================================
+   NEWSLETTER — works locally, with mailto fallback
+   ========================================================= */
+$("#updatesForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const email = $("#updatesEmail").value.trim();
+  const note = $("#updatesNote");
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    note.textContent = "Please enter a valid email address.";
+    note.style.color = "#FCA5A5";
+    return;
+  }
+  LS.set(KEYS.newsletterEmail, email);
+  note.innerHTML = `Saved locally as <strong>${email.replace(/[<>&]/g, "")}</strong>. <a href="mailto:${CONFIG.contactEmail}?subject=Subscribe&body=Please add me to the list: ${encodeURIComponent(email)}" style="color:var(--yellow);text-decoration:underline">Send us a confirmation email</a> to complete signup.`;
+  note.style.color = "#D1D5DB";
+  $("#updatesForm").reset();
+  toast("Email saved. Confirm via the link above.");
+  track("newsletter_local_save", {});
+});
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+function renderResults(container, query) {
+  container.innerHTML = "";
+  const q = query.trim();
+  if (!q) { container.hidden = true; return; }
+  const results = searchItems(q);
+  container.hidden = false;
+  LS.set(KEYS.searchCount, LS.get(KEYS.searchCount, 0) + 1);
+  if (!results.length) {
+    container.appendChild(el("div", { class:"sr-empty", text:`No matches for "${q}". Try: tip, loan, discount, credit report.` }));
+    return;
+  }
+  results.forEach(r => {
+    const a = el("a", { class:"sr-item", href:"#", role:"button" });
+    a.appendChild(icon(r.icon));
+    const txt = el("div");
+    txt.appendChild(el("b", { text:r.title }));
+    txt.appendChild(el("small", { text:`${r.type} · ${r.sub}` }));
+    a.appendChild(txt);
+    a.addEventListener("click", e => { e.preventDefault(); r.action(); container.hidden = true; });
+    container.appendChild(a);
+  });
+  track("search", { query:q, results:results.length });
+}
+function wireSearch(inputEl, resultsEl, chipsEl) {
+  if (!inputEl) return;
+  let t = null;
+  inputEl.addEventListener("input", () => { clearTimeout(t); t = setTimeout(() => renderResults(resultsEl, inputEl.value), 160); });
+  inputEl.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); renderResults(resultsEl, inputEl.value); } });
+  chipsEl?.querySelectorAll(".chip").forEach(chip => {
+    chip.addEventListener("click", () => { inputEl.value = chip.textContent.trim(); renderResults(resultsEl, inputEl.value); inputEl.focus(); });
+  });
+}
+wireSearch($("#smartSearch"), $("#smartSearchResults"), $("#searchChips"));
+$("#smartSearchBtn").addEventListener("click", () => renderResults($("#smartSearchResults"), $("#smartSearch").value));
+
+/* =========================================================
+   SCROLL PROGRESS
+   ========================================================= */
+function wireScrollProgress() {
+  const bar = $("#scrollProgress i");
+  if (!bar) return;
+  const update = () => {
+    const h = document.documentElement;
+    const max = h.scrollHeight - h.clientHeight;
+    const pct = max <= 0 ? 0 : (h.scrollTop / max) * 100;
+    bar.style.width = pct + "%";
+  };
+  window.addEventListener("scroll", update, { passive:true });
+  update();
+}
+
+/* =========================================================
+   COOKIE CONSENT
+   ========================================================= */
+const CONSENT_KEY = "dp_consent_v1";
+const cookieBanner = $("#cookieBanner");
+const cookieSettingsPanel = $("#cookieSettings");
+const consentAnalytics = $("#consentAnalytics");
+
+function loadConsent() { return LS.get(CONSENT_KEY, null); }
+function saveConsent(obj) { LS.set(CONSENT_KEY, { ...obj, ts:Date.now() }); applyConsent(obj); }
+function applyConsent(c) {
+  if (!c) return;
+  if (c.analytics) injectAnalytics();
+}
+function injectAnalytics() {
+  if (!CONFIG.analyticsId || window.__dpAnalyticsLoaded) return;
+  window.__dpAnalyticsLoaded = true;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(CONFIG.analyticsId);
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", CONFIG.analyticsId, { anonymize_ip:true });
+}
+function initCookieUI() {
+  const c = loadConsent();
+  if (!c) cookieBanner.hidden = false;
+  else applyConsent(c);
+}
+$("#cookieAccept").addEventListener("click", () => { saveConsent({ analytics:true }); cookieBanner.hidden = true; toast("Preferences saved."); });
+$("#cookieReject").addEventListener("click", () => { saveConsent({ analytics:false }); cookieBanner.hidden = true; toast("Only essential cookies will run."); });
+$("#cookieCustomize").addEventListener("click", e => {
+  const open = cookieSettingsPanel.hidden;
+  cookieSettingsPanel.hidden = !open;
+  e.currentTarget.setAttribute("aria-expanded", String(open));
+});
+$("#cookieSettingsLink").addEventListener("click", e => {
+  e.preventDefault();
+  cookieBanner.hidden = false;
+  cookieSettingsPanel.hidden = false;
+  const c = loadConsent();
+  if (c) consentAnalytics.checked = !!c.analytics;
+  cookieBanner.scrollIntoView({ behavior:"smooth", block:"end" });
+});
+consentAnalytics.addEventListener("change", () => saveConsent({ analytics:consentAnalytics.checked }));
+
+/* =========================================================
+   RESET
+   ========================================================= */
+function resetLocal() {
+  Object.values(KEYS).forEach(k => LS.del(k));
+  LS.del(CONSENT_KEY);
+  toast("Local data cleared. Reloading…");
+  setTimeout(() => location.reload(), 700);
+}
+$("#resetLocal").addEventListener("click", () => { if (confirm("Clear all locally stored data on this device?")) resetLocal(); });
+$("#resetLocalLink").addEventListener("click", e => { e.preventDefault(); if (confirm("Clear all locally stored data on this device?")) resetLocal(); });
+
+/* =========================================================
+   INIT
+   ========================================================= */
+function init() {
+  updateVisitInfo();
+  renderGreeting();
+  wireMiniTool();
+  renderToolGrids();
+  renderBundles();
+  renderResources();
+  renderArticles();
+  renderComparePicker();
+  renderComparison();
+  renderReturnBar();
+  renderEventsTable();
+  initCookieUI();
+  wireScrollProgress();
+  renderView();
+  logEvent("app_ready", { site:CONFIG.siteName });
+}
+document.addEventListener("DOMContentLoaded", init);
+</script>
+</body>
+</html>
