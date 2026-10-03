@@ -28,8 +28,9 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px;padding:0 14p
 .links a:hover,.mini:hover{color:var(--tx);background:var(--sf2)}
 .links a.on{color:#fff;background:linear-gradient(180deg,rgba(var(--ar),.35),rgba(var(--ar),.12))}
 .right{margin-inline-start:auto;display:flex;gap:6px;align-items:center}
-.sel{background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:8px 12px;max-width:150px}
-.sel option{background:#1a1612}
+.sel{background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:8px 14px;max-width:200px;font-size:.88rem;font-weight:700;cursor:pointer;transition:.2s}
+.sel:hover{border-color:var(--or);background:rgba(var(--ar),.15)}
+.sel option{background:#1a1612;color:var(--tx);padding:6px}
 .hero{padding:96px 0 40px}
 .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--or2);font-size:.8rem;font-weight:700;letter-spacing:.14em;margin-bottom:24px;padding:7px 14px;border:1px solid rgba(var(--ar),.3);border-radius:999px;background:rgba(var(--ar),.08)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--or);display:inline-block;box-shadow:0 0 10px var(--or)}
@@ -88,11 +89,6 @@ ul.l small{color:var(--mu);white-space:nowrap}
 .seg button{padding:10px 16px;border:1px solid var(--ln);background:var(--sf);cursor:pointer}
 .seg button.on{background:var(--or);border-color:var(--or);color:var(--on)}
 .seg button:first-child{border-radius:999px 0 0 999px}.seg button:last-child{border-radius:0 999px 999px 0}
-.live{display:flex;gap:30px;align-items:center;justify-content:space-between;flex-wrap:wrap;border-color:rgba(var(--ar),.3);background:radial-gradient(500px 220px at 90% 100%,rgba(var(--ar),.2),transparent 70%),linear-gradient(160deg,rgba(255,255,255,.07),rgba(255,255,255,.02))}
-.live .num{font-size:clamp(3.6rem,10vw,6.5rem);font-weight:800;letter-spacing:-.05em;line-height:1;color:var(--or2);font-variant-numeric:tabular-nums;text-shadow:0 0 60px rgba(var(--ar),.5)}
-.bars{display:flex;gap:4px;align-items:flex-end;height:80px;flex:1;min-width:220px;max-width:420px}
-.bars i{flex:1;background:linear-gradient(var(--or2),var(--or3));border-radius:4px 4px 0 0;opacity:.85;transition:height .6s}
-.pill{font-size:.68rem;font-weight:800;letter-spacing:.1em;padding:3px 9px;border-radius:999px;border:1px solid var(--ln);color:var(--mu);vertical-align:middle;margin-inline-start:8px}
 .cta{text-align:center;padding:110px 20px;background:radial-gradient(60% 90% at 50% 100%,rgba(var(--ar),.28),transparent 70%)}
 .cta h2{font-size:clamp(2.2rem,6vw,4rem)}
 footer{border-top:1px solid var(--ln);padding:36px 0;color:var(--mu);font-size:.88rem}
@@ -145,7 +141,6 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 .sw button.on{border-color:#fff;transform:scale(1.1)}
 .sw input{width:42px;height:38px;border:0;border-radius:10px;background:none;cursor:pointer;padding:0}
 .swd{display:block;width:18px;height:18px;border-radius:50%;background:conic-gradient(var(--or),var(--or2),var(--or3),var(--or))}
-/* ===== AD ZONE ===== */
 .adzone{padding:34px 0}
 .adlabel{display:block;text-align:center;font-size:.68rem;font-weight:800;letter-spacing:.2em;color:var(--mu);margin-bottom:12px;text-transform:uppercase;opacity:.7}
 .adbox{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--ln);border-radius:24px;padding:18px;min-height:110px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px -35px #000}
@@ -193,7 +188,6 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 <form id="qfForm"><input id="qfIn" autocomplete="off" data-i18n-ph="ph" placeholder="Try: 25% off $180" aria-label="Quick find"></form>
 <div class="chips" id="qfChips"></div><div class="msg" id="qfMsg" role="status"></div>
 </div></div></section>
-
 
 <section><div class="wrap">
 <h2>DealPilot decision flow</h2><p class="sub">Three steps, no accounts.</p>
@@ -318,14 +312,14 @@ const copy=async x=>{try{await navigator.clipboard.writeText(x);toast("Copied")}
 const share=x=>navigator.share?navigator.share({title:"DealPilot",text:x}).catch(()=>{}):copy(x);
 const debounce=(f,ms)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),ms)}};
 
-/* ================= AD GATE (per-tool, one-time redirect) ================= */
+/* ================= AD GATE (per-tool, one-time, opens in new tab) ================= */
 const SMARTLINK="https://www.profitablecpmnetwork.com/f6bdbr8u?key=9dbe1ac67d8e92513a4e83ab9b10cd26";
 let adClicked=ls.g("adClicked",[]);
 function adGate(id){
   if(adClicked.includes(id))return false;
   adClicked.push(id);ls.s("adClicked",adClicked);
-  window.location.href=SMARTLINK;
-  return true;
+  try{window.open(SMARTLINK,"_blank","noopener,noreferrer");}catch(e){}
+  return false;
 }
 
 /* ================= I18N ================= */
@@ -347,7 +341,8 @@ it:["Strumenti","Denaro","Acquisti","Converti","Ora","Viaggi","Salute","Salvati"
 nl:["Tools","Geld","Winkelen","Omrekenen","Tijd","Reizen","Gezondheid","Opgeslagen","Wat je ook wilt uitzoeken,","begin hier.","Geld, winkelen, tijd, valuta, omrekeningen en alledaagse keuzes — simpele tools voor mensen overal.","Begin met uitzoeken →","Bekijk tools","Wat wil je uitzoeken?","Probeer: 25% off $180","Probeer een van de voorbeelden hieronder.","Home","Meer"],
 tr:["Araçlar","Para","Alışveriş","Dönüştür","Zaman","Seyahat","Sağlık","Kaydedilenler","Ne çözmeye çalışırsan çalış,","buradan başla.","Para, alışveriş, zaman, döviz, dönüşümler ve günlük kararlar — herkes için basit araçlar.","Çözmeye başla →","Araçları keşfet","Neyi çözmeye çalışıyorsun?","Dene: 25% off $180","Aşağıdaki örneklerden birini dene.","Ana sayfa","Daha fazla"]};
 const TRANSLATIONS={};for(const l in RAW){TRANSLATIONS[l]={};KEYS.forEach((k,i)=>TRANSLATIONS[l][k]=RAW[l][i])}
-const LANGS={en:"English",zh:"中文",ru:"Русский",es:"Español",fr:"Français",de:"Deutsch",pt:"Português",ja:"日本語",ko:"한국어",bn:"বাংলা",ar:"العربية",hi:"हिन्दी",it:"Italiano",nl:"Nederlands",tr:"Türkçe"};
+/* Language list: [native name, flag emoji] */
+const LANGS={en:["English","🇬🇧"],bn:["বাংলা","🇧🇩"],ar:["العربية","🇸🇦"],zh:["中文","🇨🇳"],ru:["Русский","🇷🇺"],es:["Español","🇪🇸"],fr:["Français","🇫🇷"],de:["Deutsch","🇩🇪"],pt:["Português","🇵🇹"],ja:["日本語","🇯🇵"],ko:["한국어","🇰🇷"],hi:["हिन्दी","🇮🇳"],it:["Italiano","🇮🇹"],nl:["Nederlands","🇳🇱"],tr:["Türkçe","🇹🇷"]};
 const RAW2=`pop,allt,all,popf,live,cur,clock,recent,fav,set,priv,cta,copy,share,reset,look
 en:Popular tools|All tools|All|Popular|Live data tools|Currency converter|World right now|Recent calculations|Favorite tools|Language, currency & region|Privacy & trust|Ready to figure it out?|Copy|Share|Reset|Look up
 zh:热门工具|全部工具|全部|热门|实时数据工具|货币换算|此刻的世界|最近计算|收藏的工具|语言、货币和地区|隐私与信任|准备好弄清楚了吗？|复制|分享|重置|查询
@@ -649,11 +644,11 @@ function refresh(){["#curSel","#sCur","#cFrom","#cTo"].forEach(x=>curOpts($(x)))
  applyLang();$("#curSel").value=S.cur;$("#sCur").value=S.cur;$("#sReg").value=S.region;
  $("#sSys").innerHTML=Object.keys(SYS).map(k=>`<button class="${S.sys===k?"on":""}" data-s="${k}">${SYS[k]}</button>`).join("");
  const sg=REGIONS[S.region].lang;$("#sHint").innerHTML="";
- if(sg!==S.lang){const b=document.createElement("button");b.className="chip";b.textContent="Suggested language for this region: "+LANGS[sg];b.onclick=()=>{S.lang=sg;ls.s("lang",sg);refresh()};$("#sHint").append(b)}
+ if(sg!==S.lang){const b=document.createElement("button");b.className="chip";b.textContent="Suggested language for this region: "+LANGS[sg][1]+" "+LANGS[sg][0];b.onclick=()=>{S.lang=sg;ls.s("lang",sg);refresh()};$("#sHint").append(b)}
  $("#sPrev").textContent=`${money(1234.56)} · ${new Intl.DateTimeFormat(loc(),{dateStyle:"long"}).format(new Date())}`;
  renderTools();renderSaved();drawClocks();runUnit();cShow();
 }
-const lo=Object.entries(LANGS).map(([k,v])=>new Option(v,k));
+const lo=Object.entries(LANGS).map(([k,v])=>new Option(v[1]+"  "+v[0],k));
 ["#langSel","#sLang"].forEach(s=>{lo.forEach(o=>$(s).add(o.cloneNode(true)));$(s).onchange=e=>{S.lang=e.target.value;ls.s("lang",S.lang);refresh()}});
 Object.entries(REGIONS).forEach(([k,v])=>$("#sReg").add(new Option(v.n,k)));
 $("#sReg").onchange=e=>{S.region=e.target.value;const r=REGIONS[S.region];S.cur=r.cur;S.sys=r.sys;ls.s("region",S.region);ls.s("cur",S.cur);ls.s("sys",S.sys);$("#cTo").value=S.cur===$("#cFrom").value?"EUR":S.cur;setCat(uCat);refresh();cLoad()};
@@ -693,9 +688,7 @@ addOpts();setCat("length");refresh();cLoad();spy();
 setInterval(drawClocks,1000);
 /* ================= EXTRA FEATURES ================= */
 document.addEventListener("pointermove",e=>{const el=e.target.closest&&e.target.closest(".card,.tile,.tool");if(el){const r=el.getBoundingClientRect();el.style.setProperty("--mx",e.clientX-r.left+"px");el.style.setProperty("--my",e.clientY-r.top+"px")}});
-// Copy link: opens this tool with the same values
 $("#dLink").onclick=()=>{const p=new URLSearchParams({t:cur.id});for(const k in lastV)if(lastV[k]!==null&&lastV[k]!=="")p.set(k,lastV[k]);copy(location.href.split("#")[0]+"#"+p)};
-// Command palette
 const pal=$("#pal");let palSel=0,palRes=[];
 const PAL_EXTRA=[["Live data: weather, prayer times, holidays, countries, crypto","livedata","weather air quality prayer namaz holidays country crypto bitcoin live"],["Currency converter","currency","exchange rates money"],["Unit converter","convert","length weight temperature volume"],["World clock & meeting planner","clock","time zones cities"],["Saved & recent","saved","history favorites"],["Language, currency & region","settings","settings language region"]];
 function renderPal(){
@@ -714,7 +707,6 @@ $("#palIn").addEventListener("keydown",e=>{if(e.key==="ArrowDown"){e.preventDefa
 pal.addEventListener("click",e=>{if(e.target===pal)pal.close()});
 document.addEventListener("keydown",e=>{if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="k"){e.preventDefault();openPal()}else if(e.key==="/"&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)&&!dlg.open&&!pal.open){e.preventDefault();openPal()}});
 $("#navSearch").onclick=openPal;
-// Meeting planner
 function tzOff(z,ts){const p={};new Intl.DateTimeFormat("en-US",{timeZone:z,hourCycle:"h23",year:"numeric",month:"numeric",day:"numeric",hour:"numeric",minute:"numeric",second:"numeric"}).formatToParts(ts).forEach(x=>p[x.type]=+x.value);return Date.UTC(p.year,p.month-1,p.day,p.hour,p.minute,p.second)-Math.floor(ts/1000)*1000}
 function mpRender(){
  const o=$("#mpOut"),v=$("#mpT").value,zs=$("#mpZ");
@@ -729,7 +721,6 @@ function mpRender(){
 }
 $("#mpT").addEventListener("input",mpRender);$("#mpZ").addEventListener("change",mpRender);
 const _sc=saveClocks;saveClocks=function(){_sc();mpRender()};
-// Currency: same amount in other popular currencies
 function cAlso(){
  const b=$("#cAlso");b.innerHTML="";const amt=parseFloat($("#cAmt").value),from=$("#cFrom").value;
  if(!cr||crBase!==from||!isFinite(amt))return;
@@ -786,7 +777,7 @@ async function lvRun(){
 $("#lvTabs").innerHTML=LIVE.map(x=>`<button class="chip" data-i="${x.id}">${x.name}</button>`).join("");
 $("#lvTabs").onclick=e=>{if(e.target.dataset.i)lvTab(e.target.dataset.i)};
 $("#lvGo").onclick=lvRun;$("#lvRetry").onclick=lvRun;lvTab("wx");
-// Deep link (internal=true → no ad gate)
+/* Deep link: internal=true → bypass ad gate */
 {const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o,true),100)}}
 mpRender();
 
@@ -794,4 +785,4 @@ mpRender();
 <!-- Social Bar Ad -->
 <script src="https://pl31629832.profitablecpmnetwork.com/f6/5b/6d/f65b6dcc25550661432911096c96b6b9.js"></script>
 </body>
-        </html>
+                                                                    </html>
