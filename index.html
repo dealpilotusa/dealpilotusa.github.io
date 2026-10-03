@@ -20,7 +20,7 @@ h2{font-size:clamp(1.7rem,3.6vw,2.6rem);letter-spacing:-.035em;line-height:1.1;m
 a{color:inherit}
 :focus-visible{outline:2px solid var(--or2);outline-offset:2px}
 nav.top{position:sticky;top:12px;z-index:20;margin:12px auto 0;max-width:1120px;width:calc(100% - 24px);background:rgba(22,18,14,.72);backdrop-filter:blur(18px);border:1px solid var(--ln);border-radius:999px;box-shadow:0 20px 50px -20px #000}
-nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px;padding:0 14px 0 22px}
+nav.top .wrap{display:flex;align-items:center;gap:14px;height:62px;padding:0 12px 0 20px}
 .brand{font-weight:800;letter-spacing:.16em;font-size:.92rem;text-decoration:none;display:flex;align-items:center;gap:10px}
 .brand i{width:12px;height:12px;border-radius:50%;background:linear-gradient(135deg,var(--or2),var(--or3));box-shadow:0 0 18px var(--or)}
 .links{display:flex;gap:2px;margin-inline-start:10px}
@@ -28,9 +28,15 @@ nav.top .wrap{display:flex;align-items:center;gap:18px;height:62px;padding:0 14p
 .links a:hover,.mini:hover{color:var(--tx);background:var(--sf2)}
 .links a.on{color:#fff;background:linear-gradient(180deg,rgba(var(--ar),.35),rgba(var(--ar),.12))}
 .right{margin-inline-start:auto;display:flex;gap:6px;align-items:center}
-.sel{background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:8px 14px;max-width:200px;font-size:.88rem;font-weight:700;cursor:pointer;transition:.2s}
-.sel:hover{border-color:var(--or);background:rgba(var(--ar),.15)}
-.sel option{background:#1a1612;color:var(--tx);padding:6px}
+.sel{appearance:none;-webkit-appearance:none;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.02));border:1px solid var(--ln);border-radius:999px;padding:8px 34px 8px 14px;font-size:.85rem;font-weight:700;cursor:pointer;color:var(--tx);transition:.2s;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23ffb347' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M6 9l6 6 6-6'/></svg>");
+ background-repeat:no-repeat;background-position:right 12px center;background-size:11px}
+.sel:hover{border-color:var(--or);background-color:rgba(var(--ar),.12);box-shadow:0 0 0 4px rgba(var(--ar),.1)}
+.sel:focus{outline:none;border-color:var(--or);box-shadow:0 0 0 4px rgba(var(--ar),.18)}
+.sel option{background:#1a1612;color:var(--tx);padding:8px;font-weight:600}
+#langSel{min-width:88px}
+#curSel{min-width:100px}
+@media(max-width:820px){#langSel{padding:8px 30px 8px 10px;font-size:.82rem;min-width:78px}}
 .hero{padding:96px 0 40px}
 .eyebrow{display:inline-flex;gap:9px;align-items:center;color:var(--or2);font-size:.8rem;font-weight:700;letter-spacing:.14em;margin-bottom:24px;padding:7px 14px;border:1px solid rgba(var(--ar),.3);border-radius:999px;background:rgba(var(--ar),.08)}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--or);display:inline-block;box-shadow:0 0 10px var(--or)}
@@ -312,16 +318,6 @@ const copy=async x=>{try{await navigator.clipboard.writeText(x);toast("Copied")}
 const share=x=>navigator.share?navigator.share({title:"DealPilot",text:x}).catch(()=>{}):copy(x);
 const debounce=(f,ms)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),ms)}};
 
-/* ================= AD GATE (per-tool, one-time, opens in new tab) ================= */
-const SMARTLINK="https://www.profitablecpmnetwork.com/f6bdbr8u?key=9dbe1ac67d8e92513a4e83ab9b10cd26";
-let adClicked=ls.g("adClicked",[]);
-function adGate(id){
-  if(adClicked.includes(id))return false;
-  adClicked.push(id);ls.s("adClicked",adClicked);
-  try{window.open(SMARTLINK,"_blank","noopener,noreferrer");}catch(e){}
-  return false;
-}
-
 /* ================= I18N ================= */
 const KEYS="tools,money,shopping,convert,time,travel,health,saved,h1a,h1b,sub,cta1,cta2,qf,ph,nomatch,home,more".split(",");
 const RAW={
@@ -341,8 +337,8 @@ it:["Strumenti","Denaro","Acquisti","Converti","Ora","Viaggi","Salute","Salvati"
 nl:["Tools","Geld","Winkelen","Omrekenen","Tijd","Reizen","Gezondheid","Opgeslagen","Wat je ook wilt uitzoeken,","begin hier.","Geld, winkelen, tijd, valuta, omrekeningen en alledaagse keuzes — simpele tools voor mensen overal.","Begin met uitzoeken →","Bekijk tools","Wat wil je uitzoeken?","Probeer: 25% off $180","Probeer een van de voorbeelden hieronder.","Home","Meer"],
 tr:["Araçlar","Para","Alışveriş","Dönüştür","Zaman","Seyahat","Sağlık","Kaydedilenler","Ne çözmeye çalışırsan çalış,","buradan başla.","Para, alışveriş, zaman, döviz, dönüşümler ve günlük kararlar — herkes için basit araçlar.","Çözmeye başla →","Araçları keşfet","Neyi çözmeye çalışıyorsun?","Dene: 25% off $180","Aşağıdaki örneklerden birini dene.","Ana sayfa","Daha fazla"]};
 const TRANSLATIONS={};for(const l in RAW){TRANSLATIONS[l]={};KEYS.forEach((k,i)=>TRANSLATIONS[l][k]=RAW[l][i])}
-/* Language list: [native name, flag emoji] */
-const LANGS={en:["English","🇬🇧"],bn:["বাংলা","🇧🇩"],ar:["العربية","🇸🇦"],zh:["中文","🇨🇳"],ru:["Русский","🇷🇺"],es:["Español","🇪🇸"],fr:["Français","🇫🇷"],de:["Deutsch","🇩🇪"],pt:["Português","🇵🇹"],ja:["日本語","🇯🇵"],ko:["한국어","🇰🇷"],hi:["हिन्दी","🇮🇳"],it:["Italiano","🇮🇹"],nl:["Nederlands","🇳🇱"],tr:["Türkçe","🇹🇷"]};
+/* Language list: [native, flag, code] */
+const LANGS={en:["English","🇬🇧","EN"],bn:["বাংলা","🇧🇩","BN"],ar:["العربية","🇸🇦","AR"],zh:["中文","🇨🇳","ZH"],ru:["Русский","🇷🇺","RU"],es:["Español","🇪🇸","ES"],fr:["Français","🇫🇷","FR"],de:["Deutsch","🇩🇪","DE"],pt:["Português","🇵🇹","PT"],ja:["日本語","🇯🇵","JA"],ko:["한국어","🇰🇷","KO"],hi:["हिन्दी","🇮🇳","HI"],it:["Italiano","🇮🇹","IT"],nl:["Nederlands","🇳🇱","NL"],tr:["Türkçe","🇹🇷","TR"]};
 const RAW2=`pop,allt,all,popf,live,cur,clock,recent,fav,set,priv,cta,copy,share,reset,look
 en:Popular tools|All tools|All|Popular|Live data tools|Currency converter|World right now|Recent calculations|Favorite tools|Language, currency & region|Privacy & trust|Ready to figure it out?|Copy|Share|Reset|Look up
 zh:热门工具|全部工具|全部|热门|实时数据工具|货币换算|此刻的世界|最近计算|收藏的工具|语言、货币和地区|隐私与信任|准备好弄清楚了吗？|复制|分享|重置|查询
@@ -509,8 +505,7 @@ function renderTools(){renderHome();
 
 /* ================= CALCULATOR MODAL ================= */
 const dlg=$("#dlg");let cur=null,lastText="",lastV={};
-function openTool(id,pre,internal){
- if(!internal&&adGate(id))return;
+function openTool(id,pre){
  cur=T.find(x=>x.id===id);$("#dT").textContent=cur.name;$("#dD").textContent=cur.desc;$("#dN").textContent=cur.note||"";
  const F=$("#dF");F.innerHTML="";const wrap=document.createElement("div");wrap.className="fg";
  cur.fields.forEach(f=>{const l=document.createElement("label");l.append(f.l);let i;
@@ -535,10 +530,10 @@ function runTool(){
  lastText=cur.name+": "+o.rows.map(r=>r[0]+" "+r[1]).join(", ");recD(lastText);
 }
 $("#dCopy").onclick=()=>lastText&&copy(lastText);$("#dShare").onclick=()=>lastText&&share(lastText);
-$("#dReset").onclick=()=>openTool(cur.id,{},true);$("#dX").onclick=()=>dlg.close();
+$("#dReset").onclick=()=>openTool(cur.id);$("#dX").onclick=()=>dlg.close();
 dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
 
-/* ================= UNIT CONVERTER (inline) ================= */
+/* ================= UNIT CONVERTER ================= */
 let uCat="length",uText="";
 const DEF={metric:{length:["km","m"],weight:["kg","g"],temperature:["C","F"],volume:["l","ml"]},imperial:{length:["mi","km"],weight:["lb","kg"],temperature:["F","C"],volume:["impgal","l"]},us:{length:["mi","km"],weight:["lb","kg"],temperature:["F","C"],volume:["gal","l"]}};
 function setCat(c,a,b){uCat=c;const d=(DEF[S.sys]||DEF.metric)[c]||[U[c][0][0],U[c][1][0]];
@@ -644,11 +639,12 @@ function refresh(){["#curSel","#sCur","#cFrom","#cTo"].forEach(x=>curOpts($(x)))
  applyLang();$("#curSel").value=S.cur;$("#sCur").value=S.cur;$("#sReg").value=S.region;
  $("#sSys").innerHTML=Object.keys(SYS).map(k=>`<button class="${S.sys===k?"on":""}" data-s="${k}">${SYS[k]}</button>`).join("");
  const sg=REGIONS[S.region].lang;$("#sHint").innerHTML="";
- if(sg!==S.lang){const b=document.createElement("button");b.className="chip";b.textContent="Suggested language for this region: "+LANGS[sg][1]+" "+LANGS[sg][0];b.onclick=()=>{S.lang=sg;ls.s("lang",sg);refresh()};$("#sHint").append(b)}
+ if(sg!==S.lang){const b=document.createElement("button");b.className="chip";b.textContent="Suggested: "+LANGS[sg][1]+" "+LANGS[sg][0];b.onclick=()=>{S.lang=sg;ls.s("lang",sg);refresh()};$("#sHint").append(b)}
  $("#sPrev").textContent=`${money(1234.56)} · ${new Intl.DateTimeFormat(loc(),{dateStyle:"long"}).format(new Date())}`;
  renderTools();renderSaved();drawClocks();runUnit();cShow();
 }
-const lo=Object.entries(LANGS).map(([k,v])=>new Option(v[1]+"  "+v[0],k));
+/* Language select options: flag + code (compact) */
+const lo=Object.entries(LANGS).map(([k,v])=>new Option(v[1]+"  "+v[2],k));
 ["#langSel","#sLang"].forEach(s=>{lo.forEach(o=>$(s).add(o.cloneNode(true)));$(s).onchange=e=>{S.lang=e.target.value;ls.s("lang",S.lang);refresh()}});
 Object.entries(REGIONS).forEach(([k,v])=>$("#sReg").add(new Option(v.n,k)));
 $("#sReg").onchange=e=>{S.region=e.target.value;const r=REGIONS[S.region];S.cur=r.cur;S.sys=r.sys;ls.s("region",S.region);ls.s("cur",S.cur);ls.s("sys",S.sys);$("#cTo").value=S.cur===$("#cFrom").value?"EUR":S.cur;setCat(uCat);refresh();cLoad()};
@@ -777,12 +773,12 @@ async function lvRun(){
 $("#lvTabs").innerHTML=LIVE.map(x=>`<button class="chip" data-i="${x.id}">${x.name}</button>`).join("");
 $("#lvTabs").onclick=e=>{if(e.target.dataset.i)lvTab(e.target.dataset.i)};
 $("#lvGo").onclick=lvRun;$("#lvRetry").onclick=lvRun;lvTab("wx");
-/* Deep link: internal=true → bypass ad gate */
-{const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o,true),100)}}
+/* Deep link */
+{const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o),100)}}
 mpRender();
 
 </script>
 <!-- Social Bar Ad -->
 <script src="https://pl31629832.profitablecpmnetwork.com/f6/5b/6d/f65b6dcc25550661432911096c96b6b9.js"></script>
 </body>
-                                                                    </html>
+        </html>
