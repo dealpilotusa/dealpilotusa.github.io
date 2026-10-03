@@ -145,7 +145,15 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 .sw button.on{border-color:#fff;transform:scale(1.1)}
 .sw input{width:42px;height:38px;border:0;border-radius:10px;background:none;cursor:pointer;padding:0}
 .swd{display:block;width:18px;height:18px;border-radius:50%;background:conic-gradient(var(--or),var(--or2),var(--or3),var(--or))}
+/* ===== AD ZONE ===== */
+.adzone{padding:34px 0}
+.adlabel{display:block;text-align:center;font-size:.68rem;font-weight:800;letter-spacing:.2em;color:var(--mu);margin-bottom:12px;text-transform:uppercase;opacity:.7}
+.adbox{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--ln);border-radius:24px;padding:18px;min-height:110px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px -35px #000}
+.adbox>div{width:100%}
+.adbox img,.adbox iframe{max-width:100%;border-radius:12px}
 </style>
+<!-- Popunder Ad -->
+<script src='https://pl31629830.profitablecpmnetwork.com/8d/e9/0a/8de90ac1d82164f58389a47c3e854c.js'></script>
 </head>
 <body>
 <nav class="top"><div class="wrap">
@@ -263,6 +271,15 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 </div></div></section>
 
 <section class="cta"><h2 data-i18n="cta">Ready to figure it out?</h2><p class="sub" style="margin:0 auto 24px">Type a question and DealPilot opens the right tool.</p><a class="btn" id="cta2b">Start figuring it out →</a></section>
+
+<!-- ===== Native Banner Ad ===== -->
+<section class="adzone"><div class="wrap">
+<span class="adlabel">Sponsored</span>
+<div class="adbox">
+<script async="async" data-cfasync="false" src="https://pl31629832.profitablecpmnetwork.com/532a8010c65fc304503856727533cc0f/invoke.js"></script>
+<div id="container-532a8010c65fc304503856727533cc0f"></div>
+</div>
+</div></section>
 </main>
 
 <footer><div class="wrap"><div class="fg4"><div><a class="brand" href="#home" data-go="home"><i></i>DEALPILOT</a><p class="note" style="max-width:32ch;margin-top:14px">The place to figure things out. Simple tools for people everywhere.</p></div>
@@ -281,9 +298,6 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 
 <script>
 /* ================= CONFIGURATION ================= */
-/* CURRENCY API CONFIG.
-   SECURITY: never put a PRIVATE/paid API key in public frontend code. For keyed providers, call your own backend/serverless proxy
-   (e.g. /api/rates?base=USD) that holds the key, and set API_BASE_URL to it. The default provider below needs no key. */
 const API_PROVIDER="open.er-api.com", API_BASE_URL="https://open.er-api.com/v6/latest/", API_KEY="";
 const CurrencyService={
  url:b=>API_BASE_URL+b+(API_KEY?"?apikey="+encodeURIComponent(API_KEY):""),
@@ -295,6 +309,18 @@ const CurrencyService={
    ls.s("rates_"+b,d);return{...d,src:"live"};
   }catch(e){const c=ls.g("rates_"+b,null);if(c)return{...c,src:"cached"};throw e}
  }};
+
+/* ================= AD GATE (per-tool, one-time redirect) ================= */
+/* প্রথম ক্লিকে অ্যাড লিংকে redirect করবে। localStorage-এ save থাকবে, তাই
+   পরে ব্যাক করে আবার ক্লিক করলে আর redirect হবে না — টুল খুলবে। */
+const SMARTLINK="https://www.profitablecpmnetwork.com/f6bdbr8u?key=9dbe1ac67d8e92513a4e83ab9b10cd26";
+let adClicked=ls.g("adClicked",[]);
+function adGate(id){
+  if(adClicked.includes(id))return false;          // already visited
+  adClicked.push(id);ls.s("adClicked",adClicked);  // mark as visited
+  window.location.href=SMARTLINK;                  // go to ad
+  return true;                                     // signal: redirected
+}
 
 /* ================= HELPERS ================= */
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
@@ -351,7 +377,6 @@ const S={lang:ls.g("lang",TRANSLATIONS[nb]?nb:"en"),
  region:ls.g("region",REGIONS[nr]?nr:["DE","FR","ES","IT","NL","PT","AT","IE","SE","PL"].includes(nr)?"EU":["AE","SA","EG","QA","KW"].includes(nr)?"ME":"GL")};
 S.cur=ls.g("cur",REGIONS[S.region].cur);S.sys=ls.g("sys",REGIONS[S.region].sys);
 const RC={US:"US",CA:"CA",GB:"GB",EU:"DE",CN:"CN",RU:"RU",IN:"IN",BD:"BD",JP:"JP",AU:"AU",ME:"AE"};
-/* Number/date locale = chosen LANGUAGE + chosen REGION (e.g. en-BD), so English never shows Bengali digits. */
 const loc=()=>S.region==="GL"?S.lang:S.lang+"-"+RC[S.region];
 const fmt=(n,o)=>new Intl.NumberFormat(loc(),{maximumFractionDigits:4,...o}).format(n);
 const money=(n,c=S.cur)=>{try{return new Intl.NumberFormat(loc(),{style:"currency",currency:c}).format(n)}catch(e){return fmt(n)+" "+c}};
@@ -491,7 +516,8 @@ function renderTools(){renderHome();
 
 /* ================= CALCULATOR MODAL ================= */
 const dlg=$("#dlg");let cur=null,lastText="",lastV={};
-function openTool(id,pre){
+function openTool(id,pre,internal){
+ if(!internal&&adGate(id))return;
  cur=T.find(x=>x.id===id);$("#dT").textContent=cur.name;$("#dD").textContent=cur.desc;$("#dN").textContent=cur.note||"";
  const F=$("#dF");F.innerHTML="";const wrap=document.createElement("div");wrap.className="fg";
  cur.fields.forEach(f=>{const l=document.createElement("label");l.append(f.l);let i;
@@ -516,7 +542,7 @@ function runTool(){
  lastText=cur.name+": "+o.rows.map(r=>r[0]+" "+r[1]).join(", ");recD(lastText);
 }
 $("#dCopy").onclick=()=>lastText&&copy(lastText);$("#dShare").onclick=()=>lastText&&share(lastText);
-$("#dReset").onclick=()=>openTool(cur.id);$("#dX").onclick=()=>dlg.close();
+$("#dReset").onclick=()=>openTool(cur.id,{},true);$("#dX").onclick=()=>dlg.close();
 dlg.addEventListener("click",e=>{if(e.target===dlg)dlg.close()});
 
 /* ================= UNIT CONVERTER (inline) ================= */
@@ -762,10 +788,12 @@ async function lvRun(){
 $("#lvTabs").innerHTML=LIVE.map(x=>`<button class="chip" data-i="${x.id}">${x.name}</button>`).join("");
 $("#lvTabs").onclick=e=>{if(e.target.dataset.i)lvTab(e.target.dataset.i)};
 $("#lvGo").onclick=lvRun;$("#lvRetry").onclick=lvRun;lvTab("wx");
-// Deep link
-{const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o),100)}}
+// Deep link (internal=true → ad gate bypass)
+{const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o,true),100)}}
 mpRender();
 
 </script>
+<!-- Social Bar Ad -->
+<script src="https://pl31629832.profitablecpmnetwork.com/f6/5b/6d/f65b6dcc25550661432911096c96b6b9.js"></script>
 </body>
-        </html>
+                                                      </html>
