@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>DealPilot — Whatever you're figuring out, start here.</title>
+<!-- ===== MONETAG VERIFICATION ===== -->
+<meta name="monetag" content="5133cba62bf639faeb3c5928fe003a09">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -149,12 +151,16 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 .swd{display:block;width:18px;height:18px;border-radius:50%;background:conic-gradient(var(--or),var(--or2),var(--or3),var(--or))}
 .adzone{padding:34px 0}
 .adlabel{display:block;text-align:center;font-size:.68rem;font-weight:800;letter-spacing:.2em;color:var(--mu);margin-bottom:12px;text-transform:uppercase;opacity:.7}
-.adbox{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--ln);border-radius:24px;padding:18px;min-height:110px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px -35px #000}
+.adbox{background:linear-gradient(160deg,rgba(255,255,255,.055),rgba(255,255,255,.02));border:1px solid var(--ln);border-radius:24px;padding:18px;min-height:80px;display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 30px 60px -35px #000}
 .adbox>div{width:100%}
 .adbox img,.adbox iframe{max-width:100%;border-radius:12px}
 </style>
-<!-- Popunder Ad -->
-<script src='https://pl31629830.profitablecpmnetwork.com/8d/e9/0a/8de90ac1d82164f58389a47c3e854c.js'></script>
+<!-- =====================================================================
+     MONETAG ADS — এখানে আপনার Monetag ad zone এর <script> কোড বসান
+     (Verify হওয়ার পরে Monetag Dashboard → Sites → আপনার সাইট → Add Zone
+      থেকে কোড কপি করে এই লাইনে পেস্ট করবেন)
+     ===================================================================== -->
+<!-- <script src="Monetag থেকে পাওয়া script URL" data-zone="xxx" async></script> -->
 </head>
 <body>
 <nav class="top"><div class="wrap">
@@ -188,6 +194,14 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 <div class="ht" id="homeTools"></div>
 </div></section>
 
+<!-- ===== MONETAG AD ZONE #1 — Hero ও Find এর মাঝে (In-Page Push / Vignette) ===== -->
+<section class="adzone"><div class="wrap">
+<span class="adlabel">Sponsored</span>
+<div class="adbox" id="adzone-top">
+<!-- এখানে Monetag In-Page Push / Vignette কোড বসান -->
+</div>
+</div></section>
+
 <section id="find"><div class="wrap"><div class="card qf">
 <h2 data-i18n="qf">What are you trying to figure out?</h2>
 <p class="sub">QUICK FIND reads your words locally in this browser and opens the right tool. Press <kbd>Ctrl</kbd> <kbd>K</kbd> anywhere to search every tool.</p>
@@ -202,6 +216,14 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 <div class="card"><b>2</b><strong>Calculate</strong><p class="note">See a large, clear result with the formula behind it.</p></div>
 <div class="card"><b>3</b><strong>Keep</strong><p class="note">Copy, share, or star the tools you use most.</p></div>
 </div></div></section>
+
+<!-- ===== MONETAG AD ZONE #2 — Tools এর আগে (In-Page Push) ===== -->
+<section class="adzone"><div class="wrap">
+<span class="adlabel">Sponsored</span>
+<div class="adbox" id="adzone-mid">
+<!-- এখানে Monetag In-Page Push কোড বসান -->
+</div>
+</div></section>
 
 <section id="tools"><div class="wrap">
 <h2 data-i18n="tools">Tools</h2><p class="sub">Popular, money, shopping, time, travel and health calculators.</p>
@@ -272,12 +294,11 @@ kbd{font:700 .75rem 'Manrope',sans-serif;padding:2px 7px;border:1px solid var(--
 
 <section class="cta"><h2 data-i18n="cta">Ready to figure it out?</h2><p class="sub" style="margin:0 auto 24px">Type a question and DealPilot opens the right tool.</p><a class="btn" id="cta2b">Start figuring it out →</a></section>
 
-<!-- ===== Native Banner Ad ===== -->
+<!-- ===== MONETAG AD ZONE #3 — CTA ও Footer এর মাঝে (Native / Banner) ===== -->
 <section class="adzone"><div class="wrap">
 <span class="adlabel">Sponsored</span>
-<div class="adbox">
-<script async="async" data-cfasync="false" src="https://pl31629832.profitablecpmnetwork.com/532a8010c65fc304503856727533cc0f/invoke.js"></script>
-<div id="container-532a8010c65fc304503856727533cc0f"></div>
+<div class="adbox" id="adzone-bottom">
+<!-- এখানে Monetag Native Banner / Banner কোড বসান -->
 </div>
 </div></section>
 </main>
@@ -337,7 +358,6 @@ it:["Strumenti","Denaro","Acquisti","Converti","Ora","Viaggi","Salute","Salvati"
 nl:["Tools","Geld","Winkelen","Omrekenen","Tijd","Reizen","Gezondheid","Opgeslagen","Wat je ook wilt uitzoeken,","begin hier.","Geld, winkelen, tijd, valuta, omrekeningen en alledaagse keuzes — simpele tools voor mensen overal.","Begin met uitzoeken →","Bekijk tools","Wat wil je uitzoeken?","Probeer: 25% off $180","Probeer een van de voorbeelden hieronder.","Home","Meer"],
 tr:["Araçlar","Para","Alışveriş","Dönüştür","Zaman","Seyahat","Sağlık","Kaydedilenler","Ne çözmeye çalışırsan çalış,","buradan başla.","Para, alışveriş, zaman, döviz, dönüşümler ve günlük kararlar — herkes için basit araçlar.","Çözmeye başla →","Araçları keşfet","Neyi çözmeye çalışıyorsun?","Dene: 25% off $180","Aşağıdaki örneklerden birini dene.","Ana sayfa","Daha fazla"]};
 const TRANSLATIONS={};for(const l in RAW){TRANSLATIONS[l]={};KEYS.forEach((k,i)=>TRANSLATIONS[l][k]=RAW[l][i])}
-/* Language list: [native, flag, code] */
 const LANGS={en:["English","🇬🇧","EN"],bn:["বাংলা","🇧🇩","BN"],ar:["العربية","🇸🇦","AR"],zh:["中文","🇨🇳","ZH"],ru:["Русский","🇷🇺","RU"],es:["Español","🇪🇸","ES"],fr:["Français","🇫🇷","FR"],de:["Deutsch","🇩🇪","DE"],pt:["Português","🇵🇹","PT"],ja:["日本語","🇯🇵","JA"],ko:["한국어","🇰🇷","KO"],hi:["हिन्दी","🇮🇳","HI"],it:["Italiano","🇮🇹","IT"],nl:["Nederlands","🇳🇱","NL"],tr:["Türkçe","🇹🇷","TR"]};
 const RAW2=`pop,allt,all,popf,live,cur,clock,recent,fav,set,priv,cta,copy,share,reset,look
 en:Popular tools|All tools|All|Popular|Live data tools|Currency converter|World right now|Recent calculations|Favorite tools|Language, currency & region|Privacy & trust|Ready to figure it out?|Copy|Share|Reset|Look up
@@ -643,7 +663,6 @@ function refresh(){["#curSel","#sCur","#cFrom","#cTo"].forEach(x=>curOpts($(x)))
  $("#sPrev").textContent=`${money(1234.56)} · ${new Intl.DateTimeFormat(loc(),{dateStyle:"long"}).format(new Date())}`;
  renderTools();renderSaved();drawClocks();runUnit();cShow();
 }
-/* Language select options: flag + code (compact) */
 const lo=Object.entries(LANGS).map(([k,v])=>new Option(v[1]+"  "+v[2],k));
 ["#langSel","#sLang"].forEach(s=>{lo.forEach(o=>$(s).add(o.cloneNode(true)));$(s).onchange=e=>{S.lang=e.target.value;ls.s("lang",S.lang);refresh()}});
 Object.entries(REGIONS).forEach(([k,v])=>$("#sReg").add(new Option(v.n,k)));
@@ -778,7 +797,10 @@ $("#lvGo").onclick=lvRun;$("#lvRetry").onclick=lvRun;lvTab("wx");
 mpRender();
 
 </script>
-<!-- Social Bar Ad -->
-<script src="https://pl31629832.profitablecpmnetwork.com/f6/5b/6d/f65b6dcc25550661432911096c96b6b9.js"></script>
+<!-- =====================================================================
+     MONETAG GLOBAL SCRIPT — Verify হওয়ার পরে Monetag Dashboard থেকে
+     "Multitag" বা "Vignette Banner / OnClick" এর <script> কোড এখানে বসান
+     ===================================================================== -->
+<!-- <script src="Monetag থেকে পাওয়া global script" async></script> -->
 </body>
         </html>
