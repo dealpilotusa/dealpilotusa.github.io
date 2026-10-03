@@ -310,18 +310,6 @@ const CurrencyService={
   }catch(e){const c=ls.g("rates_"+b,null);if(c)return{...c,src:"cached"};throw e}
  }};
 
-/* ================= AD GATE (per-tool, one-time redirect) ================= */
-/* প্রথম ক্লিকে অ্যাড লিংকে redirect করবে। localStorage-এ save থাকবে, তাই
-   পরে ব্যাক করে আবার ক্লিক করলে আর redirect হবে না — টুল খুলবে। */
-const SMARTLINK="https://www.profitablecpmnetwork.com/f6bdbr8u?key=9dbe1ac67d8e92513a4e83ab9b10cd26";
-let adClicked=ls.g("adClicked",[]);
-function adGate(id){
-  if(adClicked.includes(id))return false;          // already visited
-  adClicked.push(id);ls.s("adClicked",adClicked);  // mark as visited
-  window.location.href=SMARTLINK;                  // go to ad
-  return true;                                     // signal: redirected
-}
-
 /* ================= HELPERS ================= */
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const ls={g:(k,d)=>{try{const v=localStorage.getItem("dp_"+k);return v==null?d:JSON.parse(v)}catch(e){return d}},s:(k,v)=>{try{localStorage.setItem("dp_"+k,JSON.stringify(v))}catch(e){}}};
@@ -329,6 +317,16 @@ const toast=m=>{const t=$("#toast");t.textContent=m;t.classList.add("on");setTim
 const copy=async x=>{try{await navigator.clipboard.writeText(x);toast("Copied")}catch(e){toast("Copy not available")}};
 const share=x=>navigator.share?navigator.share({title:"DealPilot",text:x}).catch(()=>{}):copy(x);
 const debounce=(f,ms)=>{let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>f(...a),ms)}};
+
+/* ================= AD GATE (per-tool, one-time redirect) ================= */
+const SMARTLINK="https://www.profitablecpmnetwork.com/f6bdbr8u?key=9dbe1ac67d8e92513a4e83ab9b10cd26";
+let adClicked=ls.g("adClicked",[]);
+function adGate(id){
+  if(adClicked.includes(id))return false;
+  adClicked.push(id);ls.s("adClicked",adClicked);
+  window.location.href=SMARTLINK;
+  return true;
+}
 
 /* ================= I18N ================= */
 const KEYS="tools,money,shopping,convert,time,travel,health,saved,h1a,h1b,sub,cta1,cta2,qf,ph,nomatch,home,more".split(",");
@@ -739,7 +737,7 @@ function cAlso(){
 }
 const _cs=cShow;cShow=function(){_cs();cAlso()};
 
-/* ================= LIVE DATA TOOLS (free public APIs, no keys) ================= */
+/* ================= LIVE DATA TOOLS ================= */
 const J=async u=>{const r=await fetch(u);if(!r.ok)throw new Error(r.status);return r.json()};
 const WMO=c=>c===0?"Clear sky":c<=3?"Partly cloudy":c<=48?"Fog":c<=57?"Drizzle":c<=67?"Rain":c<=77?"Snow":c<=82?"Rain showers":c<=86?"Snow showers":"Thunderstorm";
 const AQI=a=>a<=50?"Good":a<=100?"Moderate":a<=150?"Unhealthy for sensitive groups":a<=200?"Unhealthy":a<=300?"Very unhealthy":"Hazardous";
@@ -788,7 +786,7 @@ async function lvRun(){
 $("#lvTabs").innerHTML=LIVE.map(x=>`<button class="chip" data-i="${x.id}">${x.name}</button>`).join("");
 $("#lvTabs").onclick=e=>{if(e.target.dataset.i)lvTab(e.target.dataset.i)};
 $("#lvGo").onclick=lvRun;$("#lvRetry").onclick=lvRun;lvTab("wx");
-// Deep link (internal=true → ad gate bypass)
+// Deep link (internal=true → no ad gate)
 {const h=new URLSearchParams(location.hash.slice(1)),id=h.get("t");if(id&&T.find(x=>x.id===id)){const o={};h.forEach((v,k)=>{if(k!=="t")o[k]=v});setTimeout(()=>openTool(id,o,true),100)}}
 mpRender();
 
@@ -796,4 +794,4 @@ mpRender();
 <!-- Social Bar Ad -->
 <script src="https://pl31629832.profitablecpmnetwork.com/f6/5b/6d/f65b6dcc25550661432911096c96b6b9.js"></script>
 </body>
-                                                      </html>
+        </html>
