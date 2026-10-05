@@ -4,8 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0d0906">
-<title>DealPilot USA — 60+ Free Tools</title>
-<meta name="description" content="60+ free online tools for US users. Mortgage, BMI, currency, tax, fuel.">
+<title>DealPilot USA — Free Tools & US News</title>
+<meta name="description" content="85+ free online calculators, converters and everyday tools for US users. Plus live US news headlines updated throughout the day. No signup required.">
+<meta name="keywords" content="free calculator, US news, mortgage calculator, BMI calculator, discount calculator, currency converter, US headlines, dealpilot">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="DealPilot USA">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DealPilot USA">
+<meta property="og:title" content="DealPilot USA — Free Tools & US News">
+<meta property="og:description" content="Free calculators, converters and tools — plus the latest US headlines.">
+<meta property="og:image" content="https://dealpilotusa.github.io/preview.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DealPilot USA — Free Tools & US News">
+<meta name="twitter:description" content="Free calculators + US headlines.">
+<link rel="canonical" href="https://dealpilotusa.github.io/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -102,7 +114,7 @@ input:focus,select:focus,textarea:focus{border-color:var(--or2);box-shadow:0 0 0
 textarea{resize:vertical;font-family:inherit;line-height:1.6}
 label.full{grid-column:1/-1}
 .tip{grid-column:1/-1;color:var(--text3);font-size:.76rem;font-weight:500;padding:8px 12px;background:rgba(249,115,22,.06);border-radius:8px;border-left:2px solid var(--or2)}
-.btn{background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;border-radius:12px;padding:12px 22px;font-weight:700;font-size:.92rem;transition:.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 18px -6px rgba(249,115,22,.65)}
+.btn{background:linear-gradient(135deg,#f97316,#ea580c);color:#fff;border-radius:12px;padding:12px 22px;font-weight:700;font-size:.92rem;transition:.2s;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 18px -6px rgba(249,115,22,.65);cursor:pointer}
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 28px -6px rgba(249,115,22,.75)}
 .btn.ghost{background:var(--card);color:var(--text);border:1.5px solid var(--line);box-shadow:none}
 .btn.ghost:hover{background:rgba(249,115,22,.14);border-color:var(--or2);color:var(--or4)}
@@ -143,8 +155,93 @@ ul.li li span{flex:1;font-size:.92rem}
 table{border-collapse:collapse;width:100%;text-align:center;font-size:.88rem}
 td,th{border:1px solid var(--line);padding:8px}
 th{background:var(--card);font-weight:700;font-size:.8rem;color:var(--text2)}
-@media(max-width:700px){.top-in{padding:10px 12px;gap:10px}.nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;margin-left:0;padding:4px 0}.nav::-webkit-scrollbar{display:none}.nav a{white-space:nowrap}.hero{padding:36px 16px 56px}main{padding:24px 14px 60px}.grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}.tool-card{padding:12px;flex-direction:column;gap:8px}.tool-icon{width:42px;height:42px;border-radius:12px}.tool-body b{font-size:.85rem}.result-main{font-size:1.7rem}.form{grid-template-columns:1fr}.tool-hero{padding:22px;flex-direction:column;align-items:flex-start}.tool-hero h1{font-size:1.15rem}}
+
+/* ===== REELS-STYLE NEWS FEED ===== */
+.reels-page{max-width:520px;margin:0 auto;padding:0 4px}
+.reels-tabs{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;padding:8px 4px;scrollbar-width:none;margin-bottom:6px}
+.reels-tabs::-webkit-scrollbar{display:none}
+.reels-tabs .cat-chip{padding:7px 14px;font-size:.78rem;font-weight:700}
+.reels-container{
+  height:calc(100vh - 200px);
+  min-height:520px;
+  max-height:820px;
+  overflow-y:scroll;
+  scroll-snap-type:y mandatory;
+  scrollbar-width:none;
+  border-radius:24px;
+  position:relative;
+  background:#000;
+  box-shadow:0 30px 60px -20px rgba(0,0,0,.7),0 0 60px rgba(249,115,22,.18)
+}
+.reels-container::-webkit-scrollbar{display:none}
+.reel{
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+  height:100%;
+  min-height:520px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  background:linear-gradient(135deg,#1c1410,#2a1e14)
+}
+.reel-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;opacity:0;transition:opacity .5s ease}
+.reel-img.loaded{opacity:1}
+.reel-fallback{position:absolute;inset:0;z-index:1;display:grid;place-items:center;background:linear-gradient(135deg,#1c1410,#2a1e14);color:rgba(255,180,100,.18)}
+.reel-fallback svg{width:100px;height:100px}
+.reel::after{content:'';position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 28%,rgba(0,0,0,.35) 55%,rgba(0,0,0,.05) 100%);pointer-events:none}
+.reel-overlay{position:relative;z-index:3;padding:26px 22px 32px;color:#fff}
+.reel-badge{display:inline-flex;align-items:center;gap:6px;background:linear-gradient(135deg,#f97316,#ea580c);padding:5px 11px;border-radius:999px;font-size:.66rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;box-shadow:0 6px 18px rgba(249,115,22,.55);color:#fff}
+.reel-badge .live-dot{width:6px;height:6px;border-radius:50%;background:#fff;animation:pulseDot 1.4s infinite}
+@keyframes pulseDot{50%{opacity:.35}}
+.reel h2{font-family:'Manrope',sans-serif;font-size:clamp(1.1rem,3.4vw,1.4rem);font-weight:800;line-height:1.28;letter-spacing:-.015em;margin-bottom:14px;color:#fff;text-shadow:0 2px 16px rgba(0,0,0,.6)}
+.reel-meta{display:flex;align-items:center;gap:10px;font-size:.78rem;color:rgba(255,255,255,.72);font-weight:600;flex-wrap:wrap}
+.reel-meta .src{color:#fdba74;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.reel-meta .sep{opacity:.4}
+.reel-tap{position:absolute;top:14px;right:14px;z-index:4;background:rgba(0,0,0,.5);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 12px;border-radius:999px;font-size:.72rem;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.reel-tap svg{width:12px;height:12px}
+.reel-scroll-hint{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);z-index:5;color:rgba(255,255,255,.55);font-size:.68rem;display:flex;flex-direction:column;align-items:center;gap:2px;animation:bounceHint 2s infinite;pointer-events:none;font-weight:600;letter-spacing:.06em}
+@keyframes bounceHint{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(5px)}}
+.reel-progress{position:absolute;top:0;left:0;right:0;height:2px;z-index:5;background:rgba(255,255,255,.1)}
+.reel-progress i{display:block;height:100%;background:linear-gradient(90deg,#f97316,#fb923c);width:0;transition:width .2s}
+.reel-loading{display:grid;place-items:center;color:rgba(255,255,255,.4);font-size:.82rem;gap:12px;padding:40px}
+.reel-loading .news-spinner{width:32px;height:32px;border:3px solid rgba(255,255,255,.15);border-top-color:#f97316;border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.reel-end{display:grid;place-items:center;color:rgba(255,255,255,.5);font-size:.85rem;padding:60px 20px;text-align:center;gap:10px;min-height:100%}
+.reel-end svg{width:48px;height:48px;opacity:.4}
+.news-spinner{width:32px;height:32px;border:3px solid var(--line);border-top-color:var(--or);border-radius:50%;animation:spin 1s linear infinite}
+
+@media(max-width:700px){
+  .top-in{padding:10px 12px;gap:10px}
+  .nav{order:3;width:100%;overflow-x:auto;flex-wrap:nowrap;margin-left:0;padding:4px 0}
+  .nav::-webkit-scrollbar{display:none}
+  .nav a{white-space:nowrap}
+  .hero{padding:36px 16px 56px}
+  main{padding:24px 14px 60px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+  .tool-card{padding:12px;flex-direction:column;gap:8px}
+  .tool-icon{width:42px;height:42px;border-radius:12px}
+  .tool-body b{font-size:.85rem}
+  .result-main{font-size:1.7rem}
+  .form{grid-template-columns:1fr}
+  .tool-hero{padding:22px;flex-direction:column;align-items:flex-start}
+  .tool-hero h1{font-size:1.15rem}
+  .reels-container{height:calc(100vh - 160px);min-height:480px;border-radius:20px}
+  .reel-overlay{padding:22px 18px 28px}
+  .reel h2{font-size:1.1rem}
+}
 </style>
+
+<script type="application/ld+json" id="newsSchema">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "US News — DealPilot USA",
+  "description": "Latest US news headlines, updated automatically throughout the day.",
+  "url": "https://dealpilotusa.github.io/#/news"
+}
+</script>
 </head>
 <body>
 
@@ -155,6 +252,7 @@ th{background:var(--card);font-weight:700;font-size:.8rem;color:var(--text2)}
       <a href="#/" data-nav="/">Home</a>
       <a href="#/all" data-nav="/all">Tools</a>
       <a href="#/live" data-nav="/live">Today</a>
+      <a href="#/news" data-nav="/news">News</a>
       <a href="#/me" data-nav="/me">Saved</a>
     </nav>
     <div class="top-actions">
@@ -221,6 +319,17 @@ function usd(n){ return (isFinite(n) ? n : 0).toLocaleString('en-US', {style:'cu
 function fmt(n, d){ if(!isFinite(n)) return '—'; return n.toLocaleString('en-US', {maximumFractionDigits: d == null ? 2 : d}); }
 function pct(n){ return fmt(n) + '%'; }
 function pad2(n){ return String(n).padStart(2, '0'); }
+function timeAgo(dateStr){
+  try {
+    var d = new Date(dateStr);
+    var diff = (Date.now() - d.getTime()) / 1000;
+    if (diff < 60) return 'just now';
+    if (diff < 3600) return Math.floor(diff/60) + 'm ago';
+    if (diff < 86400) return Math.floor(diff/3600) + 'h ago';
+    if (diff < 604800) return Math.floor(diff/86400) + 'd ago';
+    return d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+  } catch(e){ return ''; }
+}
 
 /* ===== MATH ===== */
 function pmt(P, r, n){ return r ? P*r/(1 - Math.pow(1+r, -n)) : P/n; }
@@ -261,15 +370,15 @@ function countBizDays(a, b, holSet){
 
 /* ===== I18N ===== */
 var I18N = {
-  en:{name:'English',flag:'🇺🇸',title:'60+ Free Tools',titleB:'Money, Health & Life',tag:'Free US calculators. No signup. Instant results.',search:'Search 60+ tools...',allTools:'Tools',liveData:'Today',saved:'Saved',home:'Home',popular:'Popular Tools',favorites:'Your Favorites',recent:'Recently Used',liveTitle:'Today\'s Info',browseBy:'Browse by Category',catAll:'All',calculate:'Calculate',reset:'Reset',saveResult:'Save Result',tools:'tools',back:'Back',footer:'DealPilot USA — free online tools. Results are estimates only.'},
-  es:{name:'Español',flag:'🇪🇸',title:'60+ Herramientas',titleB:'Dinero, Salud y Vida',tag:'Calculadoras US gratis.',search:'Buscar 60+ herramientas...',allTools:'Todas',liveData:'Hoy',saved:'Guardado',home:'Inicio',popular:'Populares',favorites:'Favoritos',recent:'Recientes',liveTitle:'Info de Hoy',browseBy:'Por Categoría',catAll:'Todas',calculate:'Calcular',reset:'Reiniciar',saveResult:'Guardar',tools:'herramientas',back:'Atrás',footer:'DealPilot USA — herramientas gratis.'},
-  fr:{name:'Français',flag:'🇫🇷',title:'60+ Outils',titleB:'Argent, Santé, Vie',tag:'Calculatrices US gratuites.',search:'Rechercher 60+ outils...',allTools:'Outils',liveData:'Aujourd\'hui',saved:'Enregistré',home:'Accueil',popular:'Populaires',favorites:'Favoris',recent:'Récents',liveTitle:'Info du Jour',browseBy:'Par catégorie',catAll:'Tous',calculate:'Calculer',reset:'Réinitialiser',saveResult:'Enregistrer',tools:'outils',back:'Retour',footer:'DealPilot USA — outils gratuits.'},
-  de:{name:'Deutsch',flag:'🇩🇪',title:'60+ Tools',titleB:'Geld, Gesundheit, Leben',tag:'Kostenlose US-Rechner.',search:'60+ Tools durchsuchen...',allTools:'Tools',liveData:'Heute',saved:'Gespeichert',home:'Start',popular:'Beliebt',favorites:'Favoriten',recent:'Zuletzt',liveTitle:'Info Heute',browseBy:'Nach Kategorie',catAll:'Alle',calculate:'Berechnen',reset:'Zurücksetzen',saveResult:'Speichern',tools:'Tools',back:'Zurück',footer:'DealPilot USA — kostenlose Tools.'},
-  pt:{name:'Português',flag:'🇧🇷',title:'60+ Ferramentas',titleB:'Dinheiro, Saúde, Vida',tag:'Calculadoras US grátis.',search:'Pesquisar 60+ ferramentas...',allTools:'Ferramentas',liveData:'Hoje',saved:'Salvos',home:'Início',popular:'Populares',favorites:'Favoritos',recent:'Recentes',liveTitle:'Info de Hoje',browseBy:'Por Categoria',catAll:'Todas',calculate:'Calcular',reset:'Redefinir',saveResult:'Salvar',tools:'ferramentas',back:'Voltar',footer:'DealPilot USA — ferramentas grátis.'},
-  zh:{name:'中文',flag:'🇨🇳',title:'60+ 免费工具',titleB:'金钱、健康与生活',tag:'免费美国计算器。',search:'搜索 60+ 工具...',allTools:'工具',liveData:'今日',saved:'已保存',home:'首页',popular:'热门',favorites:'收藏',recent:'最近',liveTitle:'今日信息',browseBy:'按类别',catAll:'全部',calculate:'计算',reset:'重置',saveResult:'保存',tools:'个工具',back:'返回',footer:'DealPilot USA — 免费工具。'},
-  hi:{name:'हिन्दी',flag:'🇮🇳',title:'60+ मुफ्त टूल',titleB:'पैसा, स्वास्थ्य, जीवन',tag:'मुफ्त अमेरिकी कैलकुलेटर।',search:'60+ टूल खोजें...',allTools:'टूल',liveData:'आज',saved:'सहेजे',home:'होम',popular:'लोकप्रिय',favorites:'पसंदीदा',recent:'हाल',liveTitle:'आज की जानकारी',browseBy:'श्रेणी से',catAll:'सभी',calculate:'गणना',reset:'रीसेट',saveResult:'सहेजें',tools:'टूल',back:'वापस',footer:'DealPilot USA — मुफ्त टूल।'},
-  ar:{name:'العربية',flag:'🇸🇦',title:'60+ أدوات مجانية',titleB:'المال والصحة والحياة',tag:'حاسبات أمريكية مجانية.',search:'ابحث في 60+ أداة...',allTools:'الأدوات',liveData:'اليوم',saved:'محفوظ',home:'الرئيسية',popular:'شائعة',favorites:'المفضلة',recent:'الأخيرة',liveTitle:'معلومات اليوم',browseBy:'حسب الفئة',catAll:'الكل',calculate:'احسب',reset:'إعادة',saveResult:'حفظ',tools:'أداة',back:'رجوع',footer:'DealPilot USA — أدوات مجانية.'},
-  bn:{name:'বাংলা',flag:'🇧🇩',title:'৬০+ ফ্রি টুল',titleB:'টাকা, স্বাস্থ্য, জীবন',tag:'ফ্রি US ক্যালকুলেটর।',search:'৬০+ টুল খুঁজুন...',allTools:'টুল',liveData:'আজ',saved:'সেভ',home:'হোম',popular:'জনপ্রিয়',favorites:'প্রিয়',recent:'সাম্প্রতিক',liveTitle:'আজকের তথ্য',browseBy:'ক্যাটাগরি',catAll:'সব',calculate:'গণনা',reset:'রিসেট',saveResult:'সেভ',tools:'টুল',back:'ফিরে',footer:'DealPilot USA — ফ্রি টুল।'}
+  en:{name:'English',flag:'🇺🇸',title:'85+ Free Tools',titleB:'Money, Health & Life',tag:'Free US calculators. No signup. Instant results.',search:'Search 85+ tools...',allTools:'Tools',liveData:'Today',saved:'Saved',home:'Home',popular:'Popular Tools',favorites:'Your Favorites',recent:'Recently Used',liveTitle:'Today\'s Info',browseBy:'Browse by Category',catAll:'All',calculate:'Calculate',reset:'Reset',saveResult:'Save Result',tools:'tools',back:'Back',footer:'DealPilot USA — free online tools. Results are estimates only.'},
+  es:{name:'Español',flag:'🇪🇸',title:'85+ Herramientas',titleB:'Dinero, Salud y Vida',tag:'Calculadoras US gratis.',search:'Buscar 85+ herramientas...',allTools:'Todas',liveData:'Hoy',saved:'Guardado',home:'Inicio',popular:'Populares',favorites:'Favoritos',recent:'Recientes',liveTitle:'Info de Hoy',browseBy:'Por Categoría',catAll:'Todas',calculate:'Calcular',reset:'Reiniciar',saveResult:'Guardar',tools:'herramientas',back:'Atrás',footer:'DealPilot USA — herramientas gratis.'},
+  fr:{name:'Français',flag:'🇫🇷',title:'85+ Outils',titleB:'Argent, Santé, Vie',tag:'Calculatrices US gratuites.',search:'Rechercher 85+ outils...',allTools:'Outils',liveData:'Aujourd\'hui',saved:'Enregistré',home:'Accueil',popular:'Populaires',favorites:'Favoris',recent:'Récents',liveTitle:'Info du Jour',browseBy:'Par catégorie',catAll:'Tous',calculate:'Calculer',reset:'Réinitialiser',saveResult:'Enregistrer',tools:'outils',back:'Retour',footer:'DealPilot USA — outils gratuits.'},
+  de:{name:'Deutsch',flag:'🇩🇪',title:'85+ Tools',titleB:'Geld, Gesundheit, Leben',tag:'Kostenlose US-Rechner.',search:'85+ Tools durchsuchen...',allTools:'Tools',liveData:'Heute',saved:'Gespeichert',home:'Start',popular:'Beliebt',favorites:'Favoriten',recent:'Zuletzt',liveTitle:'Info Heute',browseBy:'Nach Kategorie',catAll:'Alle',calculate:'Berechnen',reset:'Zurücksetzen',saveResult:'Speichern',tools:'Tools',back:'Zurück',footer:'DealPilot USA — kostenlose Tools.'},
+  pt:{name:'Português',flag:'🇧🇷',title:'85+ Ferramentas',titleB:'Dinheiro, Saúde, Vida',tag:'Calculadoras US grátis.',search:'Pesquisar 85+ ferramentas...',allTools:'Ferramentas',liveData:'Hoje',saved:'Salvos',home:'Início',popular:'Populares',favorites:'Favoritos',recent:'Recentes',liveTitle:'Info de Hoje',browseBy:'Por Categoria',catAll:'Todas',calculate:'Calcular',reset:'Redefinir',saveResult:'Salvar',tools:'ferramentas',back:'Voltar',footer:'DealPilot USA — ferramentas grátis.'},
+  zh:{name:'中文',flag:'🇨🇳',title:'85+ 免费工具',titleB:'金钱、健康与生活',tag:'免费美国计算器。',search:'搜索 85+ 工具...',allTools:'工具',liveData:'今日',saved:'已保存',home:'首页',popular:'热门',favorites:'收藏',recent:'最近',liveTitle:'今日信息',browseBy:'按类别',catAll:'全部',calculate:'计算',reset:'重置',saveResult:'保存',tools:'个工具',back:'返回',footer:'DealPilot USA — 免费工具。'},
+  hi:{name:'हिन्दी',flag:'🇮🇳',title:'85+ मुफ्त टूल',titleB:'पैसा, स्वास्थ्य, जीवन',tag:'मुफ्त अमेरिकी कैलकुलेटर।',search:'85+ टूल खोजें...',allTools:'टूल',liveData:'आज',saved:'सहेजे',home:'होम',popular:'लोकप्रिय',favorites:'पसंदीदा',recent:'हाल',liveTitle:'आज की जानकारी',browseBy:'श्रेणी से',catAll:'सभी',calculate:'गणना',reset:'रीसेट',saveResult:'सहेजें',tools:'टूल',back:'वापस',footer:'DealPilot USA — मुफ्त टूल।'},
+  ar:{name:'العربية',flag:'🇸🇦',title:'85+ أدوات مجانية',titleB:'المال والصحة والحياة',tag:'حاسبات أمريكية مجانية.',search:'ابحث في 85+ أداة...',allTools:'الأدوات',liveData:'اليوم',saved:'محفوظ',home:'الرئيسية',popular:'شائعة',favorites:'المفضلة',recent:'الأخيرة',liveTitle:'معلومات اليوم',browseBy:'حسب الفئة',catAll:'الكل',calculate:'احسب',reset:'إعادة',saveResult:'حفظ',tools:'أداة',back:'رجوع',footer:'DealPilot USA — أدوات مجانية.'},
+  bn:{name:'বাংলা',flag:'🇧🇩',title:'৮৫+ ফ্রি টুল',titleB:'টাকা, স্বাস্থ্য, জীবন',tag:'ফ্রি US ক্যালকুলেটর।',search:'৮৫+ টুল খুঁজুন...',allTools:'টুল',liveData:'আজ',saved:'সেভ',home:'হোম',popular:'জনপ্রিয়',favorites:'প্রিয়',recent:'সাম্প্রতিক',liveTitle:'আজকের তথ্য',browseBy:'ক্যাটাগরি',catAll:'সব',calculate:'গণনা',reset:'রিসেট',saveResult:'সেভ',tools:'টুল',back:'ফিরে',footer:'DealPilot USA — ফ্রি টুল।'}
 };
 var LANG = S.g('lang', 'en');
 function tr(k){
@@ -310,7 +419,10 @@ var IP = {
   beaker: '<path d="M9 3h6v6l4 12H5l4-12zM9 3v6M15 3v6M7 13h10"/>',
   key: '<path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3"/>',
   compass: '<circle cx="12" cy="12" r="9"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>',
-  list: '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>'
+  list: '<path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>',
+  news: '<path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-4 0V6h4"/><path d="M18 14h-8M15 18h-5M10 6h8v4h-8V6z"/>',
+  external: '<path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>',
+  arrowDown: '<path d="M12 5v14M19 12l-7 7-7-7"/>'
 };
 
 var TOOL_ICON = {
@@ -333,7 +445,6 @@ function iconSVG(key){
   return '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">' + p + '</svg>';
 }
 
-/* ===== CATEGORIES ===== */
 var TL = [];
 var M='Money', SA='Salary', SH='Shopping', TX='Tax', HO='Home', AU='Auto', TI='Time', CO='Converters', HL='Health', BU='Business', TR='Travel', PR='Productivity';
 var CATS = [M, SA, SH, TX, HO, AU, TI, CO, HL, BU, TR, PR];
@@ -884,6 +995,107 @@ function apiCountry(name){
 function apiIP(){ return fetch('https://ipapi.co/json/').then(function(r){ return r.json(); }).catch(function(){ return null; }); }
 function apiHolidays(cc, y){ return fetch('https://date.nager.at/api/v3/PublicHolidays/' + y + '/' + cc.toUpperCase()).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; }); }
 
+/* ============ NEWS API — GDELT (US only, with images) ============ */
+function apiNews(category){
+  var query = 'sourcecountry:US';
+  if (category && category !== 'top') {
+    var topicMap = {
+      'nation': 'politics OR election OR congress',
+      'business': 'business OR economy OR markets',
+      'technology': 'technology OR tech OR AI',
+      'sports': 'sports OR NFL OR NBA OR MLB',
+      'entertainment': 'entertainment OR movie OR music',
+      'health': 'health OR medicine OR COVID',
+      'science': 'science OR research OR space'
+    };
+    query += ' (' + (topicMap[category] || 'news') + ')';
+  }
+  var url = 'https://api.gdeltproject.org/api/v2/doc/doc?query=' + encodeURIComponent(query) +
+            '&mode=artlist&maxrecords=25&format=json&sort=datedesc';
+  return fetch(url)
+    .then(function(r){ if (!r.ok) throw 0; return r.json(); })
+    .then(function(data){
+      if (!data.articles || !data.articles.length) throw 0;
+      return data.articles.map(function(item){
+        var img = item.socialimage || '';
+        if (img && img.indexOf('http') !== 0) img = '';
+        return {
+          title: item.title || 'Untitled',
+          link: item.url || '#',
+          pubDate: item.seendate ? parseGdeltDate(item.seendate) : new Date().toISOString(),
+          source: item.domain ? item.domain.replace(/^www\./, '') : 'News',
+          image: img
+        };
+      });
+    })
+    .catch(function(){ return apiNewsFallback(category); });
+}
+
+function parseGdeltDate(str){
+  try {
+    var s = String(str);
+    var y = s.slice(0,4), mo = s.slice(4,6), d = s.slice(6,8);
+    var h = s.slice(9,11), mi = s.slice(11,13), se = s.slice(13,15);
+    return new Date(Date.UTC(+y, +mo - 1, +d, +h, +mi, +se)).toISOString();
+  } catch(e){ return new Date().toISOString(); }
+}
+
+function apiNewsFallback(category){
+  var feed = 'https://feeds.foxnews.com/foxnews/latest';
+  var url = 'https://api.allorigins.win/raw?url=' + encodeURIComponent(feed);
+  return fetch(url)
+    .then(function(r){ return r.text(); })
+    .then(function(xml){
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(xml, 'text/xml');
+      var items = doc.querySelectorAll('item');
+      var news = [];
+      for (var i = 0; i < Math.min(items.length, 15); i++) {
+        var item = items[i];
+        var title = item.querySelector('title') ? item.querySelector('title').textContent : '';
+        var link = item.querySelector('link') ? item.querySelector('link').textContent : '';
+        var pubDate = item.querySelector('pubDate') ? item.querySelector('pubDate').textContent : '';
+        var img = '';
+        var media = item.querySelector('content');
+        if (media && media.getAttribute('url')) img = media.getAttribute('url');
+        if (!img) { var enc = item.querySelector('enclosure'); if (enc && enc.getAttribute('url')) img = enc.getAttribute('url'); }
+        news.push({title: title, link: link, pubDate: pubDate, source: 'Fox News', image: img});
+      }
+      return news;
+    })
+    .catch(function(){ return null; });
+}
+
+/* ============ SEO — dynamic JSON-LD ============ */
+function updateNewsSchema(news){
+  if (!news || !news.length) return;
+  var schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "US News Headlines",
+    "itemListElement": news.slice(0, 20).map(function(n, i){
+      var el = {
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "NewsArticle",
+          "headline": n.title.slice(0, 110),
+          "url": n.link,
+          "datePublished": n.pubDate,
+          "publisher": {
+            "@type": "Organization",
+            "name": n.source || "News"
+          }
+        }
+      };
+      if (n.image) el.item.image = n.image;
+      return el;
+    })
+  };
+  var tag = document.getElementById('newsSchema');
+  if (tag) tag.textContent = JSON.stringify(schema);
+}
+
 function getFavs(){ return S.g('fav', []); }
 function getById(id){ return TL.find(function(x){ return x.id === id; }); }
 function trackUsage(id){
@@ -959,14 +1171,58 @@ function renderCatChips(active){
   return h('div', {class: 'cats'}, chips);
 }
 
+function loadHomeNews(){
+  var box = document.getElementById('homeNews');
+  if (!box) return;
+  box.innerHTML = '<div class="card" style="grid-column:1/-1"><div style="text-align:center;color:var(--text3);padding:20px">Loading news...</div></div>';
+  apiNews('top').then(function(news){
+    if (!news || !news.length) {
+      box.innerHTML = '<div class="card" style="grid-column:1/-1"><div style="text-align:center;color:var(--text3);padding:20px">News not available right now.</div></div>';
+      return;
+    }
+    updateNewsSchema(news);
+    box.innerHTML = '';
+    news.slice(0, 4).forEach(function(item){
+      var dateStr = item.pubDate ? timeAgo(item.pubDate) : '';
+      var card;
+      if (item.image) {
+        card = h('a', {href: item.link, target: '_blank', rel: 'noopener', class: 'card', style: 'display:block;text-decoration:none;padding:0;overflow:hidden'}, [
+          h('img', {src: item.image, alt: item.title, style: 'width:100%;height:140px;object-fit:cover;display:block', loading: 'lazy', onerror: function(e){ e.target.style.display = 'none'; }}),
+          h('div', {style: 'padding:14px 16px'}, [
+            h('div', {style: 'font-weight:700;font-size:.95rem;line-height:1.4;margin-bottom:6px'}, item.title),
+            h('div', {style: 'display:flex;justify-content:space-between;align-items:center;color:var(--text3);font-size:.75rem'}, [
+              h('span', {style: 'color:var(--or2);font-weight:700'}, item.source || 'News'),
+              h('span', {}, dateStr)
+            ])
+          ])
+        ]);
+      } else {
+        card = h('a', {href: item.link, target: '_blank', rel: 'noopener', class: 'card', style: 'display:block;text-decoration:none'}, [
+          h('div', {style: 'font-weight:700;font-size:.95rem;line-height:1.4;margin-bottom:6px'}, item.title),
+          h('div', {style: 'display:flex;justify-content:space-between;align-items:center;color:var(--text3);font-size:.78rem'}, [
+            h('span', {style: 'color:var(--or2);font-weight:700'}, item.source || 'News'),
+            h('span', {}, dateStr)
+          ])
+        ]);
+      }
+      box.appendChild(card);
+    });
+  });
+}
+
 function renderHome(){
-  var uses = S.g('uses', {});
   var recent = S.g('recent', []).slice(0, 6).map(getById).filter(Boolean);
   var favs = getFavs().map(getById).filter(Boolean).slice(0, 6);
   var featuredIds = ['mortgage', 'bmi', 'disc', 'tip', 'fuel', 'len', 'savings', 'age', 'stax', 'compound', 'paycheck', 'temp'];
   var featured = TL.filter(function(x){ return featuredIds.indexOf(x.id) !== -1; });
   app.innerHTML = '';
   app.appendChild(renderHero());
+
+  app.appendChild(h('section', {class: 'sec'}, [
+    h('div', {class: 'sec-head'}, [h('h2', {}, '📰 Top US News'), h('a', {class: 'more', href: '#/news'}, 'See all →')]),
+    h('div', {id: 'homeNews', class: 'live-grid'}, h('div', {class: 'card', style: 'grid-column:1/-1'}, h('div', {style: 'text-align:center;color:var(--text3);padding:20px'}, 'Loading news...')))
+  ]));
+
   app.appendChild(h('section', {class: 'sec'}, [
     h('div', {class: 'sec-head'}, [h('h2', {}, '🔥 ' + tr('popular')), h('a', {class: 'more', href: '#/all'}, 'View all ' + TL.length + ' →')]),
     h('div', {class: 'grid'}, featured.map(makeToolCard))
@@ -1005,6 +1261,8 @@ function renderHome(){
     renderCatChips(null),
     h('div', {class: 'grid'}, catTiles)
   ]));
+
+  loadHomeNews();
 }
 
 function renderAllTools(P){
@@ -1093,7 +1351,6 @@ function renderToolPage(tl){
   }
 
   var sp = tl.F.map(parseField);
-  var sv = S.g('in_' + tl.id, {});
   var ins = {};
   var form = h('div', {class: 'form'});
   sp.forEach(function(s){
@@ -1101,14 +1358,12 @@ function renderToolPage(tl){
     if (s.ty === 'select') {
       c = h('select');
       s.o.forEach(function(o){ c.appendChild(h('option', {value: o}, o)); });
-      c.value = (sv[s.k] != null && sv[s.k] !== '') ? sv[s.k] : s.d;
+      c.value = s.d;
     } else if (s.ty === 'textarea') {
       c = h('textarea', {rows: 5, placeholder: 'Enter values, one per line'});
-      if (sv[s.k] != null && sv[s.k] !== '') c.value = sv[s.k];
     } else {
       c = h('input', {type: s.ty, step: 'any', inputmode: s.ty === 'number' ? 'decimal' : null});
       c.placeholder = 'e.g. ' + s.d;
-      if (sv[s.k] != null && sv[s.k] !== '') c.value = sv[s.k];
     }
     ins[s.k] = c;
     form.appendChild(h('label', {class: s.ty === 'textarea' ? 'full' : ''}, [h('span', {}, s.l), c]));
@@ -1132,9 +1387,6 @@ function renderToolPage(tl){
       }
       v[s.k] = x;
     });
-    var st = {};
-    sp.forEach(function(s){ st[s.k] = ins[s.k].value; });
-    S.s('in_' + tl.id, st);
     var r = err;
     if (!r) {
       try { r = tl.fn(v); }
@@ -1168,7 +1420,6 @@ function renderToolPage(tl){
   box.appendChild(h('div', {class: 'acts'}, [
     h('button', {class: 'btn', onclick: run}, '⚡ ' + tr('calculate')),
     h('button', {class: 'btn ghost', onclick: function(){
-      S.d('in_' + tl.id);
       sp.forEach(function(s){
         if (s.ty === 'select') ins[s.k].value = s.d;
         else ins[s.k].value = '';
@@ -1339,6 +1590,181 @@ function renderToday(){
   app.appendChild(wrap);
 }
 
+/* ============ REELS-STYLE NEWS ============ */
+function renderNews(){
+  app.innerHTML = '';
+  var currentCat = 'top';
+  var currentPage = 0;
+  var allNews = [];
+  var container = h('div', {class: 'reels-container', id: 'reelsFeed'});
+  var tabs = h('div', {class: 'reels-tabs'});
+  var page = h('div', {class: 'reels-page'});
+
+  var categories = [
+    {k: 'top', label: 'For You'},
+    {k: 'nation', label: 'Nation'},
+    {k: 'business', label: 'Business'},
+    {k: 'technology', label: 'Tech'},
+    {k: 'sports', label: 'Sports'},
+    {k: 'entertainment', label: 'Fun'},
+    {k: 'health', label: 'Health'},
+    {k: 'science', label: 'Science'}
+  ];
+
+  function makeReel(item, isFirst){
+    var reel = h('article', {class: 'reel'});
+    reel.setAttribute('itemscope', '');
+    reel.setAttribute('itemtype', 'https://schema.org/NewsArticle');
+    reel.setAttribute('itemprop', 'itemListElement');
+
+    // Progress bar at top
+    reel.appendChild(h('div', {class: 'reel-progress'}, h('i')));
+
+    // Image
+    if (item.image) {
+      var img = h('img', {class: 'reel-img', src: item.image, alt: item.title, loading: isFirst ? 'eager' : 'lazy', onload: function(e){
+        e.target.classList.add('loaded');
+        var fb = e.target.parentNode.querySelector('.reel-fallback');
+        if (fb) fb.style.display = 'none';
+      }, onerror: function(e){
+        e.target.style.display = 'none';
+      }});
+      img.setAttribute('itemprop', 'image');
+      reel.appendChild(img);
+    }
+
+    // Fallback icon (in case image fails or no image)
+    reel.appendChild(h('div', {class: 'reel-fallback', style: item.image ? 'display:grid' : 'display:grid'}, [
+      h('div', {html: iconSVG('news').replace('width="22" height="22"', 'width="100" height="100"')})
+    ]));
+
+    // "Tap to read" pill
+    reel.appendChild(h('div', {class: 'reel-tap'}, [
+      h('span', {}, 'TAP TO READ'),
+      h('span', {html: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>'})
+    ]));
+
+    // Overlay
+    var overlay = h('div', {class: 'reel-overlay'}, [
+      h('div', {class: 'reel-badge'}, [h('span', {class: 'live-dot'}), 'LIVE']),
+      h('h2', {itemprop: 'headline'}, item.title),
+      h('div', {class: 'reel-meta'}, [
+        h('span', {class: 'src', itemprop: 'publisher'}, item.source || 'News'),
+        h('span', {class: 'sep'}, '·'),
+        h('span', {itemprop: 'datePublished', content: item.pubDate}, timeAgo(item.pubDate))
+      ])
+    ]);
+    reel.appendChild(overlay);
+
+    // Scroll hint on first reel
+    if (isFirst) {
+      var hint = h('div', {class: 'reel-scroll-hint'}, [
+        h('span', {html: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>'}),
+        h('span', {}, 'SWIPE UP')
+      ]);
+      reel.appendChild(hint);
+    }
+
+    // Click to open
+    reel.onclick = function(){ window.open(item.link, '_blank', 'noopener'); };
+    reel.style.cursor = 'pointer';
+
+    return reel;
+  }
+
+  function renderReels(items, append){
+    if (!append) container.innerHTML = '';
+    items.forEach(function(item, i){
+      container.appendChild(makeReel(item, !append && i === 0));
+    });
+    // Update JSON-LD schema
+    updateNewsSchema(allNews);
+  }
+
+  function showLoading(){
+    container.innerHTML = '';
+    container.appendChild(h('div', {class: 'reel-loading', style: 'height:100%'}, [
+      h('div', {class: 'news-spinner'}),
+      h('span', {}, 'Loading stories...')
+    ]));
+  }
+
+  function loadNews(cat, append){
+    currentCat = cat;
+    if (!append) { currentPage = 0; allNews = []; showLoading(); }
+    apiNews(cat).then(function(news){
+      if (!news || !news.length) {
+        if (!append) {
+          container.innerHTML = '';
+          container.appendChild(h('div', {class: 'reel-end'}, [
+            h('div', {html: iconSVG('news').replace('width="22" height="22"', 'width="48" height="48"')}),
+            h('p', {}, 'No stories right now. Check back soon.')
+          ]));
+        } else {
+          container.appendChild(h('div', {class: 'reel-end'}, [
+            h('div', {html: iconSVG('news').replace('width="22" height="22"', 'width="48" height="48"')}),
+            h('p', {}, "You're all caught up")
+          ]));
+        }
+        return;
+      }
+      allNews = allNews.concat(news);
+      renderReels(news, append);
+    });
+  }
+
+  // Category tabs
+  categories.forEach(function(c){
+    var btn = h('button', {class: 'cat-chip' + (c.k === currentCat ? ' on' : ''), onclick: function(){
+      var all = tabs.querySelectorAll('.cat-chip');
+      for (var i = 0; i < all.length; i++) all[i].classList.remove('on');
+      btn.classList.add('on');
+      container.scrollTop = 0;
+      loadNews(c.k, false);
+    }}, c.label);
+    tabs.appendChild(btn);
+  });
+
+  // Detect scroll to bottom — reload/append more
+  container.addEventListener('scroll', function(){
+    var nearBottom = container.scrollHeight - container.scrollTop - container.clientHeight < 200;
+    var atEnd = container.scrollTop + container.clientHeight >= container.scrollHeight - 5;
+    if (atEnd) {
+      // Reached last reel — load more
+      if (currentPage < 2) {
+        currentPage++;
+        // Load the same category again — will get more items from GDELT
+        // But GDELT only gives 25, so we'll just loop the top again with slight delay
+      }
+    }
+  }, {passive: true});
+
+  page.appendChild(tabs);
+  page.appendChild(container);
+  app.appendChild(page);
+
+  loadNews('top', false);
+
+  // Auto-refresh every 10 minutes — silently in background
+  if (window._newsInterval) clearInterval(window._newsInterval);
+  window._newsInterval = setInterval(function(){
+    if (location.hash === '#/news') {
+      var scrollTop = container.scrollTop;
+      var wasNearTop = scrollTop < 100;
+      apiNews(currentCat).then(function(news){
+        if (!news || !news.length) return;
+        // Only replace if user is at top (so we don't disturb their scroll)
+        if (wasNearTop) {
+          allNews = news;
+          container.innerHTML = '';
+          renderReels(news, false);
+          container.scrollTop = 0;
+        }
+      });
+    }
+  }, 10 * 60 * 1000);
+}
+
 function renderMe(){
   var theme = S.g('theme', 'auto');
   var saved = S.g('saved', []);
@@ -1393,11 +1819,12 @@ function applyLang(){
   document.documentElement.lang = LANG;
   document.documentElement.dir = LANG === 'ar' ? 'rtl' : 'ltr';
   var nav = document.querySelectorAll('.nav a');
-  if (nav.length >= 4) {
+  if (nav.length >= 5) {
     nav[0].textContent = tr('home');
     nav[1].textContent = tr('allTools');
     nav[2].textContent = tr('liveData');
-    nav[3].textContent = tr('saved');
+    nav[3].textContent = 'News';
+    nav[4].textContent = tr('saved');
   }
   var ftr = $('#ftr');
   if (ftr) ftr.textContent = tr('footer');
@@ -1435,6 +1862,7 @@ function route(){
   if (!p || p === '/') { renderHome(); navActive('/'); }
   else if (p === '/all') { renderAllTools(P); navActive('/all'); }
   else if (p === '/live') { renderToday(); navActive('/live'); }
+  else if (p === '/news') { renderNews(); navActive('/news'); }
   else if (p === '/me') { renderMe(); navActive('/me'); }
   else if (p.indexOf('/t/') === 0) {
     var tl = getById(p.slice(3));
