@@ -5,32 +5,82 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0a0a0a">
 
-<title>DealPilot — Make Every Number Make Sense</title>
-<meta name="description" content="Free calculators, converters and decision tools for money, shopping, finance, travel and everyday life. No signup. Instant results.">
-<meta name="keywords" content="free calculator, discount calculator, sales tax calculator, loan calculator, tip calculator, currency converter, percentage calculator, hourly wage calculator">
+<!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
+<meta name="google-site-verification" content="JZSdU_Bn587MFLu3u72aGDBNE4XkZxtOPJUHhsFkuY8">
+
+<!-- PRIMARY SEO -->
+<title>Free Calculators for Everyday Life | DealPilot</title>
+<meta name="description" content="Free online calculators for money, shopping, taxes, loans, savings, time, travel, conversions and everyday decisions. Fast, simple and easy to use.">
+<meta name="keywords" content="free calculator, discount calculator, sales tax calculator, loan calculator, mortgage calculator, tip calculator, percentage calculator, currency converter, hourly wage calculator, BMI calculator">
 <meta name="author" content="DealPilot">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
 <meta name="language" content="English">
-<meta name="theme-color" content="#0a0a0a">
+<meta name="geo.region" content="US">
+<meta name="geo.placename" content="United States">
 <link rel="canonical" href="https://dealpilotusa.github.io/">
 
+<!-- OPEN GRAPH -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="DealPilot">
-<meta property="og:title" content="DealPilot — Make Every Number Make Sense">
-<meta property="og:description" content="Free calculators, converters and decision tools for everyday life.">
+<meta property="og:title" content="Free Calculators for Everyday Life | DealPilot">
+<meta property="og:description" content="Free online calculators for money, shopping, taxes, loans, savings, and everyday decisions.">
 <meta property="og:url" content="https://dealpilotusa.github.io/">
 <meta property="og:image" content="https://dealpilotusa.github.io/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta property="og:locale" content="en_US">
 
+<!-- TWITTER -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="DealPilot — Make Every Number Make Sense">
-<meta name="twitter:description" content="Free calculators, converters and decision tools for everyday life.">
+<meta name="twitter:title" content="Free Calculators for Everyday Life | DealPilot">
+<meta name="twitter:description" content="Free online calculators for everyday decisions.">
 <meta name="twitter:image" content="https://dealpilotusa.github.io/og-cover.jpg">
 
+<!-- HREFLANG -->
+<link rel="alternate" hreflang="en-us" href="https://dealpilotusa.github.io/">
+<link rel="alternate" hreflang="en" href="https://dealpilotusa.github.io/">
+<link rel="alternate" hreflang="x-default" href="https://dealpilotusa.github.io/">
+
+<!-- PWA MANIFEST -->
 <link rel="manifest" href="/manifest.json">
+
+<!-- FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://dealpilotusa.github.io/#website",
+      "url": "https://dealpilotusa.github.io/",
+      "name": "DealPilot",
+      "description": "Free calculators for everyday life.",
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://dealpilotusa.github.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://dealpilotusa.github.io/#organization",
+      "url": "https://dealpilotusa.github.io/",
+      "name": "DealPilot",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dealpilotusa.github.io/icon-512.png"
+      }
+    }
+  ]
+}
+</script>
 
 <style>
 /* ============ RESET & TOKENS ============ */
@@ -61,7 +111,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--bg);color:var(--text);font:15px/1.55 'Inter',system-ui,-apple-system,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden;transition:background .3s,color .3s}
+body{background:var(--bg);color:var(--text);font:15px/1.55 'Inter',system-ui,-apple-system,sans-serif;min-height:100vh;-webkit-font-smoothing:antialiased;overflow-x:hidden;transition:background .3s,color .3s}
 a{color:inherit;text-decoration:none}
 button{font:inherit;cursor:pointer;border:0;background:none;color:inherit;font-family:inherit}
 input,select,textarea{font:inherit;color:inherit;font-family:inherit}
@@ -69,14 +119,12 @@ img,svg{display:block;max-width:100%}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
 ::selection{background:var(--accent-soft);color:var(--accent)}
 
-/* ============ TYPOGRAPHY ============ */
 h1,h2,h3,h4{font-family:'Manrope',sans-serif;font-weight:700;letter-spacing:-.022em;line-height:1.15;color:var(--text)}
 h1{font-size:clamp(2rem,5vw,3.75rem);font-weight:800}
 h2{font-size:clamp(1.4rem,3vw,1.85rem);font-weight:700}
 h3{font-size:1.05rem}
 .mono{font-variant-numeric:tabular-nums}
 
-/* ============ LAYOUT ============ */
 .container{max-width:1200px;margin:0 auto;padding:0 24px}
 main{min-height:60vh}
 
@@ -99,7 +147,6 @@ header.top{position:sticky;top:0;z-index:100;background:rgba(251,250,248,.85);ba
 /* ============ BUTTONS ============ */
 .btn{background:var(--text);color:var(--bg);border-radius:10px;padding:12px 22px;font-weight:600;font-size:.92rem;display:inline-flex;align-items:center;gap:8px;transition:var(--trans);cursor:pointer;border:1.5px solid transparent;white-space:nowrap}
 .btn:hover{transform:translateY(-1px);box-shadow:var(--shadow)}
-.btn:active{transform:translateY(0)}
 .btn.accent{background:var(--accent);color:#fff}
 .btn.accent:hover{background:var(--accent-h)}
 .btn.ghost{background:var(--surface);color:var(--text);border-color:var(--line)}
@@ -115,7 +162,6 @@ header.top{position:sticky;top:0;z-index:100;background:rgba(251,250,248,.85);ba
 .hero h1 .em{color:var(--accent);font-style:normal}
 .hero .sub{font-size:1.1rem;color:var(--text2);max-width:560px;margin:0 auto 36px;line-height:1.6}
 
-/* Search */
 .search-wrap{max-width:640px;margin:0 auto 20px}
 .search-box{background:var(--surface);border:1.5px solid var(--line);border-radius:16px;display:flex;align-items:center;padding:6px 6px 6px 18px;transition:var(--trans);box-shadow:var(--shadow)}
 .search-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 4px var(--accent-soft),var(--shadow-lg)}
@@ -137,8 +183,6 @@ header.top{position:sticky;top:0;z-index:100;background:rgba(251,250,248,.85);ba
 .sec-head p{color:var(--text2);font-size:.95rem;margin-top:6px}
 .sec-head .more{color:var(--accent);font-weight:600;font-size:.88rem;transition:var(--trans);white-space:nowrap}
 .sec-head .more:hover{color:var(--accent-h)}
-.sec-head .more::after{content:' →';transition:var(--trans)}
-.sec-head .more:hover::after{transform:translateX(2px)}
 
 /* ============ PURPOSE CARDS ============ */
 .purpose-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
@@ -154,7 +198,7 @@ header.top{position:sticky;top:0;z-index:100;background:rgba(251,250,248,.85);ba
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
 .tool-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;gap:14px;align-items:flex-start;transition:var(--trans);cursor:pointer;position:relative;min-height:92px}
 .tool-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--line2)}
-.tool-icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;color:#fff;background:var(--accent);font-size:0}
+.tool-icon{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;flex-shrink:0;color:#fff;background:var(--accent)}
 .tool-icon.t-money{background:linear-gradient(135deg,#e8632a,#b8451a)}
 .tool-icon.t-shopping{background:linear-gradient(135deg,#c9468c,#8f2e64)}
 .tool-icon.t-finance{background:linear-gradient(135deg,#2a6fd1,#1a4b96)}
@@ -186,7 +230,7 @@ header.top{position:sticky;top:0;z-index:100;background:rgba(251,250,248,.85);ba
 /* ============ FORM ============ */
 .form{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
 label{display:block}
-label>span{display:block;font-size:.78rem;font-weight:600;color:var(--text2);margin-bottom:8px;letter-spacing:.005em}
+label>span{display:block;font-size:.78rem;font-weight:600;color:var(--text2);margin-bottom:8px}
 input,select,textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--text);font-size:.95rem;transition:var(--trans);outline:0;font-variant-numeric:tabular-nums}
 input:hover,select:hover,textarea:hover{border-color:var(--line2)}
 input:focus,select:focus,textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
@@ -198,7 +242,7 @@ label.full{grid-column:1/-1}
 @keyframes resultIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
 .result-eyebrow{font-size:.72rem;color:var(--text3);font-weight:700;text-transform:uppercase;letter-spacing:.1em;margin-bottom:10px}
 .result-main{font-family:'Manrope',sans-serif;font-size:clamp(2.4rem,6vw,3.4rem);font-weight:800;letter-spacing:-.04em;color:var(--accent);line-height:1.05;margin-bottom:22px;word-break:break-word;font-variant-numeric:tabular-nums}
-.result-breakdown{border-top:1px solid var(--line);padding-top:18px;display:grid;gap:0}
+.result-breakdown{border-top:1px solid var(--line);padding-top:18px;display:grid}
 .result-row{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-bottom:1px solid var(--line);font-size:.94rem}
 .result-row:last-child{border-bottom:0}
 .result-row span{color:var(--text2)}
@@ -225,7 +269,6 @@ label.full{grid-column:1/-1}
 .crumb a{color:var(--text2);transition:var(--trans)}
 .crumb a:hover{color:var(--accent)}
 
-/* ============ RELATED ============ */
 .related{margin-top:32px;padding-top:26px;border-top:1px solid var(--line)}
 .related h3{font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--text3);margin-bottom:14px}
 
@@ -304,10 +347,6 @@ label.full{grid-column:1/-1}
 .reasons-wrap{display:grid;gap:8px;max-width:480px;margin:0 auto 16px;text-align:left}
 .reason-item{padding:12px 16px;background:var(--surface2);border-radius:10px;font-size:.86rem;color:var(--text2);line-height:1.5;border-left:3px solid var(--accent)}
 .updated-at{font-size:.74rem;color:var(--text3);font-weight:500;margin-top:14px}
-.ind-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-top:22px}
-.ind-box{background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:18px 14px;text-align:center}
-.ind-box .ind-label{font-size:.7rem;font-weight:700;color:var(--text3);letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
-.ind-box .ind-value{font-family:'Manrope',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
 
 /* ============ GAMES ============ */
 .games-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
@@ -321,23 +360,22 @@ label.full{grid-column:1/-1}
 .game-head h3{font-size:1.05rem}
 .game-head .score{font-family:'Manrope',sans-serif;font-weight:700;color:var(--accent);font-size:.95rem;font-variant-numeric:tabular-nums}
 .memory-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.mem-card{aspect-ratio:1;background:var(--surface2);border:1.5px solid var(--line);border-radius:12px;display:grid;place-items:center;cursor:pointer;font-size:1.8rem;position:relative;transition:var(--trans)}
-.mem-card:hover{border-color:var(--accent);transform:scale(1.02)}
-.mem-card.matched{opacity:.5;pointer-events:none;background:var(--accent-soft);border-color:var(--accent)}
-.mem-card.flipped{background:var(--accent-soft);border-color:var(--accent)}
+.mem-card{aspect-ratio:1;background:var(--surface2);border:1.5px solid var(--line);border-radius:12px;display:grid;place-items:center;cursor:pointer;font-size:1.8rem;position:relative;transition:var(--trans);color:var(--text3)}
+.mem-card:hover{border-color:var(--accent)}
+.mem-card.flipped,.mem-card.matched{background:var(--accent-soft);border-color:var(--accent);color:var(--text)}
+.mem-card.matched{opacity:.5;pointer-events:none}
 .grid-2048{background:var(--surface2);border-radius:12px;padding:10px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.tile-2048{aspect-ratio:1;background:var(--surface);border-radius:8px;display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.35rem;color:var(--text);transition:var(--trans);font-variant-numeric:tabular-nums}
+.tile-2048{aspect-ratio:1;background:var(--surface);border-radius:8px;display:grid;place-items:center;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.35rem;color:var(--text);font-variant-numeric:tabular-nums}
 .t2{background:#f2e8e0;color:#7a4a1f}.t4{background:#efd5be;color:#7a4a1f}
 .t8{background:#e8b17a;color:#fff}.t16{background:#e8632a;color:#fff}
 .t32{background:#c44f1c;color:#fff}.t64{background:#a33d10;color:#fff}
 .t128{background:#8f2e64;color:#fff}.t256{background:#6d2a7a;color:#fff}
 .t512{background:#2a6fd1;color:#fff}.t1024{background:#0fa4a4;color:#fff}
-.t2048{background:linear-gradient(135deg,#e8632a,#a33d10);color:#fff;box-shadow:0 0 20px rgba(232,99,42,.5)}
+.t2048{background:linear-gradient(135deg,#e8632a,#a33d10);color:#fff}
 .ttt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:320px;margin:0 auto}
 .ttt-cell{aspect-ratio:1;background:var(--surface2);border:1.5px solid var(--line);border-radius:12px;display:grid;place-items:center;font-family:'Manrope',sans-serif;font-size:2.4rem;font-weight:700;cursor:pointer;color:var(--text);transition:var(--trans)}
 .ttt-cell:hover{background:var(--accent-soft);border-color:var(--accent)}
-.ttt-cell.x{color:var(--blue)}
-.ttt-cell.o{color:var(--red)}
+.ttt-cell.x{color:var(--blue)}.ttt-cell.o{color:var(--red)}
 .reaction-box{width:100%;height:260px;border-radius:16px;display:grid;place-items:center;cursor:pointer;font-family:'Manrope',sans-serif;font-weight:700;font-size:1.4rem;color:#fff;text-align:center;padding:20px;transition:var(--trans);user-select:none}
 .reaction-box.wait{background:var(--red)}
 .reaction-box.ready{background:var(--green)}
@@ -378,7 +416,6 @@ label.full{grid-column:1/-1}
 .live-head .dot{width:8px;height:8px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
 .live-head b{font-size:.95rem;font-weight:700;letter-spacing:-.01em}
 
-/* ============ LIST ROWS ============ */
 .list-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line)}
 .list-row:last-child{border-bottom:0}
 .list-row .meta{flex:1;min-width:0}
@@ -387,21 +424,18 @@ label.full{grid-column:1/-1}
 .x-btn{width:32px;height:32px;border-radius:8px;background:var(--surface2);color:var(--text3);display:grid;place-items:center;font-weight:700;cursor:pointer;transition:var(--trans);font-size:.9rem}
 .x-btn:hover{background:var(--red);color:#fff}
 
-/* ============ UTIL LISTS ============ */
 ul.li{list-style:none}
 ul.li li{display:flex;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
 ul.li li:last-child{border-bottom:0}
-ul.li li input[type=checkbox]{width:auto;flex-shrink:0;accent-color:var(--accent);cursor:pointer;width:16px;height:16px}
+ul.li li input[type=checkbox]{width:16px;height:16px;flex-shrink:0;accent-color:var(--accent);cursor:pointer}
 ul.li li span{flex:1;font-size:.92rem}
 .done{text-decoration:line-through;opacity:.45}
 
-/* Calculator */
 .calc-display{font-family:'Manrope',sans-serif;font-size:2.4rem;font-weight:700;text-align:right;padding:20px 22px;background:var(--surface2);border-radius:12px;margin:20px 0;word-break:break-all;letter-spacing:-.02em;font-variant-numeric:tabular-nums;min-height:76px;color:var(--text)}
 .pad{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:16px}
 .pad button{padding:14px 8px;background:var(--surface2);border:1px solid var(--line);border-radius:10px;font-weight:600;font-size:.98rem;cursor:pointer;transition:var(--trans);color:var(--text)}
 .pad button:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 
-/* ============ FOOTER ============ */
 footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--surface);margin-top:80px}
 .footer-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:36px;margin-bottom:40px}
 .footer-col h4{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text3);margin-bottom:16px}
@@ -427,7 +461,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
   .sec-head{margin-bottom:22px}
   .grid{grid-template-columns:1fr;gap:10px}
   .tool-card{padding:15px;min-height:auto}
-  .tool-icon{width:38px;height:38px;border-radius:9px}
+  .tool-icon{width:38px;height:38px}
   .tool-body b{font-size:.92rem}
   .tool-body small{font-size:.78rem}
   .form{grid-template-columns:1fr}
@@ -439,7 +473,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
   .result-box{padding:22px 18px}
   .purpose-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .purpose-card{padding:20px 16px}
-  .purpose-card .ico{font-size:1.5rem;margin-bottom:10px}
+  .purpose-card .ico{font-size:1.5rem}
   .purpose-card b{font-size:.92rem}
   .purpose-card small{font-size:.76rem}
   .news-featured-img{height:210px}
@@ -451,11 +485,11 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
   .predict-card{padding:28px 18px}
   .games-grid{grid-template-columns:repeat(2,1fr);gap:10px}
   .game-tile{padding:18px 14px}
-  .game-tile .ico{font-size:2rem;margin-bottom:8px}
+  .game-tile .ico{font-size:2rem}
   .game-tile .name{font-size:.88rem}
   .game-tile .desc{font-size:.72rem}
   .game-panel{padding:22px 18px}
-  .memory-grid{gap:8px;grid-template-columns:repeat(4,1fr)}
+  .memory-grid{gap:8px}
   .mem-card{font-size:1.3rem}
   .stroop-word{font-size:2.6rem}
   .trust{padding:26px 20px}
@@ -464,9 +498,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
   .footer-cols{grid-template-columns:repeat(2,1fr);gap:24px}
   .acts{flex-direction:column}
   .acts .btn{width:100%;justify-content:center}
-  .ind-grid{grid-template-columns:repeat(2,1fr);gap:8px}
-  .ind-box{padding:14px 10px}
-  .ind-box .ind-value{font-size:1.1rem}
   .pad{grid-template-columns:repeat(5,1fr);gap:6px}
   .pad button{padding:12px 4px;font-size:.88rem}
   .calc-display{font-size:1.8rem;padding:16px 18px}
@@ -475,13 +506,6 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
   html{scroll-behavior:auto}
-}
-
-/* ============ PRINT ============ */
-@media print{
-  header.top,footer,.acts,.related,.faq,.trust,.nav{display:none!important}
-  body{background:#fff;color:#000}
-  .result-box{box-shadow:none;border:1px solid #ccc}
 }
 </style>
 </head>
@@ -518,7 +542,7 @@ footer{border-top:1px solid var(--line);padding:56px 0 32px;background:var(--sur
     <div class="footer-cols" id="footerCols"></div>
     <div class="footer-bottom">
       <span class="footer-brand">DealPilot</span>
-      <span>Smarter Everyday Decisions.</span>
+      <span>Free Calculators for Everyday Life</span>
       <span>© <span id="yr"></span> DealPilot · Available worldwide</span>
     </div>
   </div>
@@ -614,13 +638,13 @@ function countBizDays(a, b, holSet){ var n = 0; for (var d = new Date(a), i = 0;
    REGION & LANGUAGE
    ============================================================ */
 var REGIONS = {
-  US: {flag:'🇺🇸', name:'United States', currency:'USD', symbol:'$', tax:'Sales Tax', distance:'miles', temp:'°F', weight:'lb'},
-  GB: {flag:'🇬🇧', name:'United Kingdom', currency:'GBP', symbol:'£', tax:'VAT', distance:'miles', temp:'°C', weight:'kg'},
-  EU: {flag:'🇪🇺', name:'Europe', currency:'EUR', symbol:'€', tax:'VAT', distance:'km', temp:'°C', weight:'kg'},
-  CA: {flag:'🇨🇦', name:'Canada', currency:'CAD', symbol:'C$', tax:'GST/HST', distance:'km', temp:'°C', weight:'kg'},
-  AU: {flag:'🇦🇺', name:'Australia', currency:'AUD', symbol:'A$', tax:'GST', distance:'km', temp:'°C', weight:'kg'},
-  IN: {flag:'🇮🇳', name:'India', currency:'INR', symbol:'₹', tax:'GST', distance:'km', temp:'°C', weight:'kg'},
-  OT: {flag:'🌎', name:'Other', currency:'USD', symbol:'$', tax:'Tax', distance:'km', temp:'°C', weight:'kg'}
+  US: {flag:'🇺🇸', name:'United States', currency:'USD'},
+  GB: {flag:'🇬🇧', name:'United Kingdom', currency:'GBP'},
+  EU: {flag:'🇪🇺', name:'Europe', currency:'EUR'},
+  CA: {flag:'🇨🇦', name:'Canada', currency:'CAD'},
+  AU: {flag:'🇦🇺', name:'Australia', currency:'AUD'},
+  IN: {flag:'🇮🇳', name:'India', currency:'INR'},
+  OT: {flag:'🌎', name:'Other', currency:'USD'}
 };
 var LANGUAGES = [
   {code:'en', flag:'🇺🇸', name:'English'},
@@ -724,7 +748,7 @@ function regCustom(id, name, cat, R, opts){
 }
 
 /* ============================================================
-   TOOLS — MONEY
+   MONEY TOOLS
    ============================================================ */
 reg('disc','Discount Calculator',M,['p|Original price|250','o|Discount % off|20'],function(v){
   if (v.o > 100) return 'Discount cannot exceed 100%.';
@@ -923,7 +947,6 @@ reg('hours','Work Hours Calculator',M,['t:s|Start|09:00','t:e|End|17:30','br|Bre
   if (m < 0) return 'Break is longer than the shift.';
   return [['Hours per day', Math.floor(m/60) + 'h ' + m%60 + 'm', 1],['Decimal hours', fmt(m/60)],['Total for ' + v.d + ' days', fmt(m/60*v.d) + ' hours']];
 }, {desc:'Calculate hours worked including breaks.', related:['h2s','ot','paycheck','payper']});
-
 reg('rent','Rent Affordability',M,['inc|Monthly income|5000','pc|Rent share %|30','debt|Monthly debt|0'],function(v){
   return [['Suggested max rent', usd(v.inc*v.pc/100), 1],['Annual rent', usd(v.inc*v.pc/100*12)],['Left after rent', usd(v.inc - v.inc*v.pc/100 - v.debt)]];
 }, {desc:'How much rent fits your budget.', related:['mortgage','budget','afford','down']});
@@ -947,7 +970,7 @@ reg('avg','Average Calculator',FN,['x:n|Numbers (comma separated)|4,8,15,16,23,4
   var mid = sorted.length >> 1;
   var sum = A.reduce(function(a, b){ return a + b; }, 0);
   return [['Average', fmt(sum/A.length, 6), 1],['Median', fmt(sorted.length % 2 ? sorted[mid] : (sorted[mid-1] + sorted[mid])/2, 6)],['Sum', fmt(sum, 6)],['Count', A.length],['Min / Max', sorted[0] + ' / ' + sorted[sorted.length - 1]]];
-}, {desc:'Average, median, sum of a list.', related:['pct','pctch','chart','avg']});
+}, {desc:'Average, median, sum of a list.', related:['pct','pctch','avg','pctch']});
 
 /* Home / Room */
 reg('area','Room Area Calculator',EV,['s:sh|Shape|Rectangle,Triangle,Circle','a|Length / base / radius|12','b|Width / height|10','s:u|Unit|ft,m'],function(v){
@@ -1320,15 +1343,15 @@ function setSoftwareSchema(name, desc){
   var script = document.createElement('script'); script.type = 'application/ld+json'; script.id = 'sw-schema'; script.textContent = JSON.stringify(schema); document.head.appendChild(script);
 }
 function resetSEO(){
-  document.title = SITE_NAME + ' — Make Every Number Make Sense';
-  setMeta('name', 'description', 'Free calculators, converters and decision tools for money, shopping, finance, travel and everyday life.');
-  setMeta('property', 'og:title', SITE_NAME + ' — Make Every Number Make Sense');
+  document.title = 'Free Calculators for Everyday Life | DealPilot';
+  setMeta('name', 'description', 'Free online calculators for money, shopping, taxes, loans, savings, time, travel, conversions and everyday decisions. Fast, simple and easy to use.');
+  setMeta('property', 'og:title', 'Free Calculators for Everyday Life | DealPilot');
   setMeta('property', 'og:url', SITE_URL + '/');
   setCanonical(SITE_URL + '/');
 }
 
 /* ============================================================
-   FAVORITES + HISTORY + USAGE
+   FAVORITES + HISTORY
    ============================================================ */
 function getFavs(){ return S.g('fav', []); }
 function getById(id){ return TL.find(function(x){ return x.id === id; }); }
@@ -1345,20 +1368,15 @@ function trackUsage(id){
    SHARE
    ============================================================ */
 function shareResult(text){
-  if (navigator.share) {
-    navigator.share({title: SITE_NAME + ' Result', text: text}).catch(function(){});
-  } else {
-    copyToClipboard(text, 'Result copied');
-  }
+  if (navigator.share) { navigator.share({title: 'DealPilot Result', text: text}).catch(function(){}); }
+  else { copyToClipboard(text, 'Result copied'); }
 }
 function copyToClipboard(text, msg){
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(function(){ showToast(msg || 'Copied'); });
   } else {
     var ta = document.createElement('textarea');
-    ta.value = text;
-    document.body.appendChild(ta);
-    ta.select();
+    ta.value = text; document.body.appendChild(ta); ta.select();
     try { document.execCommand('copy'); showToast(msg || 'Copied'); } catch(e){}
     document.body.removeChild(ta);
   }
@@ -1367,11 +1385,7 @@ function showToast(msg){
   var old = document.querySelector('.toast'); if (old) old.remove();
   var t = h('div', {class: 'toast'}, msg);
   document.body.appendChild(t);
-  setTimeout(function(){
-    t.style.transition = 'opacity .3s';
-    t.style.opacity = '0';
-    setTimeout(function(){ t.remove(); }, 300);
-  }, 1600);
+  setTimeout(function(){ t.style.transition = 'opacity .3s'; t.style.opacity = '0'; setTimeout(function(){ t.remove(); }, 300); }, 1600);
 }
 
 /* ============================================================
@@ -1380,7 +1394,6 @@ function showToast(msg){
 function smartRoute(query){
   var q = query.toLowerCase().trim();
   if (!q) return null;
-  // Discount: "20% off $250"
   var m = q.match(/(\d+(?:\.\d+)?)\s*%\s*(?:off|discount)/);
   if (m) {
     var price = q.match(/\$?\s*(\d+(?:\.\d+)?)/g);
@@ -1391,13 +1404,6 @@ function smartRoute(query){
       if (pctVal && priceVal) return {id: 'disc', prefill: {p: priceVal, o: pctVal}};
     }
     return {id: 'disc', prefill: {o: parseFloat(m[1])}};
-  }
-  // Currency
-  if (/convert|exchange|to usd|to eur|to gbp|usd to|eur to|gbp to/i.test(q)) {
-    var curMatch = q.match(/(\d+(?:\.\d+)?)/);
-    var prefill = {};
-    if (curMatch) prefill.n = parseFloat(curMatch[1]);
-    return {id: 'pct', prefill: prefill}; // route to a placeholder that still works
   }
   if (/sales?\s*tax|vat|gst/i.test(q)) return {id: 'stax'};
   if (/(per hour|hourly|salary|wage)/i.test(q)) {
@@ -1410,7 +1416,6 @@ function smartRoute(query){
   if (/(percent|%)/i.test(q)) return {id: 'pct'};
   if (/fahrenheit|celsius|°f|°c/i.test(q)) return {id: 'temp'};
   if (/convert|exchange/i.test(q)) return {id: 'len'};
-  // Fallback: keyword match
   var words = q.split(/\s+/);
   var best = null, bestScore = 0;
   TL.forEach(function(t){
@@ -1433,10 +1438,7 @@ function makeToolCard(tl){
   var catClass = CAT_CLASS[tl.cat] || '';
   var card = h('a', {class: 'tool-card', href: '#/t/' + tl.id, 'aria-label': tl.name}, [
     h('div', {class: 'tool-icon ' + catClass, html: iconSVG(iconKey, 20)}),
-    h('div', {class: 'tool-body'}, [
-      h('b', {}, tl.name),
-      h('small', {}, tl.desc || tl.cat)
-    ]),
+    h('div', {class: 'tool-body'}, [h('b', {}, tl.name), h('small', {}, tl.desc || tl.cat)]),
     h('span', {class: 'tool-arrow', 'aria-hidden': 'true'}, '→')
   ]);
   var star = h('button', {class: 'tool-star' + (isFav ? ' on' : ''), 'aria-label': 'Toggle favorite', onclick: function(e){
@@ -1469,18 +1471,10 @@ function renderHero(){
     }
   }
   search.onkeydown = function(e){ if (e.key === 'Enter') go(); };
-
-  var examples = [
-    '20% off $250',
-    '£80 + VAT',
-    '$25/hour yearly',
-    'Loan payment on $20,000',
-    'Convert 72°F to °C'
-  ];
-
+  var examples = ['20% off $250', '£80 + VAT', '$25/hour yearly', 'Loan payment on $20,000', 'Convert 72°F to °C'];
   return h('section', {class: 'hero'}, h('div', {class: 'container'}, [
-    h('h1', {}, ['Make every number ', h('span', {class: 'em'}, 'make sense.'), '']),
-    h('p', {class: 'sub'}, 'Free calculators, converters and decision tools for money, shopping, finance, travel and everyday life.'),
+    h('h1', {}, ['Free Calculators for ', h('span', {class: 'em'}, 'Everyday Life')]),
+    h('p', {class: 'sub'}, 'Money, shopping, taxes, finance, conversions and everyday tools — all in one place. Free, fast, and easy to use.'),
     h('div', {class: 'search-wrap'}, [
       h('div', {class: 'search-box'}, [
         h('span', {html: iconSVG('search', 20), style: 'color:var(--text3)'}),
@@ -1491,9 +1485,7 @@ function renderHero(){
         return h('button', {class: 'example-chip', onclick: function(){ search.value = ex; go(); }}, ex);
       }))
     ]),
-    h('div', {class: 'hero-cta'}, [
-      h('a', {href: '#/all', class: 'btn ghost lg'}, 'Explore all tools')
-    ])
+    h('div', {class: 'hero-cta'}, [h('a', {href: '#/all', class: 'btn ghost lg'}, 'Explore all tools')])
   ]));
 }
 
@@ -1508,18 +1500,12 @@ function renderPurpose(){
     {ic: '📊', t: 'Compare', d: 'Deals, prices, and options side by side', route: '#/t/coupon'},
     {ic: '❤️', t: 'Everyday life', d: 'Health, home, cooking, and more', route: '#/t/bmi'}
   ];
-  return h('section', {class: 'sec'}, [
-    h('div', {class: 'container'}, [
-      h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, 'What are you trying to do?'), h('p', {}, 'Start with a goal, not a tool name.')])]),
-      h('div', {class: 'purpose-grid'}, purposes.map(function(p){
-        return h('a', {class: 'purpose-card', href: p.route}, [
-          h('div', {class: 'ico'}, p.ic),
-          h('b', {}, p.t),
-          h('small', {}, p.d)
-        ]);
-      }))
-    ])
-  ]);
+  return h('section', {class: 'sec'}, h('div', {class: 'container'}, [
+    h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, 'What are you trying to do?'), h('p', {}, 'Start with a goal, not a tool name.')])]),
+    h('div', {class: 'purpose-grid'}, purposes.map(function(p){
+      return h('a', {class: 'purpose-card', href: p.route}, [h('div', {class: 'ico'}, p.ic), h('b', {}, p.t), h('small', {}, p.d)]);
+    }))
+  ]));
 }
 
 function renderTrust(){
@@ -1535,11 +1521,7 @@ function renderTrust(){
     h('div', {class: 'trust'}, [
       h('h2', {}, 'Why people use DealPilot'),
       h('div', {class: 'trust-grid'}, items.map(function(x){
-        return h('div', {class: 'trust-item'}, [
-          h('div', {class: 'ic'}, x.ic),
-          h('b', {}, x.t),
-          h('small', {}, x.d)
-        ]);
+        return h('div', {class: 'trust-item'}, [h('div', {class: 'ic'}, x.ic), h('b', {}, x.t), h('small', {}, x.d)]);
       }))
     ])
   ]));
@@ -1551,41 +1533,37 @@ function renderHome(){
   app.innerHTML = '';
   app.appendChild(renderHero());
 
-  // Featured / Start Here
   var featuredIds = ['disc', 'stax', 'loan', 'tip', 'pct', 'h2s'];
   var featured = featuredIds.map(getById).filter(Boolean);
   app.appendChild(h('section', {class: 'sec'}, h('div', {class: 'container'}, [
-    h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, 'Start here'), h('p', {}, 'The tools most people need first.')]), h('a', {class: 'more', href: '#/all'}, 'All ' + TL.length + ' tools')]),
+    h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, 'Start here'), h('p', {}, 'The tools most people need first.')]), h('a', {class: 'more', href: '#/all'}, 'All ' + TL.length + ' tools →')]),
     h('div', {class: 'grid'}, featured.map(makeToolCard))
   ])));
 
   app.appendChild(renderPurpose());
 
-  // Category sections
   function catSection(cat, title, sub){
     var list = TL.filter(function(t){ return t.cat === cat; });
     if (!list.length) return null;
-    var slug = '#/t/' + list[0].id;
     return h('section', {class: 'sec'}, h('div', {class: 'container'}, [
       h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, title), h('p', {}, sub)])]),
       h('div', {class: 'grid'}, list.slice(0, 6).map(makeToolCard))
     ]));
   }
-  var s1 = catSection(M, '💵 Money', 'Wages, savings, loans, and money decisions.');
-  var s2 = catSection(SH, '🛍 Shopping', 'Discounts, tax, tips, and smarter purchases.');
-  var s3 = catSection(FN, '🏦 Finance', 'Loans, mortgages, budgets, retirement.');
-  var s4 = catSection(CO, '🔄 Converters', 'Units, temperatures, distances, data.');
-  var s5 = catSection(TI, '⏱ Time', 'Age, dates, business days, time zones.');
-  var s6 = catSection(TR, '✈️ Travel', 'Trip budgets, fuel, hotels.');
-  var s7 = catSection(HL, '❤️ Health', 'BMI, calories, hydration.');
-  var s8 = catSection(EV, '📋 Everyday', 'Calculators, notepads, planners.');
-  [s1, s2, s3, s4, s5, s6, s7, s8].forEach(function(s){ if (s) app.appendChild(s); });
+  [catSection(M, '💵 Money', 'Wages, savings, loans, and money decisions.'),
+   catSection(SH, '🛍 Shopping', 'Discounts, tax, tips, and smarter purchases.'),
+   catSection(FN, '🏦 Finance', 'Loans, mortgages, budgets, retirement.'),
+   catSection(CO, '🔄 Converters', 'Units, temperatures, distances, data.'),
+   catSection(TI, '⏱ Time', 'Age, dates, business days, time zones.'),
+   catSection(TR, '✈️ Travel', 'Trip budgets, fuel, hotels.'),
+   catSection(HL, '❤️ Health', 'BMI, calories, hydration.'),
+   catSection(EV, '📋 Everyday', 'Calculators, notepads, planners.')
+  ].forEach(function(s){ if (s) app.appendChild(s); });
 
-  // Recently used / favorites
   var recent = S.g('recent', []).slice(0, 6).map(getById).filter(Boolean);
   if (recent.length) {
     app.appendChild(h('section', {class: 'sec'}, h('div', {class: 'container'}, [
-      h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, '🕐 Your recent tools'), h('p', {}, 'Based on your recent activity on this device.')])]),
+      h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, '🕐 Your recent tools'), h('p', {}, 'Based on your activity on this device.')])]),
       h('div', {class: 'grid'}, recent.map(makeToolCard))
     ])));
   }
@@ -1599,22 +1577,19 @@ function renderHome(){
 
   app.appendChild(renderTrust());
 
-  // FAQ
   app.appendChild(h('section', {class: 'sec'}, h('div', {class: 'container'}, [
     h('div', {class: 'sec-head'}, [h('div', {}, [h('h2', {}, 'Frequently asked questions')])]),
     h('div', {}, [
       faqItem('Is DealPilot free?', 'Yes. Every calculator and tool is completely free to use. No account, no signup, no hidden fees.'),
       faqItem('Do I need to create an account?', 'No. You can use every tool instantly. Your favorites and history are stored locally on your device.'),
       faqItem('Is my data private?', 'Yes. Your calculations and saved data stay on your own device. We do not collect or store personal information.'),
-      faqItem('Do the calculators work on mobile?', 'Yes. Every tool is fully responsive and designed to work on phones, tablets, and desktop computers.'),
+      faqItem('Do the calculators work on mobile?', 'Yes. Every tool is fully responsive and works on phones, tablets, and desktop computers.'),
       faqItem('How accurate are the results?', 'Every calculator uses standard, well-documented formulas. For financial, tax, or medical decisions, always confirm with a qualified professional.')
     ])
   ])));
 }
 
-function faqItem(q, a){
-  return h('details', {class: 'faq-item'}, [h('summary', {}, q), h('p', {}, a)]);
-}
+function faqItem(q, a){ return h('details', {class: 'faq-item'}, [h('summary', {}, q), h('p', {}, a)]); }
 
 function renderAllTools(P){
   var q = P.get('q') || '';
@@ -1651,7 +1626,7 @@ function renderAllTools(P){
   }
   qi.oninput = draw; cs.onchange = draw; so.onchange = draw;
   app.innerHTML = '';
-  var container = h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
+  app.appendChild(h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
     h('h1', {style: 'margin-bottom:16px'}, 'All Tools'),
     h('p', {style: 'color:var(--text2);margin-bottom:24px;max-width:560px'}, TL.length + ' free calculators, converters, and decision tools.'),
     h('div', {class: 'card'}, h('div', {class: 'form'}, [
@@ -1661,8 +1636,7 @@ function renderAllTools(P){
     ])),
     cnt,
     out
-  ]);
-  app.appendChild(container);
+  ]));
   draw();
 }
 
@@ -1672,13 +1646,12 @@ function renderCategory(catName){
   setBreadcrumb([{name:'Home', url:'/'}, {name:catName, url:'/' + catName.toLowerCase()}]);
   var list = TL.filter(function(t){ return t.cat === catName; });
   app.innerHTML = '';
-  var container = h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
+  app.appendChild(h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
     h('nav', {class: 'crumb'}, [h('a', {href: '#/'}, 'Home'), ' / ', h('span', {}, catName)]),
     h('h1', {style: 'margin-bottom:8px'}, catName + ' Tools'),
     h('p', {style: 'color:var(--text2);margin-bottom:28px'}, list.length + ' free tools in ' + catName.toLowerCase() + '.'),
     h('div', {class: 'grid'}, list.map(makeToolCard))
-  ]);
-  app.appendChild(container);
+  ]));
 }
 
 function parseField(spec){
@@ -1702,7 +1675,7 @@ function parseField(spec){
 function renderToolPage(tl, params){
   trackUsage(tl.id);
   resetSEO();
-  document.title = tl.name + ' — Free Calculator | ' + SITE_NAME;
+  document.title = tl.name + ' | ' + SITE_NAME;
   setMeta('name', 'description', (tl.desc || tl.name) + ' Free, no signup. Instant results.');
   setCanonical(SITE_URL + '/#/t/' + tl.id);
   setBreadcrumb([{name:'Home', url:'/'}, {name:tl.cat, url:'/' + tl.cat.toLowerCase()}, {name:tl.name, url:'/t/' + tl.id}]);
@@ -1711,21 +1684,15 @@ function renderToolPage(tl, params){
 
   var iconKey = TOOL_ICON[tl.id] || CAT_ICON[tl.cat] || 'calc';
   var catClass = CAT_CLASS[tl.cat] || '';
-
   var container = h('div', {class: 'container', style: 'padding-top:28px;padding-bottom:60px'});
   container.appendChild(h('nav', {class: 'crumb', 'aria-label': 'Breadcrumb'}, [
-    h('a', {href: '#/'}, 'Home'),
-    h('span', {}, '/'),
-    h('a', {href: '#/all?c=' + encodeURIComponent(tl.cat)}, tl.cat),
-    h('span', {}, '/'),
+    h('a', {href: '#/'}, 'Home'), h('span', {}, '/'),
+    h('a', {href: '#/all?c=' + encodeURIComponent(tl.cat)}, tl.cat), h('span', {}, '/'),
     h('span', {style: 'color:var(--text)'}, tl.name)
   ]));
   container.appendChild(h('div', {class: 'tool-hero'}, [
     h('div', {class: 'tool-icon ' + catClass, html: iconSVG(iconKey, 30)}),
-    h('div', {style: 'flex:1;min-width:0'}, [
-      h('h1', {}, tl.name),
-      tl.desc ? h('p', {}, tl.desc) : null
-    ])
+    h('div', {style: 'flex:1;min-width:0'}, [h('h1', {}, tl.name), tl.desc ? h('p', {}, tl.desc) : null])
   ]));
   if (tl.note) container.appendChild(h('div', {class: 'warn'}, tl.note));
 
@@ -1736,11 +1703,9 @@ function renderToolPage(tl, params){
     tl.R(box);
     container.appendChild(box);
     if (tl.related) {
-      var rel = h('div', {class: 'related'}, [h('h3', {}, 'You may also need')]);
       var relGrid = h('div', {class: 'grid'});
       tl.related.map(getById).filter(Boolean).forEach(function(t){ relGrid.appendChild(makeToolCard(t)); });
-      rel.appendChild(relGrid);
-      container.appendChild(rel);
+      container.appendChild(h('div', {class: 'related'}, [h('h3', {}, 'You may also need'), relGrid]));
     }
     app.innerHTML = '';
     app.appendChild(container);
@@ -1752,16 +1717,9 @@ function renderToolPage(tl, params){
   var form = h('div', {class: 'form'});
   sp.forEach(function(s){
     var c;
-    if (s.ty === 'select') {
-      c = h('select', {'aria-label': s.l});
-      s.o.forEach(function(o){ c.appendChild(h('option', {value: o}, o)); });
-      c.value = s.d;
-    } else if (s.ty === 'textarea') {
-      c = h('textarea', {rows: 5, 'aria-label': s.l, placeholder: 'Enter values, one per line'});
-    } else {
-      c = h('input', {type: s.ty, step: 'any', inputmode: s.ty === 'number' ? 'decimal' : null, 'aria-label': s.l});
-      c.placeholder = 'e.g. ' + s.d;
-    }
+    if (s.ty === 'select') { c = h('select', {'aria-label': s.l}); s.o.forEach(function(o){ c.appendChild(h('option', {value: o}, o)); }); c.value = s.d; }
+    else if (s.ty === 'textarea') { c = h('textarea', {rows: 5, 'aria-label': s.l, placeholder: 'Enter values, one per line'}); }
+    else { c = h('input', {type: s.ty, step: 'any', inputmode: s.ty === 'number' ? 'decimal' : null, 'aria-label': s.l}); c.placeholder = 'e.g. ' + s.d; }
     ins[s.k] = c;
     form.appendChild(h('label', {class: s.ty === 'textarea' ? 'full' : ''}, [h('span', {}, s.l), c]));
   });
@@ -1773,42 +1731,22 @@ function renderToolPage(tl, params){
     });
   }
 
-  var lastResult = null;
   function run(){
     var v = {}, err = '';
     sp.forEach(function(s){
       var raw = ins[s.k].value;
       var x;
-      if (s.ty === 'number') {
-        x = raw.trim() === '' ? +s.d : +raw;
-        if (!isFinite(x)) err = err || 'Enter a valid number for "' + s.l + '".';
-        else if (x < 0 && !s.neg) err = err || '"' + s.l + '" cannot be negative.';
-      } else if (s.ty === 'textarea') {
-        x = raw.trim() === '' ? s.d : raw;
-      } else {
-        x = raw === '' ? s.d : raw;
-      }
+      if (s.ty === 'number') { x = raw.trim() === '' ? +s.d : +raw; if (!isFinite(x)) err = err || 'Enter a valid number for "' + s.l + '".'; else if (x < 0 && !s.neg) err = err || '"' + s.l + '" cannot be negative.'; }
+      else if (s.ty === 'textarea') { x = raw.trim() === '' ? s.d : raw; }
+      else { x = raw === '' ? s.d : raw; }
       v[s.k] = x;
     });
     var r = err;
-    if (!r) {
-      try { r = tl.fn(v); }
-      catch(e){ r = 'These inputs cannot be calculated.'; }
-    }
-    if (typeof r !== 'string' && r && r.some(function(a){ return /NaN|Infinity|undefined|∞/.test(String(a[1])); })) {
-      r = 'Check for zeros or unrealistic values.';
-    }
-    lastResult = null;
+    if (!r) { try { r = tl.fn(v); } catch(e){ r = 'These inputs cannot be calculated.'; } }
+    if (typeof r !== 'string' && r && r.some(function(a){ return /NaN|Infinity|undefined|∞/.test(String(a[1])); })) { r = 'Check for zeros or unrealistic values.'; }
     res.innerHTML = '';
-    if (typeof r === 'string') {
-      res.appendChild(h('div', {class: 'err'}, r));
-      return;
-    }
-    if (!r || !r.length) {
-      res.appendChild(h('div', {class: 'err'}, 'No result.'));
-      return;
-    }
-    lastResult = r;
+    if (typeof r === 'string') { res.appendChild(h('div', {class: 'err'}, r)); return; }
+    if (!r || !r.length) { res.appendChild(h('div', {class: 'err'}, 'No result.')); return; }
 
     var rb = h('div', {class: 'result-box'});
     rb.appendChild(h('div', {class: 'result-eyebrow'}, 'Your result'));
@@ -1820,34 +1758,25 @@ function renderToolPage(tl, params){
       breakdown.appendChild(h('div', {class: cls}, [h('span', {}, a[0]), h('b', {}, String(a[1]))]));
     });
     rb.appendChild(breakdown);
+    res.appendChild(rb);
 
-    // Explain
     if (r.length >= 2) {
       var explain = h('div', {class: 'explain'});
       explain.appendChild(h('h4', {}, 'How we calculated it'));
-      var mathLines = [];
-      r.forEach(function(a){ mathLines.push(a[0] + ' = ' + a[1]); });
+      var mathLines = r.map(function(a){ return a[0] + ' = ' + a[1]; });
       explain.appendChild(h('div', {class: 'math'}, mathLines.join('\n')));
-      res.appendChild(rb);
       res.appendChild(explain);
-    } else {
-      res.appendChild(rb);
     }
 
-    // Actions
     var resText = tl.name + '\n' + r.map(function(a){ return a[0] + ': ' + a[1]; }).join('\n') + '\n\nvia DealPilot';
-    var acts = h('div', {class: 'acts'}, [
+    res.appendChild(h('div', {class: 'acts'}, [
       h('button', {class: 'btn', onclick: function(){ copyToClipboard(resText, 'Result copied'); }}, '📋 Copy result'),
       h('button', {class: 'btn ghost', onclick: function(){ shareResult(resText); }}, '📤 Share'),
       h('button', {class: 'btn ghost', onclick: function(){
-        sp.forEach(function(s){
-          if (s.ty === 'select') ins[s.k].value = s.d;
-          else ins[s.k].value = '';
-        });
+        sp.forEach(function(s){ if (s.ty === 'select') ins[s.k].value = s.d; else ins[s.k].value = ''; });
         run();
       }}, '↺ Calculate again')
-    ]);
-    res.appendChild(acts);
+    ]));
   }
   sp.forEach(function(s){ ins[s.k].oninput = run; });
 
@@ -1855,14 +1784,12 @@ function renderToolPage(tl, params){
   box.appendChild(res);
   container.appendChild(box);
 
-  // Related
   if (tl.related) {
     var relGrid = h('div', {class: 'grid'});
     tl.related.map(getById).filter(Boolean).forEach(function(t){ relGrid.appendChild(makeToolCard(t)); });
     container.appendChild(h('div', {class: 'related'}, [h('h3', {}, 'You may also need'), relGrid]));
   }
 
-  // FAQ
   if (tl.faq && tl.faq.length) {
     container.appendChild(h('div', {class: 'faq'}, [
       h('h2', {}, 'Frequently asked questions'),
@@ -1883,11 +1810,9 @@ function renderLive(){
     h('h1', {style: 'margin-bottom:8px'}, 'Live Info'),
     h('p', {style: 'color:var(--text2);margin-bottom:28px;max-width:600px'}, 'Live data from real sources. If an API is unavailable, we say so — we never show fake data.')
   ]);
-
   var tools = [
-    {name: '💱 Currency Rates', desc: 'Live exchange rates from open.er-api.com', render: function(el){
-      var box = h('div', {style: 'margin-top:14px;color:var(--text3)'}, 'Loading...');
-      el.appendChild(box);
+    {name: '💱 Currency Rates', desc: 'Live exchange rates', render: function(el){
+      var box = h('div', {style: 'margin-top:14px;color:var(--text3)'}, 'Loading...'); el.appendChild(box);
       apiFX('USD').then(function(d){
         box.innerHTML = '';
         if (!d) { box.appendChild(h('div', {class: 'warn'}, 'Live data is temporarily unavailable.')); return; }
@@ -1922,8 +1847,7 @@ function renderLive(){
       el.appendChild(box);
     }},
     {name: '₿ Crypto Prices', desc: 'Live prices from CoinGecko', render: function(el){
-      var box = h('div', {style: 'margin-top:14px;color:var(--text3)'}, 'Loading...');
-      el.appendChild(box);
+      var box = h('div', {style: 'margin-top:14px;color:var(--text3)'}, 'Loading...'); el.appendChild(box);
       fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum&vs_currencies=usd&include_24hr_change=true').then(function(r){ return r.json(); }).then(function(d){
         box.innerHTML = '';
         Object.keys(d).forEach(function(k){
@@ -1975,24 +1899,8 @@ function renderLive(){
       btn.onclick = go;
       el.appendChild(h('div', {style: 'display:flex;gap:8px;flex-wrap:wrap'}, [cc, y, btn]));
       el.appendChild(box);
-    }},
-    {name: '📰 US News', desc: 'Latest headlines', render: function(el){
-      var box = h('div', {style: 'margin-top:14px'}, 'Loading...');
-      el.appendChild(box);
-      apiNews('top').then(function(news){
-        box.innerHTML = '';
-        if (!news || !news.length) { box.appendChild(h('div', {class: 'warn'}, 'News is temporarily unavailable.')); return; }
-        news.slice(0, 5).forEach(function(item){
-          var dateStr = relativeTime(item.pubDate);
-          box.appendChild(h('a', {href: item.link, target: '_blank', rel: 'noopener', style: 'display:block;padding:10px 0;border-bottom:1px solid var(--line);color:inherit'}, [
-            h('div', {style: 'font-weight:600;font-size:.92rem;line-height:1.4;margin-bottom:4px'}, item.title),
-            h('div', {style: 'color:var(--text3);font-size:.75rem;font-weight:500'}, (item.source || 'News') + ' · ' + dateStr)
-          ]));
-        });
-      });
     }}
   ];
-
   var wrap = h('div', {class: 'live-grid'});
   tools.forEach(function(x){
     var card = h('div', {class: 'card', style: 'margin:0'}, [
@@ -2009,7 +1917,7 @@ function renderLive(){
 
 function renderNews(){
   resetSEO();
-  document.title = 'US News — ' + SITE_NAME;
+  document.title = 'News — ' + SITE_NAME;
   setCanonical(SITE_URL + '/#/news');
   var container = h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'});
   var currentCat = 'top';
@@ -2018,21 +1926,12 @@ function renderNews(){
   var lastUpdateEl = h('span', {}, 'Updated: ' + new Date().toLocaleTimeString());
   var refreshBtn = h('button', {class: 'btn sm ghost'}, '🔄 Refresh');
   var categories = [
-    {k: 'top', label: 'Top Stories'},
-    {k: 'nation', label: 'Nation'},
-    {k: 'business', label: 'Business'},
-    {k: 'technology', label: 'Technology'},
-    {k: 'sports', label: 'Sports'},
-    {k: 'entertainment', label: 'Entertainment'},
-    {k: 'health', label: 'Health'},
-    {k: 'science', label: 'Science'}
+    {k: 'top', label: 'Top Stories'}, {k: 'nation', label: 'Nation'},
+    {k: 'business', label: 'Business'}, {k: 'technology', label: 'Technology'},
+    {k: 'sports', label: 'Sports'}, {k: 'entertainment', label: 'Entertainment'},
+    {k: 'health', label: 'Health'}, {k: 'science', label: 'Science'}
   ];
-  function skeleton(){
-    newsBox.innerHTML = '';
-    var sk = h('div', {class: 'news-grid'});
-    for (var i = 0; i < 6; i++) sk.appendChild(h('div', {class: 'sk-card'}, [h('div', {class: 'sk-img skeleton'}), h('div', {class: 'sk-line skeleton'}), h('div', {class: 'sk-line short skeleton'})]));
-    newsBox.appendChild(sk);
-  }
+  function skeleton(){ newsBox.innerHTML = ''; var sk = h('div', {class: 'news-grid'}); for (var i = 0; i < 6; i++) sk.appendChild(h('div', {class: 'sk-card'}, [h('div', {class: 'sk-img skeleton'}), h('div', {class: 'sk-line skeleton'}), h('div', {class: 'sk-line short skeleton'})])); newsBox.appendChild(sk); }
   function renderContent(news){
     newsBox.innerHTML = '';
     if (!news || !news.length) { newsBox.appendChild(h('div', {class: 'warn'}, 'News is temporarily unavailable.')); return; }
@@ -2081,10 +1980,10 @@ function renderNews(){
     tabs.appendChild(btn);
   });
   refreshBtn.onclick = function(){ load(currentCat, false); };
-  container.appendChild(h('h1', {style: 'margin-bottom:8px'}, '📰 US News'));
-  container.appendChild(h('p', {style: 'color:var(--text2);margin-bottom:22px;max-width:600px'}, 'Latest headlines from trusted American newsrooms. Auto-refreshes every 2 minutes.'));
+  container.appendChild(h('h1', {style: 'margin-bottom:8px'}, '📰 News'));
+  container.appendChild(h('p', {style: 'color:var(--text2);margin-bottom:22px;max-width:600px'}, 'Latest headlines. Auto-refreshes every 2 minutes.'));
   container.appendChild(h('div', {class: 'refresh-bar'}, [
-    h('div', {class: 'info'}, [h('span', {class: 'live-dot'}), lastUpdateEl, h('span', {style: 'color:var(--text3)'}, '· auto-refresh every 2 min')]),
+    h('div', {class: 'info'}, [h('span', {class: 'live-dot'}), lastUpdateEl]),
     refreshBtn
   ]));
   container.appendChild(tabs);
@@ -2092,11 +1991,8 @@ function renderNews(){
   app.innerHTML = '';
   app.appendChild(container);
   load('top', false);
-
   if (window._newsInterval) clearInterval(window._newsInterval);
-  window._newsInterval = setInterval(function(){
-    if (location.hash === '#/news') load(currentCat, true);
-  }, 2 * 60 * 1000);
+  window._newsInterval = setInterval(function(){ if (location.hash === '#/news') load(currentCat, true); }, 2 * 60 * 1000);
 }
 
 function renderSaved(){
@@ -2108,20 +2004,11 @@ function renderSaved(){
   var favs = getFavs().map(getById).filter(Boolean);
   container.appendChild(h('h2', {style: 'margin:24px 0 14px;font-size:1.05rem'}, '⭐ Favorites (' + favs.length + ')'));
   if (!favs.length) container.appendChild(h('p', {style: 'color:var(--text3)'}, 'Star any tool to add it here.'));
-  else {
-    var g = h('div', {class: 'grid'});
-    favs.forEach(function(t){ g.appendChild(makeToolCard(t)); });
-    container.appendChild(g);
-  }
+  else { var g = h('div', {class: 'grid'}); favs.forEach(function(t){ g.appendChild(makeToolCard(t)); }); container.appendChild(g); }
   var recent = S.g('recent', []).map(getById).filter(Boolean);
   container.appendChild(h('h2', {style: 'margin:32px 0 14px;font-size:1.05rem'}, '🕐 Recent (' + recent.length + ')'));
   if (!recent.length) container.appendChild(h('p', {style: 'color:var(--text3)'}, 'No recent activity yet.'));
-  else {
-    var g2 = h('div', {class: 'grid'});
-    recent.forEach(function(t){ g2.appendChild(makeToolCard(t)); });
-    container.appendChild(g2);
-  }
-  // Settings
+  else { var g2 = h('div', {class: 'grid'}); recent.forEach(function(t){ g2.appendChild(makeToolCard(t)); }); container.appendChild(g2); }
   container.appendChild(h('h2', {style: 'margin:32px 0 14px;font-size:1.05rem'}, '⚙️ Settings'));
   var themeSel = h('select', {'aria-label': 'Theme'});
   themeSel.appendChild(h('option', {value: 'auto'}, 'Match device'));
@@ -2141,9 +2028,7 @@ function renderSaved(){
   app.appendChild(container);
 }
 
-/* ============================================================
-   PREDICT (crypto signals — kept from existing site)
-   ============================================================ */
+/* Predict */
 var CRYPTO_LIST = [
   {id:'bitcoin', name:'Bitcoin', sym:'BTC'},
   {id:'ethereum', name:'Ethereum', sym:'ETH'},
@@ -2195,8 +2080,7 @@ function renderPredict(){
     var chip = h('div', {class: 'crypto-chip' + (c.id === selectedId ? ' on' : ''), onclick: function(){
       selectedId = c.id; S.s('predict_id', selectedId);
       Object.keys(chipEls).forEach(function(k){ chipEls[k].classList.remove('on'); });
-      chip.classList.add('on');
-      load();
+      chip.classList.add('on'); load();
     }}, [h('span', {class: 'sym'}, c.sym), h('span', {class: 'full-name'}, c.name)]);
     chipEls[c.id] = chip;
     picker.appendChild(chip);
@@ -2211,9 +2095,7 @@ function renderPredict(){
   var updatedAt = h('div', {class: 'updated-at'}, '');
   card.appendChild(symbolTitle); card.appendChild(signalEl); card.appendChild(priceEl); card.appendChild(confRow); card.appendChild(reasonsWrap); card.appendChild(updatedAt);
   container.appendChild(card);
-  var refreshBtn = h('button', {class: 'btn', onclick: function(){ load(); }}, '🔄 Refresh now');
-  container.appendChild(h('div', {class: 'acts', style: 'justify-content:center'}, [refreshBtn]));
-  container.appendChild(h('p', {style: 'font-size:.78rem;color:var(--text3);line-height:1.7;max-width:640px;margin:20px auto 0;text-align:center'}, '⚠️ Algorithmic signal based on technical indicators. NOT financial advice. Crypto markets are highly volatile.'));
+  container.appendChild(h('div', {class: 'acts', style: 'justify-content:center'}, [h('button', {class: 'btn', onclick: function(){ load(); }}, '🔄 Refresh now')]));
   function updateUI(pred, coin){
     var sig = pred.signal;
     signalEl.className = 'signal-display ' + (sig === 'UP' ? 'up' : (sig === 'DOWN' ? 'down' : 'wait'));
@@ -2251,12 +2133,9 @@ function renderPredict(){
   refreshTimer = setInterval(load, 120000);
 }
 
-/* ============================================================
-   GAMES
-   ============================================================ */
+/* Games */
 function renderGames(){
-  resetSEO();
-  document.title = 'Games — ' + SITE_NAME;
+  resetSEO(); document.title = 'Games — ' + SITE_NAME;
   var games = [
     {id:'memory', ic:'🧠', name:'Memory Match', desc:'Flip cards and match pairs'},
     {id:'2048', ic:'🔢', name:'2048', desc:'Merge tiles to reach 2048'},
@@ -2268,18 +2147,15 @@ function renderGames(){
   var grid = h('div', {class: 'games-grid'});
   games.forEach(function(g){
     grid.appendChild(h('div', {class: 'game-tile', onclick: function(){ location.hash = '#/games/' + g.id; }}, [
-      h('div', {class: 'ico'}, g.ic),
-      h('div', {class: 'name'}, g.name),
-      h('div', {class: 'desc'}, g.desc)
+      h('div', {class: 'ico'}, g.ic), h('div', {class: 'name'}, g.name), h('div', {class: 'desc'}, g.desc)
     ]));
   });
-  var container = h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
+  app.innerHTML = '';
+  app.appendChild(h('div', {class: 'container', style: 'padding-top:32px;padding-bottom:60px'}, [
     h('h1', {style: 'margin-bottom:8px'}, '🎮 Free Games'),
     h('p', {style: 'color:var(--text2);margin-bottom:28px;max-width:600px'}, 'Play instantly — no download, no signup.'),
     grid
-  ]);
-  app.innerHTML = '';
-  app.appendChild(container);
+  ]));
 }
 function renderGameById(id){
   var fn = {memory:renderMemoryGame, '2048':renderGame2048, ttt:renderTTT, reaction:renderReaction, stroop:renderStroop, mole:renderMole}[id];
@@ -2289,11 +2165,9 @@ function gameWrap(title, headerContent, bodyContent){
   var container = h('div', {class: 'container', style: 'padding-top:28px;padding-bottom:60px'});
   container.appendChild(h('nav', {class: 'crumb'}, [h('a', {href: '#/games'}, '← Games'), h('span', {}, '/'), h('span', {style: 'color:var(--text)'}, title)]));
   container.appendChild(h('h1', {style: 'margin-bottom:22px'}, title));
-  var panel = h('div', {class: 'game-panel'}, [headerContent, bodyContent]);
-  container.appendChild(panel);
+  container.appendChild(h('div', {class: 'game-panel'}, [headerContent, bodyContent]));
   app.innerHTML = '';
   app.appendChild(container);
-  return {container: container, panel: panel};
 }
 function renderMemoryGame(){
   resetSEO(); document.title = 'Memory Match — ' + SITE_NAME;
@@ -2305,13 +2179,11 @@ function renderMemoryGame(){
   var header = h('div', {class: 'game-head'}, [h('h3', {}, 'Memory Match'), scoreEl]);
   var mgrid = h('div', {class: 'memory-grid'});
   deck.forEach(function(emo){
-    var face = h('div', {style: 'display:none'}, emo);
     var card = h('div', {class: 'mem-card', 'aria-label': 'Card'}, '?');
-    card._emo = emo; card._face = face;
+    card._emo = emo;
     card.onclick = function(){
       if (card.classList.contains('matched') || card.classList.contains('flipped') || flipped.length === 2) return;
-      card.classList.add('flipped');
-      card.textContent = emo;
+      card.classList.add('flipped'); card.textContent = emo;
       flipped.push(card);
       if (flipped.length === 2) {
         moves++; scoreEl.textContent = 'Moves: ' + moves;
@@ -2332,7 +2204,7 @@ function renderMemoryGame(){
     };
     mgrid.appendChild(card);
   });
-  var ref = gameWrap('🧠 Memory Match', header, mgrid);
+  gameWrap('🧠 Memory Match', header, mgrid);
   function showWin(){
     var time = Math.round((Date.now() - startTime) / 1000);
     var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [
@@ -2352,28 +2224,9 @@ function renderMemoryGame(){
 function renderGame2048(){
   resetSEO(); document.title = '2048 — ' + SITE_NAME;
   var size = 4, grid, score, best = S.g('game_2048_best', 0), over;
-  function init(){
-    grid = [];
-    for (var i = 0; i < size; i++) { grid.push([]); for (var j = 0; j < size; j++) grid[i].push(0); }
-    score = 0; over = false; addRandom(); addRandom();
-  }
-  function addRandom(){
-    var empty = [];
-    for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) if (grid[i][j] === 0) empty.push([i,j]);
-    if (!empty.length) return;
-    var cell = empty[Math.floor(Math.random()*empty.length)];
-    grid[cell[0]][cell[1]] = Math.random() < 0.9 ? 2 : 4;
-  }
-  function slide(row){
-    var arr = row.filter(function(x){ return x; });
-    var res = [];
-    for (var i = 0; i < arr.length; i++) {
-      if (arr[i] === arr[i+1]) { res.push(arr[i]*2); score += arr[i]*2; i++; }
-      else res.push(arr[i]);
-    }
-    while (res.length < size) res.push(0);
-    return res;
-  }
+  function init(){ grid = []; for (var i = 0; i < size; i++) { grid.push([]); for (var j = 0; j < size; j++) grid[i].push(0); } score = 0; over = false; addRandom(); addRandom(); }
+  function addRandom(){ var empty = []; for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) if (grid[i][j] === 0) empty.push([i,j]); if (!empty.length) return; var cell = empty[Math.floor(Math.random()*empty.length)]; grid[cell[0]][cell[1]] = Math.random() < 0.9 ? 2 : 4; }
+  function slide(row){ var arr = row.filter(function(x){ return x; }); var res = []; for (var i = 0; i < arr.length; i++) { if (arr[i] === arr[i+1]) { res.push(arr[i]*2); score += arr[i]*2; i++; } else res.push(arr[i]); } while (res.length < size) res.push(0); return res; }
   function move(dir){
     if (over) return;
     var before = JSON.stringify(grid);
@@ -2385,14 +2238,7 @@ function renderGame2048(){
     if (score > best) { best = score; S.s('game_2048_best', best); }
     if (isGameOver()) { over = true; showGameOver(); }
   }
-  function isGameOver(){
-    for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) {
-      if (grid[i][j] === 0) return false;
-      if (j < size - 1 && grid[i][j] === grid[i][j+1]) return false;
-      if (i < size - 1 && grid[i][j] === grid[i+1][j]) return false;
-    }
-    return true;
-  }
+  function isGameOver(){ for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) { if (grid[i][j] === 0) return false; if (j < size - 1 && grid[i][j] === grid[i][j+1]) return false; if (i < size - 1 && grid[i][j] === grid[i+1][j]) return false; } return true; }
   var scoreEl = h('div', {class: 'score'}, 'Score: 0');
   var header = h('div', {class: 'game-head'}, [h('h3', {}, '2048'), scoreEl]);
   var boardGrid = h('div', {class: 'grid-2048'});
@@ -2413,14 +2259,7 @@ function renderGame2048(){
     else if (e.key === 'ArrowUp') { e.preventDefault(); move('up'); }
     else if (e.key === 'ArrowDown') { e.preventDefault(); move('down'); }
   });
-  function render(){
-    scoreEl.textContent = 'Score: ' + score + ' · Best: ' + best;
-    boardGrid.innerHTML = '';
-    for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) {
-      var v = grid[i][j];
-      boardGrid.appendChild(h('div', {class: 'tile-2048 ' + (v ? 't' + v : '')}, v || ''));
-    }
-  }
+  function render(){ scoreEl.textContent = 'Score: ' + score + ' · Best: ' + best; boardGrid.innerHTML = ''; for (var i = 0; i < size; i++) for (var j = 0; j < size; j++) { var v = grid[i][j]; boardGrid.appendChild(h('div', {class: 'tile-2048 ' + (v ? 't' + v : '')}, v || '')); } }
   function showGameOver(){
     var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [
       h('h2', {}, 'Game over'),
@@ -2446,64 +2285,18 @@ function renderTTT(){
   var header = h('div', {class: 'game-head'}, [h('h3', {}, 'Tic Tac Toe'), scoreEl]);
   var grid = h('div', {class: 'ttt-grid'});
   var cells = [];
-  for (var i = 0; i < 9; i++) (function(idx){
-    var c = h('div', {class: 'ttt-cell', onclick: function(){ play(idx); }});
-    cells.push(c); grid.appendChild(c);
-  })(i);
+  for (var i = 0; i < 9; i++) (function(idx){ var c = h('div', {class: 'ttt-cell', onclick: function(){ play(idx); }}); cells.push(c); grid.appendChild(c); })(i);
   var status = h('p', {style: 'text-align:center;color:var(--text2);margin-top:16px;font-weight:600'}, 'Your turn (X)');
   var content = h('div', {}, [grid, status, h('div', {class: 'acts', style: 'justify-content:center'}, [h('button', {class: 'btn ghost', onclick: reset}, '🔄 New game')])]);
   gameWrap('⭕ Tic Tac Toe', header, content);
-  function play(idx){
-    if (gameOver || board[idx] !== '') return;
-    board[idx] = 'X'; cells[idx].textContent = 'X'; cells[idx].classList.add('x');
-    if (checkWin('X')) return finish('win');
-    if (board.every(function(c){ return c; })) return finish('draw');
-    status.textContent = 'AI thinking...';
-    setTimeout(aiMove, 400);
-  }
-  function aiMove(){
-    if (gameOver) return;
-    var best = bestMove();
-    board[best] = 'O'; cells[best].textContent = 'O'; cells[best].classList.add('o');
-    if (checkWin('O')) return finish('lose');
-    if (board.every(function(c){ return c; })) return finish('draw');
-    status.textContent = 'Your turn (X)';
-  }
+  function play(idx){ if (gameOver || board[idx] !== '') return; board[idx] = 'X'; cells[idx].textContent = 'X'; cells[idx].classList.add('x'); if (checkWin('X')) return finish('win'); if (board.every(function(c){ return c; })) return finish('draw'); status.textContent = 'AI thinking...'; setTimeout(aiMove, 400); }
+  function aiMove(){ if (gameOver) return; var best = bestMove(); board[best] = 'O'; cells[best].textContent = 'O'; cells[best].classList.add('o'); if (checkWin('O')) return finish('lose'); if (board.every(function(c){ return c; })) return finish('draw'); status.textContent = 'Your turn (X)'; }
   function bestMove(){ var b = minimax(board, 'O').index; if (b == null) { for (var i = 0; i < 9; i++) if (board[i] === '') return i; } return b; }
-  function minimax(nb, p){
-    var avail = [];
-    for (var i = 0; i < 9; i++) if (nb[i] === '') avail.push(i);
-    if (checkWin2(nb, 'X')) return {score: -10};
-    if (checkWin2(nb, 'O')) return {score: 10};
-    if (!avail.length) return {score: 0};
-    var moves = [];
-    for (var k = 0; k < avail.length; k++) {
-      var mv = {index: avail[k]};
-      var copy = nb.slice(); copy[avail[k]] = p;
-      mv.score = minimax(copy, p === 'O' ? 'X' : 'O').score;
-      moves.push(mv);
-    }
-    var bestMove, bestScore = p === 'O' ? -Infinity : Infinity;
-    for (var m = 0; m < moves.length; m++) {
-      if (p === 'O' ? moves[m].score > bestScore : moves[m].score < bestScore) { bestScore = moves[m].score; bestMove = m; }
-    }
-    return moves[bestMove];
-  }
+  function minimax(nb, p){ var avail = []; for (var i = 0; i < 9; i++) if (nb[i] === '') avail.push(i); if (checkWin2(nb, 'X')) return {score: -10}; if (checkWin2(nb, 'O')) return {score: 10}; if (!avail.length) return {score: 0}; var moves = []; for (var k = 0; k < avail.length; k++) { var mv = {index: avail[k]}; var copy = nb.slice(); copy[avail[k]] = p; mv.score = minimax(copy, p === 'O' ? 'X' : 'O').score; moves.push(mv); } var bestMove, bestScore = p === 'O' ? -Infinity : Infinity; for (var m = 0; m < moves.length; m++) { if (p === 'O' ? moves[m].score > bestScore : moves[m].score < bestScore) { bestScore = moves[m].score; bestMove = m; } } return moves[bestMove]; }
   function checkWin(p){ return checkWin2(board, p); }
   function checkWin2(b, p){ var lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]; return lines.some(function(l){ return b[l[0]] === p && b[l[1]] === p && b[l[2]] === p; }); }
-  function finish(result){
-    gameOver = true;
-    if (result === 'win') { scores.w++; status.textContent = '🎉 You win!'; }
-    else if (result === 'lose') { scores.l++; status.textContent = '😔 AI wins!'; }
-    else { scores.d++; status.textContent = '🤝 Draw!'; }
-    S.s('game_ttt', scores);
-    scoreEl.textContent = 'You ' + scores.w + ' · AI ' + scores.l + ' · D ' + scores.d;
-  }
-  function reset(){
-    board = ['','','','','','','','','']; gameOver = false;
-    cells.forEach(function(c){ c.textContent = ''; c.className = 'ttt-cell'; });
-    status.textContent = 'Your turn (X)';
-  }
+  function finish(result){ gameOver = true; if (result === 'win') { scores.w++; status.textContent = '🎉 You win!'; } else if (result === 'lose') { scores.l++; status.textContent = '😔 AI wins!'; } else { scores.d++; status.textContent = '🤝 Draw!'; } S.s('game_ttt', scores); scoreEl.textContent = 'You ' + scores.w + ' · AI ' + scores.l + ' · D ' + scores.d; }
+  function reset(){ board = ['','','','','','','','','']; gameOver = false; cells.forEach(function(c){ c.textContent = ''; c.className = 'ttt-cell'; }); status.textContent = 'Your turn (X)'; }
 }
 function renderReaction(){
   resetSEO(); document.title = 'Reaction Test — ' + SITE_NAME;
@@ -2514,96 +2307,29 @@ function renderReaction(){
   var box = h('div', {class: 'reaction-box wait'}, 'Tap to start');
   box.onclick = function(){
     if (state === 'idle') { start(); return; }
-    if (state === 'wait') {
-      if (timeoutId) clearTimeout(timeoutId);
-      box.className = 'reaction-box early';
-      box.textContent = '⏰ Too early!';
-      state = 'idle';
-      setTimeout(function(){ box.className = 'reaction-box wait'; box.textContent = 'Tap to start'; }, 1500);
-      return;
-    }
-    if (state === 'ready') {
-      var t = Date.now() - startTime;
-      state = 'idle';
-      if (t < best || best === 0) { best = t; S.s('game_reaction_best', best); }
-      scoreEl.textContent = 'Best: ' + best + 'ms';
-      box.className = 'reaction-box result';
-      var rating = t < 200 ? '🔥 Superhuman' : (t < 250 ? '⚡ Excellent' : (t < 350 ? '👍 Good' : '😴 Slow'));
-      box.innerHTML = t + 'ms<br><span style="font-size:.9rem;opacity:.85">' + rating + '</span>';
-      setTimeout(function(){ box.className = 'reaction-box wait'; box.textContent = 'Tap to start'; }, 2000);
-    }
+    if (state === 'wait') { if (timeoutId) clearTimeout(timeoutId); box.className = 'reaction-box early'; box.textContent = '⏰ Too early!'; state = 'idle'; setTimeout(function(){ box.className = 'reaction-box wait'; box.textContent = 'Tap to start'; }, 1500); return; }
+    if (state === 'ready') { var t = Date.now() - startTime; state = 'idle'; if (t < best || best === 0) { best = t; S.s('game_reaction_best', best); } scoreEl.textContent = 'Best: ' + best + 'ms'; box.className = 'reaction-box result'; var rating = t < 200 ? '🔥 Superhuman' : (t < 250 ? '⚡ Excellent' : (t < 350 ? '👍 Good' : '😴 Slow')); box.innerHTML = t + 'ms<br><span style="font-size:.9rem;opacity:.85">' + rating + '</span>'; setTimeout(function(){ box.className = 'reaction-box wait'; box.textContent = 'Tap to start'; }, 2000); }
   };
-  function start(){
-    if (timeoutId) clearTimeout(timeoutId);
-    state = 'wait'; box.className = 'reaction-box wait'; box.textContent = 'Wait for green...';
-    var delay = 1500 + Math.random() * 2500;
-    timeoutId = setTimeout(function(){
-      state = 'ready'; startTime = Date.now();
-      box.className = 'reaction-box ready'; box.textContent = 'TAP NOW!';
-    }, delay);
-  }
-  var content = h('div', {}, [box, h('p', {style: 'text-align:center;color:var(--text3);font-size:.85rem;margin-top:14px'}, 'Wait for green, then tap as fast as you can.')]);
-  gameWrap('⚡ Reaction Test', header, content);
+  function start(){ if (timeoutId) clearTimeout(timeoutId); state = 'wait'; box.className = 'reaction-box wait'; box.textContent = 'Wait for green...'; var delay = 1500 + Math.random() * 2500; timeoutId = setTimeout(function(){ state = 'ready'; startTime = Date.now(); box.className = 'reaction-box ready'; box.textContent = 'TAP NOW!'; }, delay); }
+  gameWrap('⚡ Reaction Test', header, h('div', {}, [box, h('p', {style: 'text-align:center;color:var(--text3);font-size:.85rem;margin-top:14px'}, 'Wait for green, then tap as fast as you can.')]));
 }
 function renderStroop(){
   resetSEO(); document.title = 'Color Match — ' + SITE_NAME;
-  var colors = [
-    {name: 'RED', hex: '#d33a3a'}, {name: 'BLUE', hex: '#2a6fd1'},
-    {name: 'GREEN', hex: '#0f9d58'}, {name: 'YELLOW', hex: '#b58900'},
-    {name: 'PURPLE', hex: '#7a5af0'}, {name: 'ORANGE', hex: '#e8632a'}
-  ];
+  var colors = [{name: 'RED', hex: '#d33a3a'}, {name: 'BLUE', hex: '#2a6fd1'}, {name: 'GREEN', hex: '#0f9d58'}, {name: 'YELLOW', hex: '#b58900'}, {name: 'PURPLE', hex: '#7a5af0'}, {name: 'ORANGE', hex: '#e8632a'}];
   var score = 0, lives = 3, timeLeft = 30, textColor, timerId;
   var best = S.g('game_stroop_best', 0);
   var scoreEl = h('div', {class: 'score'}, 'Score 0 · Lives 3 · 30s');
   var header = h('div', {class: 'game-head'}, [h('h3', {}, 'Color Match'), scoreEl]);
   var wordEl = h('div', {class: 'stroop-word'}, 'READY?');
   var opts = h('div', {class: 'stroop-options'});
-  colors.forEach(function(c){
-    opts.appendChild(h('button', {class: 'stroop-btn', style: 'background:' + c.hex, onclick: function(){ guess(c.name); }}, c.name));
-  });
-  var content = h('div', {}, [
-    h('p', {style: 'text-align:center;color:var(--text2);font-size:.9rem;margin-bottom:8px'}, 'Tap the INK color, not the word'),
-    wordEl, opts,
-    h('div', {class: 'acts', style: 'justify-content:center;margin-top:20px'}, [h('button', {class: 'btn ghost', onclick: startGame}, '🔄 New game')])
-  ]);
+  colors.forEach(function(c){ opts.appendChild(h('button', {class: 'stroop-btn', style: 'background:' + c.hex, onclick: function(){ guess(c.name); }}, c.name)); });
+  var content = h('div', {}, [h('p', {style: 'text-align:center;color:var(--text2);font-size:.9rem;margin-bottom:8px'}, 'Tap the INK color, not the word'), wordEl, opts, h('div', {class: 'acts', style: 'justify-content:center;margin-top:20px'}, [h('button', {class: 'btn ghost', onclick: startGame}, '🔄 New game')])]);
   gameWrap('🎨 Color Match', header, content);
-  function newRound(){
-    if (lives <= 0 || timeLeft <= 0) return;
-    var word = colors[Math.floor(Math.random()*colors.length)];
-    var ink = colors[Math.floor(Math.random()*colors.length)];
-    if (Math.random() < 0.7) { while (ink.name === word.name) ink = colors[Math.floor(Math.random()*colors.length)]; }
-    textColor = ink; wordEl.textContent = word.name; wordEl.style.color = ink.hex;
-  }
-  function guess(name){
-    if (lives <= 0 || timeLeft <= 0) return;
-    if (name === textColor.name) { score++; if (score > best) { best = score; S.s('game_stroop_best', best); } newRound(); }
-    else lives--;
-    updateHUD();
-    if (lives <= 0) endGame('Out of lives!');
-  }
+  function newRound(){ if (lives <= 0 || timeLeft <= 0) return; var word = colors[Math.floor(Math.random()*colors.length)]; var ink = colors[Math.floor(Math.random()*colors.length)]; if (Math.random() < 0.7) { while (ink.name === word.name) ink = colors[Math.floor(Math.random()*colors.length)]; } textColor = ink; wordEl.textContent = word.name; wordEl.style.color = ink.hex; }
+  function guess(name){ if (lives <= 0 || timeLeft <= 0) return; if (name === textColor.name) { score++; if (score > best) { best = score; S.s('game_stroop_best', best); } newRound(); } else lives--; updateHUD(); if (lives <= 0) endGame('Out of lives!'); }
   function updateHUD(){ scoreEl.textContent = 'Score ' + score + ' · Lives ' + lives + ' · ' + timeLeft + 's'; }
-  function startGame(){
-    score = 0; lives = 3; timeLeft = 30;
-    if (timerId) clearInterval(timerId);
-    updateHUD(); newRound();
-    timerId = setInterval(function(){ timeLeft--; updateHUD(); if (timeLeft <= 0) endGame('Time up!'); }, 1000);
-  }
-  function endGame(reason){
-    if (timerId) clearInterval(timerId); timerId = null;
-    var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [
-      h('h2', {}, 'Game over'),
-      h('p', {style: 'color:var(--text2);margin-bottom:20px'}, reason),
-      h('div', {class: 'game-stats'}, [
-        h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(score)), h('div', {class: 'l'}, 'Score')]),
-        h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(best)), h('div', {class: 'l'}, 'Best')])
-      ]),
-      h('div', {class: 'acts', style: 'justify-content:center'}, [
-        h('button', {class: 'btn accent', onclick: function(){ overlay.remove(); startGame(); }}, 'Play again'),
-        h('a', {href: '#/games', class: 'btn ghost'}, 'Back')
-      ])
-    ]));
-    document.body.appendChild(overlay);
-  }
+  function startGame(){ score = 0; lives = 3; timeLeft = 30; if (timerId) clearInterval(timerId); updateHUD(); newRound(); timerId = setInterval(function(){ timeLeft--; updateHUD(); if (timeLeft <= 0) endGame('Time up!'); }, 1000); }
+  function endGame(reason){ if (timerId) clearInterval(timerId); timerId = null; var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [h('h2', {}, 'Game over'), h('p', {style: 'color:var(--text2);margin-bottom:20px'}, reason), h('div', {class: 'game-stats'}, [h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(score)), h('div', {class: 'l'}, 'Score')]), h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(best)), h('div', {class: 'l'}, 'Best')])]), h('div', {class: 'acts', style: 'justify-content:center'}, [h('button', {class: 'btn accent', onclick: function(){ overlay.remove(); startGame(); }}, 'Play again'), h('a', {href: '#/games', class: 'btn ghost'}, 'Back')])])); document.body.appendChild(overlay); }
   startGame();
 }
 function renderMole(){
@@ -2614,67 +2340,22 @@ function renderMole(){
   var header = h('div', {class: 'game-head'}, [h('h3', {}, 'Whack-a-Mole'), scoreEl]);
   var grid = h('div', {class: 'mole-grid'});
   var holes = [];
-  for (var i = 0; i < 9; i++) (function(idx){
-    var hole = h('div', {class: 'mole-hole'}, [h('div', {class: 'mole'}, '🐹')]);
-    hole.onclick = function(){
-      if (idx === activeHole) { score++; hole.classList.remove('active'); activeHole = -1; updateHUD(); }
-    };
-    holes.push(hole); grid.appendChild(hole);
-  })(i);
+  for (var i = 0; i < 9; i++) (function(idx){ var hole = h('div', {class: 'mole-hole'}, [h('div', {class: 'mole'}, '🐹')]); hole.onclick = function(){ if (idx === activeHole) { score++; hole.classList.remove('active'); activeHole = -1; updateHUD(); } }; holes.push(hole); grid.appendChild(hole); })(i);
   var content = h('div', {}, [grid, h('div', {class: 'acts', style: 'justify-content:center;margin-top:20px'}, [h('button', {class: 'btn ghost', onclick: startGame}, '🔄 New game')])]);
   gameWrap('🔨 Whack-a-Mole', header, content);
   function updateHUD(){ scoreEl.textContent = 'Score ' + score + ' · ' + timeLeft + 's'; }
-  function spawnMole(){
-    if (timerId === null) return;
-    if (activeHole >= 0 && holes[activeHole]) holes[activeHole].classList.remove('active');
-    var idx = Math.floor(Math.random() * 9);
-    activeHole = idx;
-    holes[idx].classList.add('active');
-    var dur = Math.max(500, 1200 - score * 20);
-    setTimeout(function(){ if (activeHole === idx) { holes[idx].classList.remove('active'); activeHole = -1; } }, dur);
-  }
-  function startGame(){
-    score = 0; timeLeft = 30;
-    if (timerId) clearInterval(timerId);
-    if (moleTimer) clearInterval(moleTimer);
-    holes.forEach(function(h){ h.classList.remove('active'); });
-    activeHole = -1; updateHUD();
-    timerId = setInterval(function(){ timeLeft--; updateHUD(); if (timeLeft <= 0) endGame(); }, 1000);
-    moleTimer = setInterval(spawnMole, 900);
-    spawnMole();
-  }
-  function endGame(){
-    clearInterval(timerId); clearInterval(moleTimer);
-    timerId = null; moleTimer = null;
-    if (score > best) { best = score; S.s('game_mole_best', best); }
-    var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [
-      h('h2', {}, '⏰ Time up!'),
-      h('div', {class: 'game-stats'}, [
-        h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(score)), h('div', {class: 'l'}, 'Score')]),
-        h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(best)), h('div', {class: 'l'}, 'Best')])
-      ]),
-      h('div', {class: 'acts', style: 'justify-content:center'}, [
-        h('button', {class: 'btn accent', onclick: function(){ overlay.remove(); startGame(); }}, 'Play again'),
-        h('a', {href: '#/games', class: 'btn ghost'}, 'Back')
-      ])
-    ]));
-    document.body.appendChild(overlay);
-  }
+  function spawnMole(){ if (timerId === null) return; if (activeHole >= 0 && holes[activeHole]) holes[activeHole].classList.remove('active'); var idx = Math.floor(Math.random() * 9); activeHole = idx; holes[idx].classList.add('active'); var dur = Math.max(500, 1200 - score * 20); setTimeout(function(){ if (activeHole === idx) { holes[idx].classList.remove('active'); activeHole = -1; } }, dur); }
+  function startGame(){ score = 0; timeLeft = 30; if (timerId) clearInterval(timerId); if (moleTimer) clearInterval(moleTimer); holes.forEach(function(h){ h.classList.remove('active'); }); activeHole = -1; updateHUD(); timerId = setInterval(function(){ timeLeft--; updateHUD(); if (timeLeft <= 0) endGame(); }, 1000); moleTimer = setInterval(spawnMole, 900); spawnMole(); }
+  function endGame(){ clearInterval(timerId); clearInterval(moleTimer); timerId = null; moleTimer = null; if (score > best) { best = score; S.s('game_mole_best', best); } var overlay = h('div', {class: 'game-overlay'}, h('div', {class: 'game-overlay-inner'}, [h('h2', {}, '⏰ Time up!'), h('div', {class: 'game-stats'}, [h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(score)), h('div', {class: 'l'}, 'Score')]), h('div', {class: 'game-stat'}, [h('div', {class: 'v'}, String(best)), h('div', {class: 'l'}, 'Best')])]), h('div', {class: 'acts', style: 'justify-content:center'}, [h('button', {class: 'btn accent', onclick: function(){ overlay.remove(); startGame(); }}, 'Play again'), h('a', {href: '#/games', class: 'btn ghost'}, 'Back')])])); document.body.appendChild(overlay); }
   startGame();
 }
 
-/* ============================================================
-   THEME
-   ============================================================ */
+/* THEME */
 function applyTheme(){
   var x = S.g('theme', 'auto');
   var r = document.documentElement;
-  if (x === 'auto') {
-    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    r.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
-  } else {
-    r.setAttribute('data-theme', x === 'dark' ? 'dark' : 'light');
-  }
+  if (x === 'auto') { var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; r.setAttribute('data-theme', prefersDark ? 'dark' : 'light'); }
+  else { r.setAttribute('data-theme', x === 'dark' ? 'dark' : 'light'); }
   var b = $('#thBtn');
   if (b) b.textContent = x === 'dark' ? '☀' : (x === 'light' ? '☾' : '◐');
 }
@@ -2682,93 +2363,49 @@ $('#thBtn').onclick = function(){
   var order = ['auto', 'light', 'dark'];
   var cur = S.g('theme', 'auto');
   var next = order[(order.indexOf(cur) + 1) % 3];
-  S.s('theme', next);
-  applyTheme();
-  showToast('Theme: ' + next);
+  S.s('theme', next); applyTheme(); showToast('Theme: ' + next);
 };
 
-/* ============================================================
-   REGION / LANGUAGE SELECTORS
-   ============================================================ */
+/* SELECTORS */
 function initSelectors(){
   var regionSel = $('#regionSel');
   regionSel.innerHTML = '';
   Object.keys(REGIONS).forEach(function(k){
-    var o = document.createElement('option');
-    o.value = k;
-    o.textContent = REGIONS[k].flag + ' ' + REGIONS[k].name;
-    regionSel.appendChild(o);
+    var o = document.createElement('option'); o.value = k; o.textContent = REGIONS[k].flag + ' ' + REGIONS[k].name; regionSel.appendChild(o);
   });
   regionSel.value = REGION;
   regionSel.onchange = function(e){ REGION = e.target.value; S.s('region', REGION); showToast('Region: ' + REGIONS[REGION].name); };
-
   var langSel = $('#langSel');
   langSel.innerHTML = '';
-  LANGUAGES.forEach(function(l){
-    var o = document.createElement('option');
-    o.value = l.code;
-    o.textContent = l.flag + ' ' + l.name;
-    langSel.appendChild(o);
-  });
+  LANGUAGES.forEach(function(l){ var o = document.createElement('option'); o.value = l.code; o.textContent = l.flag + ' ' + l.name; langSel.appendChild(o); });
   langSel.value = LANG;
   langSel.onchange = function(e){ LANG = e.target.value; S.s('lang', LANG); document.documentElement.lang = LANG; };
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* FOOTER */
 function renderFooter(){
   var cols = [
-    {title: 'Tools', links: [
-      {t: 'All Tools', h: '#/all'},
-      {t: 'Money', h: '#/money'},
-      {t: 'Shopping', h: '#/shopping'},
-      {t: 'Finance', h: '#/finance'},
-      {t: 'Converters', h: '#/convert'}
-    ]},
-    {title: 'Popular', links: [
-      {t: 'Discount Calculator', h: '#/t/disc'},
-      {t: 'Sales Tax Calculator', h: '#/t/stax'},
-      {t: 'Loan Calculator', h: '#/t/loan'},
-      {t: 'Tip Calculator', h: '#/t/tip'},
-      {t: 'BMI Calculator', h: '#/t/bmi'}
-    ]},
-    {title: 'More', links: [
-      {t: 'Live Info', h: '#/live'},
-      {t: 'US News', h: '#/news'},
-      {t: 'Crypto Signals', h: '#/predict'},
-      {t: 'Games', h: '#/games'},
-      {t: 'Saved', h: '#/me'}
-    ]}
+    {title: 'Tools', links: [{t: 'All Tools', h: '#/all'}, {t: 'Money', h: '#/money'}, {t: 'Shopping', h: '#/shopping'}, {t: 'Finance', h: '#/finance'}, {t: 'Converters', h: '#/convert'}]},
+    {title: 'Popular', links: [{t: 'Discount Calculator', h: '#/t/disc'}, {t: 'Sales Tax Calculator', h: '#/t/stax'}, {t: 'Loan Calculator', h: '#/t/loan'}, {t: 'Tip Calculator', h: '#/t/tip'}, {t: 'BMI Calculator', h: '#/t/bmi'}]},
+    {title: 'More', links: [{t: 'Live Info', h: '#/live'}, {t: 'News', h: '#/news'}, {t: 'Crypto Signals', h: '#/predict'}, {t: 'Games', h: '#/games'}, {t: 'Saved', h: '#/me'}]}
   ];
-  var wrap = document.getElementById('footerCols');
-  if (!wrap) return;
+  var wrap = document.getElementById('footerCols'); if (!wrap) return;
   wrap.innerHTML = '';
-  cols.forEach(function(c){
-    var col = h('div', {class: 'footer-col'}, [h('h4', {}, c.title)]);
-    c.links.forEach(function(l){ col.appendChild(h('a', {href: l.h}, l.t)); });
-    wrap.appendChild(col);
-  });
+  cols.forEach(function(c){ var col = h('div', {class: 'footer-col'}, [h('h4', {}, c.title)]); c.links.forEach(function(l){ col.appendChild(h('a', {href: l.h}, l.t)); }); wrap.appendChild(col); });
 }
 
-/* ============================================================
-   NAV
-   ============================================================ */
+/* NAV */
 function navActive(path){
   var nav = document.querySelectorAll('.nav a');
   for (var i = 0; i < nav.length; i++) {
     var a = nav[i];
     var k = a.getAttribute('data-nav');
-    var isOn = (k === path) ||
-      (path.indexOf('/t/') === 0 && k === '/all') ||
-      (path.indexOf('/games/') === 0 && k === '/games');
+    var isOn = (k === path) || (path.indexOf('/t/') === 0 && k === '/all') || (path.indexOf('/games/') === 0 && k === '/games');
     a.classList.toggle('on', isOn);
   }
 }
 
-/* ============================================================
-   ROUTER
-   ============================================================ */
+/* ROUTER */
 function route(){
   var hash = location.hash.slice(1);
   var qIdx = hash.indexOf('?');
@@ -2790,34 +2427,19 @@ function route(){
   else if (p.indexOf('/games/') === 0) { renderGameById(p.slice(7)); }
   else if (p.indexOf('/t/') === 0) {
     var tl = getById(p.slice(3));
-    if (tl) {
-      var params = {};
-      P.forEach(function(v, k){ params[k] = v; });
-      renderToolPage(tl, params);
-      navActive('/t/' + tl.id);
-    } else {
-      renderAllTools(P);
-    }
+    if (tl) { var params = {}; P.forEach(function(v, k){ params[k] = v; }); renderToolPage(tl, params); navActive('/t/' + tl.id); }
+    else { renderAllTools(P); }
   } else { renderHome(); navActive('/'); }
   setTimeout(function(){ if (window.monetagRefresh) window.monetagRefresh(); }, 400);
 }
 
-/* ============================================================
-   INIT
-   ============================================================ */
 $('#yr').textContent = new Date().getFullYear();
 applyTheme();
 initSelectors();
 renderFooter();
 route();
 window.addEventListener('hashchange', route);
-
-// Watch system theme changes
-if (window.matchMedia) {
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
-    if (S.g('theme', 'auto') === 'auto') applyTheme();
-  });
-}
+if (window.matchMedia) window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){ if (S.g('theme', 'auto') === 'auto') applyTheme(); });
 
 })();
 </script>
